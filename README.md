@@ -1,2 +1,2 @@
-# Moodle_MK2
+# Fundus
 Gruppenprojekt: Webanwendung
