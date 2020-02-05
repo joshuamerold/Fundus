@@ -19,4 +19,4 @@ Route::get('/test', 'TestController@test');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'MainController@showContent')->middleware('auth');
