@@ -33,5 +33,21 @@ class DatabaseSeeder extends Seeder
           'name' =>'WebUsability1',
           'courseid' => '1'
         ]);
+
+        App\Lesson::create([
+          'lessonname' =>'Datenbanksysteme und Integration',
+          'professorname' => 'Herr Seith',
+          'moduleid' => 1
+        ]);
+        App\Lesson::create([
+          'lessonname' =>'Katastrophale Java-Vorlesung',
+          'professorname' => 'Herr Schadt',
+          'moduleid' => 1
+        ]);
+        App\Lesson::create([
+          'lessonname' =>'Statistik und BlaBla',
+          'professorname' => 'Herr Weird',
+          'moduleid' => 2
+        ]);
     }
 }
