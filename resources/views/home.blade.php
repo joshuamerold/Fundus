@@ -16,6 +16,21 @@
 
                     You are logged in!
                 </div>
+                Name: {{$user->username}} <br>
+                Course: {{$course->name}} <br><br>
+
+                @foreach($modules as $module)
+                <div class="mt-5">
+
+                Modulname: {{$module->name}}<br>
+                  @foreach($lessons as $lesson)
+                    @if($lesson->moduleid == $module->id)
+                      {{$lesson->lessonname}}, {{$lesson->professorname}}<br>
+                    @endif
+                  @endforeach
+                </div>
+                @endforeach
+                <!-- ->with('users',$user)->with('courses', $courses)->with('modules', $modules)->with('lessons', $lessons); -->
             </div>
         </div>
     </div>
