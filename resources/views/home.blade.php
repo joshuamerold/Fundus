@@ -25,7 +25,7 @@
                 Modulname: {{$module->name}}<br>
                   @foreach($lessons as $lesson)
                     @if($lesson->moduleid == $module->id)
-                      {{$lesson->lessonname}}, {{$lesson->professorname}}<br>
+                      <a href="/lesson_{{$lesson->id}}/show">{{$lesson->lessonname}}</a>, {{$lesson->professorname}}<br>
                     @endif
                   @endforeach
                 </div>
