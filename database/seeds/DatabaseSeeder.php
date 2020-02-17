@@ -17,6 +17,12 @@ class DatabaseSeeder extends Seeder
           'password' => Hash::make('admin'),
           'courseid' => 1
         ]);
+        App\User::create([
+          'username' =>'noadmin',
+          'email' => 'noadmin@noadmin.de',
+          'password' => Hash::make('noadmin'),
+          'courseid' => 1
+        ]);
 
         App\Course::create([
           'representativeid' =>1,
@@ -48,6 +54,34 @@ class DatabaseSeeder extends Seeder
           'lessonname' =>'Statistik und BlaBla',
           'professorname' => 'Herr Weird',
           'moduleid' => 2
+        ]);
+
+        App\File::create([
+          'name' =>'Web Usability Semester3 zusammendfa',
+          'extension' => 'pdf',
+          'path' => '/files/Web Usability Semester3 zusammendfa.pdf',
+          'type' => 'Zusammenfassungen',
+          'lessonid' => 3,
+          'creatoruserid' => 1,
+          'courseid' => 1
+        ]);
+        App\File::create([
+          'name' =>'Ajax',
+          'extension' => 'pdf',
+          'path' => '/files/Ajax.pdf',
+          'type' => 'Zusammenfassungen',
+          'lessonid' => 1,
+          'creatoruserid' => 1,
+          'courseid' => 1
+        ]);
+        App\File::create([
+          'name' =>'Java',
+          'extension' => 'pdf',
+          'path' => '/files/Java.pdf',
+          'type' => 'Zusammenfassungen',
+          'lessonid' => 1,
+          'creatoruserid' => 2,
+          'courseid' => 1
         ]);
     }
 }

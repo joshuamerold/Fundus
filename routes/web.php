@@ -20,3 +20,6 @@ Route::get('/test', 'TestController@test');
 Auth::routes();
 
 Route::get('/home', 'MainController@showContent')->middleware('auth');
+
+
+Route::get('/lesson_{lesson}/show', 'LessonController@showContent')->middleware('auth');
