@@ -48,11 +48,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        $validator = Validator::make($data, [    // Anpassung für Anmeldeseite mit Registrierung & Anmeldung 
+            'register_name' => ['required', 'string', 'max:255'],
+            'register_email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
+            'register_password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
+        $validator->setAttributeNames([
+          'register_name' => 'name',
+          'register_email' => 'email',
+          'register_password' => 'password',
+        ]);
+
+        return $validator;
     }
 
     /**
