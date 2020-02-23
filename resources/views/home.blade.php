@@ -16,6 +16,12 @@
 
                     You are logged in!
                 </div>
+
+                @include('inc.messages')
+
+                <a href="/add/module">Modul hinzufügen</a>
+                <a href="/add/lesson">Lehrveranstaltung hinzufügen</a>
+
                 Name: {{$user->username}} <br>
                 Course: {{$course->name}} <br><br>
 

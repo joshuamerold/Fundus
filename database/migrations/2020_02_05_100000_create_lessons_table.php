@@ -17,7 +17,8 @@ class CreateLessonsTable extends Migration
           $table->bigIncrements('id');
           $table->string('lessonname');
           $table->string('professorname');
-          $table->integer('moduleid');
+          $table->integer('moduleid')->nullable();
+          $table->integer('creator_userid');
           $table->timestamps();
         });
     }
