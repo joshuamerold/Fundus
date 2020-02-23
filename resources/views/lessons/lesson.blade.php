@@ -1,4 +1,5 @@
-<h1>Zusammenfassung</h1>
+<a href="/{{Request::path()}}/add/File">neue Datei hochladen</a>
+
 
 <table>
   <thead>
