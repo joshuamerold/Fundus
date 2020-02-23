@@ -36,3 +36,6 @@ Route::get('/add/module', function() {
 })->middleware('auth');
 
 Route::post('/add/module/create', 'ModuleController@add')->middleware('auth');
+
+//Files Side
+Route::get('/download/{file}', 'FileController@download')->middleware('auth');
