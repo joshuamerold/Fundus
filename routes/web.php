@@ -21,5 +21,17 @@ Auth::routes();
 
 Route::get('/home', 'MainController@showContent')->middleware('auth');
 
-
 Route::get('/lesson_{lesson}/show', 'LessonController@showContent')->middleware('auth');
+
+
+Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
+
+Route::post('/add/lesson/create', 'LessonController@add')->middleware('auth');
+
+
+
+Route::get('/add/module', function() {
+  return view('forms.addModule');
+})->middleware('auth');
+
+Route::post('/add/module/create', 'ModuleController@add')->middleware('auth');

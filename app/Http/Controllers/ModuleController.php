@@ -13,6 +13,8 @@ use App\Lesson;
 
 class ModuleController extends Controller
 {
+
+
   public function add(Request $request){
 
     $currentUser = Auth::user();
