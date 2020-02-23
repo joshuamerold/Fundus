@@ -60,28 +60,28 @@ class DatabaseSeeder extends Seeder
         ]);
 
         App\File::create([
-          'name' =>'Web Usability Semester3 zusammendfa',
+          'name' =>'Web Usability Semester3 zusammendfa.pdf',
           'extension' => 'pdf',
           'path' => '/files/Web Usability Semester3 zusammendfa.pdf',
-          'type' => 'Zusammenfassungen',
+          'type' => 'Zusammenfassung',
           'lessonid' => 3,
           'creatoruserid' => 1,
           'courseid' => 1
         ]);
         App\File::create([
-          'name' =>'Ajax',
+          'name' =>'Ajax.pdf',
           'extension' => 'pdf',
           'path' => '/files/Ajax.pdf',
-          'type' => 'Zusammenfassungen',
+          'type' => 'Zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 1,
           'courseid' => 1
         ]);
         App\File::create([
-          'name' =>'Java',
+          'name' =>'Java.pdf',
           'extension' => 'pdf',
           'path' => '/files/Java.pdf',
-          'type' => 'Zusammenfassungen',
+          'type' => 'Zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 2,
           'courseid' => 1

@@ -1,4 +1,5 @@
-<h1>Zusammenfassung</h1>
+<a href="/{{Request::path()}}/add/File">neue Datei hochladen</a>
+
 
 <table>
   <thead>
@@ -9,6 +10,7 @@
     <th>Datum</th>
     <th>Hochgeladen von</th>
     <th>Bewertung</th>
+    <th>Action</th>
   </thead>
   @foreach($files as $file)
   <tbody>
@@ -25,6 +27,14 @@
         @endforeach
     </td>
     <td></td>
+    <td>
+      <!-- {{Request::path()}} -->
+      <a href="/download/{{$file->id}}">Download</a>
+      <a href="">kommentieren</a>
+      <a href="">Löschen</a>
+      <a href="">bearbeiten</a>
+
+    </td>
   </tbody>
   @endforeach
 </table>
