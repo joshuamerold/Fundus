@@ -18,6 +18,7 @@ Route::get('/', function () {
 Route::get('/test', 'TestController@test');
 
 Auth::routes();
+Route::post('/register/create', 'Auth\RegisterController@registerNEW');
 
 Route::get('/home', 'MainController@showContent')->middleware('auth');
 

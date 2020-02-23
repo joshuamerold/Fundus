@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
+use Illuminate\Http\Request;
 
 use App\User;
 use App\Http\Controllers\Controller;
@@ -48,15 +49,18 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
-        $validator = Validator::make($data, [    // Anpassung für Anmeldeseite mit Registrierung & Anmeldung 
+        $validator = Validator::make($data, [    // Anpassung für Anmeldeseite mit Registrierung & Anmeldung
             'register_name' => ['required', 'string', 'max:255'],
             'register_email' => ['required', 'string', 'email', 'max:255', 'unique:users,email'],
             'register_password' => ['required', 'string', 'min:8', 'confirmed'],
+            'courseid' => ['required', 'string', 'max:255'],
+
         ]);
         $validator->setAttributeNames([
-          'register_name' => 'name',
+          'register_name' => 'username',
           'register_email' => 'email',
           'register_password' => 'password',
+          'register_courseid' => 'courseid',
         ]);
 
         return $validator;
@@ -71,9 +75,20 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'username' => $data['register_name'],
+            'email' => $data['register_email'],
+            'password' => Hash::make($data['register_password']),
+            'courseid' => $data['register_courseid'],
         ]);
+    }
+
+    public function registerNEW(Request $request){
+      $user = new User;
+      $user->username = $request->register_name;
+      $user->password = Hash::make($request->register_password);
+      $user->email = $request->register_email;
+      $user->courseid = $request->register_courseid;
+      $user->save();
+      return redirect('/home');
     }
 }

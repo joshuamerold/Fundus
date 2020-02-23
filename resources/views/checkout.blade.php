@@ -79,7 +79,7 @@
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('register') }}">
+                    <form method="POST" action="/register/create">
                         @csrf
 
                         <div class="form-group row">
@@ -123,6 +123,8 @@
                                 @enderror
                             </div>
                         </div>
+
+                        <input style="display:none;"type="text" id="register_courseid" name="register_courseid" value="1">
 
                         <div class="form-group row">
                             <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
