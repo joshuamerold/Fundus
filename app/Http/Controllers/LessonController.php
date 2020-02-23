@@ -15,7 +15,7 @@ class LessonController extends Controller
 {
   public function showContent($id){
 
-    $files = File::all()->where('lessonid', $id)->where('type', 'Zusammenfassungen');
+    $files = File::all()->where('lessonid', $id)->where('type', 'Zusammenfassung');
     $creators = User::all();
     $currentLesson = Lesson::all()->where('id', $id)->first();
 
