@@ -86,5 +86,21 @@ class DatabaseSeeder extends Seeder
           'creatoruserid' => 2,
           'courseid' => 1
         ]);
+
+        App\Comment::create([
+          'content' =>'Das ist Post NR.1',
+          'userid' => 1,
+          'fileid' => 1,
+        ]);
+        App\Comment::create([
+          'content' =>'Das ist Post NR.2',
+          'userid' => 2,
+          'fileid' => 1,
+        ]);
+        App\Comment::create([
+          'content' =>'Das ist Post NR.3',
+          'userid' => 1,
+          'fileid' => 1,
+        ]);
     }
 }

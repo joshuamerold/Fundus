@@ -93,7 +93,5 @@ class FileController extends Controller
       return redirect('/'.$id)->with('success', 'Datei Hochgeladen!');
 
       //Seite wird geladen...
-
-
   }
 }

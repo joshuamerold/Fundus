@@ -39,3 +39,8 @@ Route::post('/add/module/create', 'ModuleController@add')->middleware('auth');
 Route::get('/download/{file}', 'FileController@download')->middleware('auth');
 Route::get('/{lesson}/add/File', 'FileController@add')->middleware('auth');
 Route::post('/{lesson}/add/File/store', 'FileController@store')->middleware('auth');
+
+
+//Comments SQLiteDatabase
+Route::get('/{file}/add/comment', 'CommentController@show')->middleware('auth');
+Route::post('/{file}/add/comment/store', 'CommentController@store')->middleware('auth');
