@@ -14,12 +14,12 @@ use App\File;
 class LessonController extends Controller
 {
   public function showContent($id){
-
+    $user = Auth::user();
     $files = File::all()->where('lessonid', $id)->where('type', 'Zusammenfassung');
     $creators = User::all();
     $currentLesson = Lesson::all()->where('id', $id)->first();
 
-    return view('lessons.lesson')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson);
+    return view('lessons.lesson')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user);
   }
 
   public function show(){

@@ -79,6 +79,7 @@ class FileController extends Controller
       $file->lessonid = $id;
       $file->creatoruserid = $userid;
       $file->courseid = $courseid;
+      $file->voting = 0;
 
       //mit save() werden die Einträge an die Datenbank übermittelt und gespeichert
       $file->save();
@@ -93,7 +94,5 @@ class FileController extends Controller
       return redirect('/'.$id)->with('success', 'Datei Hochgeladen!');
 
       //Seite wird geladen...
-
-
   }
 }

@@ -26,13 +26,15 @@
           @endif
         @endforeach
     </td>
-    <td></td>
+    <td>{{$file->voting}}</td>
     <td>
       <!-- {{Request::path()}} -->
       <a href="/download/{{$file->id}}">Download</a>
-      <a href="">kommentieren</a>
+      <a href="/{{$file->id}}/add/comment">kommentieren</a>
+      @if($file->creatoruserid == $user->id)
       <a href="">Löschen</a>
       <a href="">bearbeiten</a>
+      @endif
 
     </td>
   </tbody>
