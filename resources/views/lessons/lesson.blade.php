@@ -26,7 +26,7 @@
           @endif
         @endforeach
     </td>
-    <td></td>
+    <td>{{$file->voting}}</td>
     <td>
       <!-- {{Request::path()}} -->
       <a href="/download/{{$file->id}}">Download</a>

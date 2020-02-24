@@ -44,3 +44,7 @@ Route::post('/{lesson}/add/File/store', 'FileController@store')->middleware('aut
 //Comments SQLiteDatabase
 Route::get('/{file}/add/comment', 'CommentController@show')->middleware('auth');
 Route::post('/{file}/add/comment/store', 'CommentController@store')->middleware('auth');
+
+//Votes
+Route::get('/{file}/add/comment/up', 'VoteController@up')->middleware('auth');
+Route::get('/{file}/add/comment/down', 'VoteController@down')->middleware('auth');

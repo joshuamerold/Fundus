@@ -22,6 +22,7 @@ class CreateFilesTable extends Migration
           $table->integer('lessonid');
           $table->integer('creatoruserid');
           $table->integer('courseid');
+          $table->integer('voting');
           $table->timestamps();
         });
     }
