@@ -66,7 +66,8 @@ class DatabaseSeeder extends Seeder
           'type' => 'Zusammenfassung',
           'lessonid' => 3,
           'creatoruserid' => 1,
-          'courseid' => 1
+          'courseid' => 1,
+          'voting' => 0
         ]);
         App\File::create([
           'name' =>'Ajax.pdf',
@@ -75,7 +76,8 @@ class DatabaseSeeder extends Seeder
           'type' => 'Zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 1,
-          'courseid' => 1
+          'courseid' => 1,
+          'voting' => 0
         ]);
         App\File::create([
           'name' =>'Java.pdf',
@@ -84,7 +86,8 @@ class DatabaseSeeder extends Seeder
           'type' => 'Zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 2,
-          'courseid' => 1
+          'courseid' => 1,
+          'voting' => 0
         ]);
 
         App\Comment::create([

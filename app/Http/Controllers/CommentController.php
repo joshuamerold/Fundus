@@ -9,16 +9,26 @@ use App\User;
 use App\Comment;
 use App\File;
 use App\Course;
+use App\Vote;
 
 class CommentController extends Controller
 {
     public function show($id){
+
+      $rating = 0;
+
       $comments = Comment::all()->where('fileid', $id);
       $fileToShow = File::all()->where('id', $id)->first();
       $users = User::all();
       $courses = Course::all();
+      $votes = Vote::all()->where('fileid', $id);
 
-      return view('forms.addComment')->with('comments', $comments)->with('fileToShow', $fileToShow)->with('users', $users)->with('courses', $courses);
+      foreach ($votes as $vote) {
+        $rating = $rating + $vote->vote;
+      }
+
+
+      return view('forms.addComment')->with('comments', $comments)->with('fileToShow', $fileToShow)->with('users', $users)->with('courses', $courses)->with('rating', $rating);
 
     }
 

@@ -1,6 +1,12 @@
 <h1>Comments hier</h1>
  <iframe src="http://fundus.localhost/.{{$fileToShow->path}}" frameborder="0" height="500px" width="500px"></iframe>
 
+<h2>Votes für die File lol</h2>
+{{$rating}} <br>
+
+<a href="/{{$fileToShow->id}}/add/comment/up">hier upvoten</a>
+<a href="/{{$fileToShow->id}}/add/comment/down">hier downvoten</a>
+
 <h2>Comment-Section</h2>
 @foreach($comments as $comment)
 <p>
