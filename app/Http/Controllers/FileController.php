@@ -107,8 +107,8 @@ class FileController extends Controller
       $filename = $file->name;
 
       //mit ::delete wird die Datei im angegeben Verzeichnis gelöscht
-      LaraFile::delete(public_path()."/".$filename);
-
+      LaraFile::delete(public_path()."/files/".$filename);
+      //return public_path()."/".$filename;
       //Nun will ich die Datenbankeinträge löschen, wofür ich alle Daten mit der gleichen reftile abfrage
       //Somit werden auch Daten gelöscht, die durch das Teilen mit einem andern Nutzer erstellt wurden.
       //Es werden folglich alle Dateien gelöscht, die das gewünschte id(reftile) besitzen.

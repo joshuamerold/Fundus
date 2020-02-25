@@ -1,4 +1,7 @@
-<a href="/{{Request::path()}}/add/File">neue Datei hochladen</a>
+<a href="/{{$currentLesson->id}}/add/File">neue Datei hochladen</a>
+
+<a href="/{{$currentLesson->id}}/show/zusammenfassung">Zusammenfassung</a>
+<a href="/{{$currentLesson->id}}/show/karteikarte">Karteikarten</a>
 
 <table>
   <thead>
@@ -16,7 +19,17 @@
     <td>{{$file->extension}}</td>
     <td>{{$file->name}}</td>
     <td>{{$currentLesson->professorname}}</td>
-    <td></td>
+    <td>
+        @foreach($allUsers as $tempUser)
+          @if($file->creatoruserid == $tempUser->id)
+            @foreach($courses as $course)
+              @if($tempUser->courseid == $course->id)
+                {{$course->name}}
+              @endif
+            @endforeach
+          @endif
+        @endforeach
+    </td>
     <td>{{$file->updated_at}}</td>
     <td>
         @foreach($creators as $creator)
@@ -32,7 +45,6 @@
       <a href="/{{$file->id}}/add/comment">kommentieren</a>
       @if($file->creatoruserid == $user->id)
       <a href="/altklausur/{{$currentLesson->id}}/{{$file->id}}/delete">Löschen</a>
-      <a href="">bearbeiten</a>
       @endif
 
     </td>
