@@ -89,6 +89,6 @@ class RegisterController extends Controller
       $user->email = $request->register_email;
       $user->courseid = $request->register_courseid;
       $user->save();
-      return redirect('/home');
+      return redirect('/login')->with('success', 'Bitte melde dich an!');
     }
 }

@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('checkout');
-});
+    return redirect('/home');
+})->middleware('auth');
+
+
 
 Route::get('/test', 'TestController@test');
 
