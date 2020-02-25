@@ -3,9 +3,9 @@
   @csrf
     <input type="file" name="fileToUpload" id="fileToUpload" value="">
     <select id="type" name="type">
-     <option value="zusammenfassungen">Zusammenfassung</option>
-     <option value="altklausuren">Altklausur</option>
-     <option value="karteikarten">Karteikarten</option>
+     <option value="zusammenfassung">Zusammenfassung</option>
+     <option value="altklausur">Altklausur</option>
+     <option value="karteikarte">Karteikarten</option>
     </select>
 
     <input type="submit" name="" value="abschicken">

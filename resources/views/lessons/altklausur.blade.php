@@ -1,6 +1,5 @@
 <a href="/{{Request::path()}}/add/File">neue Datei hochladen</a>
 
-
 <table>
   <thead>
     <th>Typ</th>

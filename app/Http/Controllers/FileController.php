@@ -91,7 +91,7 @@ class FileController extends Controller
 
       //Durch redirect wird man auf eine gewünschte Seite geleitet.
       // mit ->with() habe ich dem View gewünschte Mitteilungen(Hier eine success-Meldung wenn es geklappt hat) übergeben
-      return redirect('/'.$id)->with('success', 'Datei Hochgeladen!');
+      return redirect('/'.$id.'/'.$request->type)->with('success', 'Datei Hochgeladen!');
 
       //Seite wird geladen...
   }
