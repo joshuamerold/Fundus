@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File as LaraFile;
 
 use App\User;
 use App\Course;
@@ -94,5 +95,29 @@ class FileController extends Controller
       return redirect('/'.$id.'/show/'.$request->type)->with('success', 'Datei Hochgeladen!');
 
       //Seite wird geladen...
+  }
+
+  public function destroy($type, $lessonID, $fileID)
+  {
+      //Lädt die erste Datei mit der gewünschten id //Weil ich lediglich den Namen des Datenbankeintrags brauche
+      //Ich hole mir mit first() nur eine Datei und frage den Namen ab/ so erspare ich mir eine foreach-Schleife
+      $file = File::all()->where('id', $fileID)->first();
+
+      //In Filename wird der Name der gewünschten Datei gespeichert
+      $filename = $file->name;
+
+      //mit ::delete wird die Datei im angegeben Verzeichnis gelöscht
+      LaraFile::delete(public_path()."/".$filename);
+
+      //Nun will ich die Datenbankeinträge löschen, wofür ich alle Daten mit der gleichen reftile abfrage
+      //Somit werden auch Daten gelöscht, die durch das Teilen mit einem andern Nutzer erstellt wurden.
+      //Es werden folglich alle Dateien gelöscht, die das gewünschte id(reftile) besitzen.
+      $files = File::all()->where('id', $fileID);
+      foreach ($files as $file) {
+        $file->delete();
+      }
+      //Anschließend wird eine Nachricht an die files blade übergeben und angezeigt
+      return redirect('/'.$lessonID.'/show/'.$type)->with('success', 'Die Datei wurde erfolgreich gelöscht');
+
   }
 }

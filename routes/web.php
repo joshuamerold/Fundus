@@ -31,7 +31,6 @@ Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
 Route::post('/add/lesson/create', 'LessonController@add')->middleware('auth');
 
 
-
 Route::get('/add/module', function() {
   return view('forms.addModule');
 })->middleware('auth');
@@ -42,6 +41,7 @@ Route::get('/download/{file}', 'FileController@download')->middleware('auth');
 Route::get('/{lesson}/add/File', 'FileController@add')->middleware('auth');
 Route::post('/{lesson}/add/File/store', 'FileController@store')->middleware('auth');
 
+Route::get('{type}/{lesson}/{file}/delete', 'FileController@destroy')->middleware('auth');
 
 //Comments SQLiteDatabase
 Route::get('/{file}/add/comment', 'CommentController@show')->middleware('auth');
