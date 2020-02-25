@@ -22,9 +22,9 @@ Route::post('/register/create', 'Auth\RegisterController@registerNEW');
 
 Route::get('/home', 'MainController@showContent')->middleware('auth');
 
-Route::get('/{lesson}/{zusammenfassung}', 'LessonController@showContent')->middleware('auth');
-Route::get('/{lesson}/{altklausur}', 'LessonController@showContent')->middleware('auth');
-Route::get('/{lesson}/{karteikarte}', 'LessonController@showContent')->middleware('auth');
+Route::get('/{lesson}/show/{zusammenfassung}', 'LessonController@showContent')->middleware('auth');
+Route::get('/{lesson}/show/{altklausur}', 'LessonController@showContent')->middleware('auth');
+Route::get('/{lesson}/show/{karteikarte}', 'LessonController@showContent')->middleware('auth');
 
 //Lessonsthings
 Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
