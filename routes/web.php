@@ -52,3 +52,7 @@ Route::post('/{file}/add/comment/store', 'CommentController@store')->middleware(
 //Votes
 Route::get('/{file}/add/comment/up', 'VoteController@up')->middleware('auth');
 Route::get('/{file}/add/comment/down', 'VoteController@down')->middleware('auth');
+
+//User Profile
+Route::get('/profile/{username}', 'ProfileController@showProfile')->middleware('auth');
+Route::post('/profile/{username}/update', 'ProfileController@updateProfile')->middleware('auth');
