@@ -18,7 +18,7 @@
 
         <!--<link href="{{ asset('css/sb-admin.css') }}" rel="stylesheet">-->
 
-        <title>Laravel</title>
+        <title>Fundus</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">

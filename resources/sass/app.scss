@@ -6,3 +6,52 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+
+.login-body{
+  background: linear-gradient(90deg, #CF2D25 50%, #FFF 50%);
+}
+
+.circle {
+  border: 3px solid #CF2D25;
+  border-radius: 50%;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  z-index: 2000;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  *.login {
+    color: white;
+  }
+}
+
+.card-row {
+  margin-top: 50px;
+}
+
+.form-group input {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.btn {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.btn-register {
+  background-color: #CF2D25;
+  border: none;
+  color: white;
+}
+
+.btn-link {
+  color: white;
+}
+
+.login-save, .login-title {
+  color: white;
+}
