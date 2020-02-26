@@ -47,9 +47,9 @@
                 Course: {{$course->name}} <br><br>
 
                 @foreach($modules as $module)
-                <div class="mt-5">
 
-                Modulname: {{$module->name}}<br>
+                <div class="mt-5 module-card col-md-5">
+                <b>{{$module->name}}</b><br>
                   @foreach($lessons as $lesson)
                     @if($lesson->moduleid == $module->id)
                       <a href="/{{$lesson->id}}/show/zusammenfassung">{{$lesson->lessonname}}</a>, {{$lesson->professorname}}<br>
