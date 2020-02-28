@@ -27,8 +27,8 @@
 @include('topbar')
 
 
-<div class="container">
-    <div class="row justify-content-center">
+
+    <div class="card-container">
         <div class="col-md-8">
             <div>
               <div>
@@ -61,5 +61,5 @@
             </div>
         </div>
     </div>
-</div>
+
 </body>
