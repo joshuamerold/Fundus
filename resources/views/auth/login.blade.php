@@ -15,7 +15,12 @@
 
 @include('inc.messages')
 <body class="login-body">
-  <div class="circle">
+  <div class="logo-position">
+    <div class="circle">
+      <div class="logo text-center my-auto">
+        Fundus
+      </div>
+    </div>
   </div>
   <div class="row justify-content-around card-row">
       <div class="col-md-3">
