@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Fundus') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -24,72 +24,37 @@
 <body class="home-body">
 
 @include('sidebar')
+@include('topbar')
 
-
-<div class="login-logout">
-  @guest
-    <li class="nav-item">
-        <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-    </li>
-    @if (Route::has('register'))
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-        </li>
-    @endif
-@else
-    <li class="nav-item dropdown">
-        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-            {{ Auth::user()->name }} <span class="caret"></span>
-        </a>
-
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                {{ __('Logout') }}
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        </div>
-    </li>
-@endguest
-</div>
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    You are logged in!
+            <div>
+              <div>
+                <button class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="credits"></span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                  <li><a href="/add/module">Modul hinzufügen</a></li>
+		              <li><a href="/add/lesson">Lehrveranstaltung hinzufügen</a></li>
                 </div>
+              </div>
 
                 @include('inc.messages')
-                <a href="/profile/{{$user->username}}">Profil anzeigen</a>
-                <a href="/add/module">Modul hinzufügen</a>
-                <a href="/add/lesson">Lehrveranstaltung hinzufügen</a>
-
-                Name: {{$user->username}} <br>
-                Course: {{$course->name}} <br><br>
+                <!-- <a href="/add/module">Modul hinzufügen</a>
+                <a href="/add/lesson">Lehrveranstaltung hinzufügen</a> -->
 
                 @foreach($modules as $module)
 
-                <div class="mt-5 module-card col-md-5">
-                <b>{{$module->name}}</b><br>
-                  @foreach($lessons as $lesson)
-                    @if($lesson->moduleid == $module->id)
-                      <a href="/{{$lesson->id}}/show/zusammenfassung">{{$lesson->lessonname}}</a>, {{$lesson->professorname}}<br>
-                    @endif
-                  @endforeach
+                <div class="mt-3 module-card col-md-5">
+                    <b>{{$module->name}}</b><br>
+                    <hr>
+                    @foreach($lessons as $lesson)
+                      @if($lesson->moduleid == $module->id)
+                        <a href="/{{$lesson->id}}/show/zusammenfassung">{{$lesson->lessonname}}</a>, {{$lesson->professorname}}<br>
+                      @endif
+                    @endforeach
+
                 </div>
                 @endforeach
                 <!-- ->with('users',$user)->with('courses', $courses)->with('modules', $modules)->with('lessons', $lessons); -->
@@ -97,5 +62,4 @@
         </div>
     </div>
 </div>
-
 </body>
