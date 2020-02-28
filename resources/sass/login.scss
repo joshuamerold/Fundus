@@ -1,0 +1,62 @@
+
+.login-body{
+  background: linear-gradient(90deg, #CF2D25 50%, #FFF 50%);
+}
+
+.logo-position {
+    text-align: center;
+    align-self: center;
+}
+
+.circle {
+  border: 3px solid $red;
+  border-radius: 50%;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  position: absolute;
+  z-index: 2000;
+  margin: 40px auto 0px auto;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.logo {
+  display: inline-block;
+}
+
+h2 {
+  text-align: center;
+  *.login {
+    color: white;
+  }
+}
+
+.card-row {
+  margin-top: 50px;
+}
+
+.form-group input {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.btn {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.btn-register {
+  background-color: $red;
+  border: none;
+  color: white;
+}
+
+.btn-link {
+  color: white;
+}
+
+.login-save, .login-title {
+  color: white;
+}
