@@ -10886,29 +10886,34 @@ a.text-dark:focus {
 
 .login-body {
   background: linear-gradient(90deg, #CF2D25 50%, #FFF 50%);
+  width: 100%;
 }
 
-.logo-position {
-  text-align: center;
-  align-self: center;
+.outer {
+  align-items: center;
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  max-width: 100%;
+  overflow: auto;
+  padding: 50px;
+  z-index: 1000;
 }
 
-.circle {
-  border: 3px solid #CF2D25;
-  border-radius: 50%;
-  background-color: white;
-  height: 250px;
-  width: 250px;
-  position: absolute;
-  z-index: 2000;
-  margin: 40px auto 0px auto;
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+svg {
+  height: 100%;
 }
 
-.logo {
-  display: inline-block;
+circle {
+  fill: #fff;
+  stroke: #CF2D25;
+  stroke-width: 3px;
+}
+
+text {
+  fill: #000;
+  font-size: 2rem;
+  font-family: sans-serif;
 }
 
 h2 {
@@ -10953,6 +10958,10 @@ h2 *.login {
   box-shadow: 0px 5px 30px 5px #cccccc;
   border-radius: 10px;
   padding: 8px 16px;
+}
+
+.card-container {
+  margin-left: 250px;
 }
 
 span.credits {
