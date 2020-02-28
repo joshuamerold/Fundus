@@ -2,4 +2,14 @@
   background-color: white;
   box-shadow: 0px 5px 30px 5px rgba(204,204,204,1);
   border-radius: 10px;
+  padding: 8px 16px;
+}
+
+span.credits {
+    background: url('resources/assets/Add_Plus.svg');
+    background-size: contain;
+    cursor: pointer;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
 }
