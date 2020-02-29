@@ -11,9 +11,9 @@
         <div class="col-md-8">
             <div>
               <div>
-                <button class="fa fa-caret-down button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="credits"></span>
-                </button>
-                <div class="dropdown-menu fa-caret-down" aria-labelledby="dropdownMenu2">
+                <i class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="add-module"></span>
+                </i>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="/add/module">Modul hinzufügen</a></li>
 		              <li><a href="/add/lesson">Lehrveranstaltung hinzufügen</a></li>
                 </div>
@@ -35,7 +35,7 @@
                         <a href="#">Modul bearbeiten</a>
                         <a href="#">Modul löschen</a>
                       </div>
-                    </div>                    
+                    </div>
                   </div>
                     <hr>
                     @foreach($lessons as $lesson)
