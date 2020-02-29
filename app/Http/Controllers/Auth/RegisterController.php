@@ -88,6 +88,7 @@ class RegisterController extends Controller
       $user->password = Hash::make($request->register_password);
       $user->email = $request->register_email;
       $user->courseid = $request->register_courseid;
+      $user->coursename = 'ON18';
       $user->save();
       return redirect('/login')->with('success', 'Bitte melde dich an!');
     }

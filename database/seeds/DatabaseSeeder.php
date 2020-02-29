@@ -15,13 +15,15 @@ class DatabaseSeeder extends Seeder
           'username' =>'admin',
           'email' => 'admin@admin.de',
           'password' => Hash::make('admin'),
-          'courseid' => 1
+          'courseid' => 1,
+          'coursename' => 'ON18'
         ]);
         App\User::create([
           'username' =>'noadmin',
           'email' => 'noadmin@noadmin.de',
           'password' => Hash::make('noadmin'),
-          'courseid' => 1
+          'courseid' => 1,
+          'coursename' => 'ON18'
         ]);
 
         App\Course::create([
