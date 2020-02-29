@@ -1,5 +1,10 @@
-<a href="/{{$currentLesson->id}}/add/File">neue Datei hochladen</a>
+@include('standards/head')
 
+@include('sidebar')
+@include('topbar')
+
+<a href="/{{$currentLesson->id}}/add/File">neue Datei hochladen</a>
+Zusammenfassungen
 <a href="/{{$currentLesson->id}}/show/altklausur">Altklausuren</a>
 <a href="/{{$currentLesson->id}}/show/karteikarte">Karteikarten</a>
 

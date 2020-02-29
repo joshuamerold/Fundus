@@ -1,6 +1,12 @@
+@include('standards/head')
+
+@include('sidebar')
+@include('topbar')
+
 <a href="/{{$currentLesson->id}}/add/File">neue Datei hochladen</a>
 
-<a href="/{{$currentLesson->id}}/show/zusammenfassung">Zusammenfassung</a>
+<a href="/{{$currentLesson->id}}/show/zusammenfassung">Zusammenfassungen</a>
+Altklausuren
 <a href="/{{$currentLesson->id}}/show/karteikarte">Karteikarten</a>
 
 <table>
