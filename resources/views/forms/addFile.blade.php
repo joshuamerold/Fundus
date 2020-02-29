@@ -1,4 +1,6 @@
-<h1>neue File hinzufügen</h1>
+@include('standards/head')
+
+<b>neue Datei hinzufügen</b>
 <form class="" action="File/store" method="post" enctype="multipart/form-data">
   @csrf
     <input type="file" name="fileToUpload" id="fileToUpload" value="">

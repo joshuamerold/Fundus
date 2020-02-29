@@ -10973,7 +10973,7 @@ h2 *.login {
   padding-right: 8px;
 }
 
-span.credits {
+span.add-module {
   background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
   background-size: contain;
   cursor: pointer;
@@ -11083,6 +11083,10 @@ span.credits {
   color: #fff;
 }
 
+.sidebar-card .fa-plus:before {
+  margin-left: -7px;
+}
+
 .sidebar-card table {
   width: 100%;
 }
@@ -11108,5 +11112,19 @@ span.credits {
 .form-container {
   margin-left: 250px;
   padding-left: 15px;
+}
+
+files-body {
+  margin-left: 250px;
+  padding-left: 10px;
+}
+
+.button-add-file {
+  background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }
 
