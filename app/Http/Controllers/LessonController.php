@@ -24,6 +24,17 @@ class LessonController extends Controller
     return view('lessons.'.$type)->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user)->with('courses', $courses)->with('allUsers', $allUsers);
   }
 
+  public function showAllContent($id){
+    $user = Auth::user();
+    $allUsers = User::all();
+    $files = File::all()->where('lessonid', $id);
+    $creators = User::all();
+    $currentLesson = Lesson::all()->where('id', $id)->first();
+    $courses = Course::all();
+
+    return view('lessons.allCategories')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user)->with('courses', $courses)->with('allUsers', $allUsers);
+  }
+
   public function show(){
 
     $user = Auth::user();

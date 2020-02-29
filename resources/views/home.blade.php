@@ -35,12 +35,12 @@
                         <a href="#">Modul bearbeiten</a>
                         <a href="#">Modul löschen</a>
                       </div>
-                    </div>                    
+                    </div>
                   </div>
                     <hr>
                     @foreach($lessons as $lesson)
                       @if($lesson->moduleid == $module->id)
-                        <a href="/{{$lesson->id}}/show/zusammenfassung">{{$lesson->lessonname}}</a><br>
+                        <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a><br>
                         <p>{{$lesson->professorname}}</p>
                       @endif
                     @endforeach

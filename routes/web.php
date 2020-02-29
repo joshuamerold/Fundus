@@ -28,6 +28,9 @@ Route::get('/{lesson}/show/{zusammenfassung}', 'LessonController@showContent')->
 Route::get('/{lesson}/show/{altklausur}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/{karteikarte}', 'LessonController@showContent')->middleware('auth');
 
+Route::get('/{lesson}/show/', 'LessonController@showAllContent')->middleware('auth');
+
+
 //Lessonsthings
 Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
 Route::post('/add/lesson/create', 'LessonController@add')->middleware('auth');

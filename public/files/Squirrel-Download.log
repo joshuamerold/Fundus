@@ -1,0 +1,336 @@
+﻿[04.02.20 10:27:00] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[04.02.20 10:27:00] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[04.02.20 10:27:01] info: CheckForUpdateImpl: Generated new staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[04.02.20 10:27:01] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[04.02.20 10:27:01] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.43.0&os_version=10.0.18363&id=atom&localVersion=1.43.0&arch=amd64
+[04.02.20 10:27:02] info: Program: Finished Squirrel Updater
+[05.02.20 09:07:31] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:07:31] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:07:31] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[05.02.20 09:07:32] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:07:32] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.43.0&os_version=10.0.18363&id=atom&localVersion=1.43.0&arch=amd64
+[05.02.20 09:07:34] info: Program: Finished Squirrel Updater
+[05.02.20 09:34:28] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:34:28] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:34:28] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[05.02.20 09:34:28] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 09:34:29] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.43.0&os_version=10.0.18363&id=atom&localVersion=1.43.0&arch=amd64
+[05.02.20 09:34:31] info: Program: Finished Squirrel Updater
+[05.02.20 13:12:14] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 13:12:14] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 13:12:14] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[05.02.20 13:12:14] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[05.02.20 13:12:14] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.43.0&os_version=10.0.18363&id=atom&localVersion=1.43.0&arch=amd64
+[05.02.20 13:12:15] info: Program: Finished Squirrel Updater
+[11.02.20 10:07:54] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[11.02.20 10:07:54] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[11.02.20 10:07:54] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[11.02.20 10:07:54] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.43.0&os_version=10.0.18363
+[11.02.20 10:07:55] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.43.0&os_version=10.0.18363&id=atom&localVersion=1.43.0&arch=amd64
+[11.02.20 10:07:56] info: FileDownloader: Downloading file: https://atom.io/api/updates-x64/atom-1.44.0-delta.nupkg
+[11.02.20 10:08:23] warn: UpdateInfo: Couldn't get release notes for:atom-1.44.0-delta.nupkg: System.Exception: Invalid 'ReleaseNotes' value in nuspec file at 'C:\Users\Fundus\AppData\Local\atom\packages\atom-1.44.0-delta.nupkg'
+   bei Squirrel.ReleaseEntry.GetReleaseNotes(String packageDirectory)
+   bei Squirrel.UpdateInfo.<FetchReleaseNotes>b__19_0(ReleaseEntry x)
+[11.02.20 10:08:23] info: Program: Finished Squirrel Updater
+[17.02.20 09:14:11] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 09:14:11] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 09:14:12] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[17.02.20 09:14:12] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 09:14:12] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[17.02.20 09:14:13] info: Program: Finished Squirrel Updater
+[17.02.20 10:30:19] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 10:30:19] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 10:30:19] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[17.02.20 10:30:20] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 10:30:21] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[17.02.20 10:30:23] info: Program: Finished Squirrel Updater
+[17.02.20 12:57:04] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 12:57:04] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 12:57:04] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[17.02.20 12:57:04] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[17.02.20 12:57:04] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[17.02.20 12:57:05] info: Program: Finished Squirrel Updater
+[23.02.20 17:56:15] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 17:56:15] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 17:56:15] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[23.02.20 17:56:15] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 17:56:15] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[23.02.20 17:56:17] info: Program: Finished Squirrel Updater
+[23.02.20 21:56:14] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 21:56:14] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 21:56:14] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[23.02.20 21:56:14] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 21:56:14] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[23.02.20 21:56:15] info: Program: Finished Squirrel Updater
+[23.02.20 22:44:58] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 22:44:58] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 22:44:58] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[23.02.20 22:44:58] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[23.02.20 22:44:58] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[23.02.20 22:44:59] info: Program: Finished Squirrel Updater
+[24.02.20 10:48:12] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 10:48:12] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 10:48:13] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[24.02.20 10:48:13] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 10:48:14] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[24.02.20 10:51:00] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64: System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 10:51:00] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64
+[24.02.20 11:00:53] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64: System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unbekannter Fehler beim Empfangen.. ---> System.IO.IOException: Von der Übertragungsverbindung können keine Daten gelesen werden: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ---> System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+   bei System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   bei System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:00:53] info: CheckForUpdateImpl: Download resulted in WebException (returning blank release list): System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unbekannter Fehler beim Empfangen.. ---> System.IO.IOException: Von der Übertragungsverbindung können keine Daten gelesen werden: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ---> System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+   bei System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   bei System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.Security._SslStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.TlsStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.PooledStream.EndRead(IAsyncResult asyncResult)
+   bei System.Net.Connection.ReadCallback(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+[24.02.20 11:00:53] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[24.02.20 11:09:56] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64: System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Die Verbindung wurde unerwartet getrennt..
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:09:56] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64
+[24.02.20 11:11:25] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64: System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden.. ---> System.IO.IOException: Von der Übertragungsverbindung können keine Daten gelesen werden: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ---> System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+   bei System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   bei System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.TlsStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.PooledStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.ConnectStream.WriteHeadersCallback(IAsyncResult ar)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:11:25] info: CheckForUpdateImpl: Download resulted in WebException (returning blank release list): System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden.. ---> System.IO.IOException: Von der Übertragungsverbindung können keine Daten gelesen werden: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ---> System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+   bei System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   bei System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.TlsStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.PooledStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.ConnectStream.WriteHeadersCallback(IAsyncResult ar)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+[24.02.20 11:11:25] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[24.02.20 11:18:46] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64: System.Net.WebException: Die Verbindung mit dem Remoteserver kann nicht hergestellt werden. ---> System.Net.Sockets.SocketException: Ein Verbindungsversuch ist fehlgeschlagen, da die Gegenstelle nach einer bestimmten Zeitspanne nicht richtig reagiert hat, oder die hergestellte Verbindung war fehlerhaft, da der verbundene Host nicht reagiert hat 151.101.112.133:443
+   bei System.Net.Sockets.Socket.InternalEndConnect(IAsyncResult asyncResult)
+   bei System.Net.Sockets.Socket.EndConnect(IAsyncResult asyncResult)
+   bei System.Net.ServicePoint.ConnectSocketInternal(Boolean connectFailure, Socket s4, Socket s6, Socket& socket, IPAddress& address, ConnectSocketState state, IAsyncResult asyncResult, Exception& exception)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:18:46] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64
+[24.02.20 11:18:57] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64: System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:18:57] info: CheckForUpdateImpl: Download resulted in WebException (returning blank release list): System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+[24.02.20 11:18:57] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[24.02.20 11:28:48] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64: System.Net.WebException: Die zugrunde liegende Verbindung wurde geschlossen: Unerwarteter Fehler beim Senden.. ---> System.IO.IOException: Von der Übertragungsverbindung können keine Daten gelesen werden: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ---> System.Net.Sockets.SocketException: Eine vorhandene Verbindung wurde vom Remotehost geschlossen
+   bei System.Net.Sockets.Socket.EndReceive(IAsyncResult asyncResult)
+   bei System.Net.Sockets.NetworkStream.EndRead(IAsyncResult asyncResult)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.TlsStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.PooledStream.EndWrite(IAsyncResult asyncResult)
+   bei System.Net.ConnectStream.WriteHeadersCallback(IAsyncResult ar)
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:28:48] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64
+[24.02.20 11:28:59] warn: IEnableLogger: Failed to download url: https://atom.io/api/updates-x64/releases?version=1.44.0&os_version=10.0.18363&id=atom&localversion=1.44.0&arch=amd64: System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+[24.02.20 11:28:59] info: CheckForUpdateImpl: Download resulted in WebException (returning blank release list): System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+[24.02.20 11:28:59] fatal: Finished with unhandled exception: System.AggregateException: Mindestens ein Fehler ist aufgetreten. ---> System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Update.Program.<Download>d__7.MoveNext()
+   --- Ende der internen Ausnahmestapelüberwachung ---
+   bei System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   bei System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   bei System.Threading.Tasks.Task`1.get_Result()
+   bei Squirrel.Update.Program.executeCommandLine(String[] args)
+   bei Squirrel.Update.Program.main(String[] args)
+---> (Interne Ausnahme #0) System.Net.WebException: Der Remotename konnte nicht aufgelöst werden: 'atom.io'
+   bei System.Net.HttpWebRequest.EndGetResponse(IAsyncResult asyncResult)
+   bei System.Net.WebClient.GetWebResponse(WebRequest request, IAsyncResult result)
+   bei System.Net.WebClient.DownloadBitsResponseCallback(IAsyncResult result)
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Utility.<LogIfThrows>d__43`1.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.FileDownloader.<DownloadUrl>d__3.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.ValidateEnd(Task task)
+   bei Squirrel.UpdateManager.CheckForUpdateImpl.<CheckForUpdate>d__2.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.UpdateManager.<CheckForUpdate>d__7.MoveNext()
+--- Ende der Stapelüberwachung vom vorhergehenden Ort, an dem die Ausnahme ausgelöst wurde ---
+   bei System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   bei System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   bei Squirrel.Update.Program.<Download>d__7.MoveNext()<---
+
+[24.02.20 14:48:11] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 14:48:11] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 14:48:11] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[24.02.20 14:48:11] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[24.02.20 14:48:11] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[24.02.20 14:48:12] info: Program: Finished Squirrel Updater
+[25.02.20 16:33:10] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[25.02.20 16:33:10] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[25.02.20 16:33:10] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[25.02.20 16:33:10] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[25.02.20 16:33:10] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[25.02.20 16:33:11] info: Program: Finished Squirrel Updater
+[29.02.20 09:53:23] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 09:53:23] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 09:53:23] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[29.02.20 09:53:23] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 09:53:23] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[29.02.20 09:53:24] info: Program: Finished Squirrel Updater
+[29.02.20 10:50:02] info: Program: Starting Squirrel Updater: --download https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 10:50:02] info: Program: Fetching update information, downloading from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 10:50:03] info: CheckForUpdateImpl: Using existing staging user ID: 608df3b9-2156-5b8f-8d1d-1207844deb67
+[29.02.20 10:50:03] info: CheckForUpdateImpl: Downloading RELEASES file from https://atom.io/api/updates-x64?version=1.44.0&os_version=10.0.18363
+[29.02.20 10:50:03] info: FileDownloader: Downloading url: https://atom.io/api/updates-x64/RELEASES?version=1.44.0&os_version=10.0.18363&id=atom&localVersion=1.44.0&arch=amd64
+[29.02.20 10:50:05] info: Program: Finished Squirrel Updater
