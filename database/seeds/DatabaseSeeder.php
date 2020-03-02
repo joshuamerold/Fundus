@@ -65,7 +65,7 @@ class DatabaseSeeder extends Seeder
           'name' =>'Web Usability Semester3 zusammendfa.pdf',
           'extension' => 'pdf',
           'path' => '/files/Web Usability Semester3 zusammendfa.pdf',
-          'type' => 'zusammenfassungen',
+          'type' => 'zusammenfassung',
           'lessonid' => 3,
           'creatoruserid' => 1,
           'courseid' => 1,
@@ -75,7 +75,7 @@ class DatabaseSeeder extends Seeder
           'name' =>'Ajax.pdf',
           'extension' => 'pdf',
           'path' => '/files/Ajax.pdf',
-          'type' => 'zusammenfassungen',
+          'type' => 'zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 1,
           'courseid' => 1,
@@ -85,7 +85,7 @@ class DatabaseSeeder extends Seeder
           'name' =>'Java.pdf',
           'extension' => 'pdf',
           'path' => '/files/Java.pdf',
-          'type' => 'zusammenfassungen',
+          'type' => 'zusammenfassung',
           'lessonid' => 1,
           'creatoruserid' => 2,
           'courseid' => 1,
@@ -106,6 +106,17 @@ class DatabaseSeeder extends Seeder
           'content' =>'Das ist Post NR.3',
           'userid' => 1,
           'fileid' => 1,
+        ]);
+
+        App\Date::create([
+          'name' =>'Starzmann Abgabe Redesign',
+          'date' => '29.03.2020',
+          'day' => 29,
+          'month' => 03,
+          'year' => 2020,
+          'creatoruserid' => 1,
+          'courseid' => 1,
+          'year' => 2020
         ]);
     }
 }
