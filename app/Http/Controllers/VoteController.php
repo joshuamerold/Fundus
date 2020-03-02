@@ -11,7 +11,7 @@ use App\File;
 use App\Course;
 use App\Vote;
 
-class VoteController extends Controller
+class VoteController extends NavbarController
 {
     public function up($id){
 

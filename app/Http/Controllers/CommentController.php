@@ -11,7 +11,7 @@ use App\File;
 use App\Course;
 use App\Vote;
 
-class CommentController extends Controller
+class CommentController extends NavbarController
 {
     public function show($id){
 

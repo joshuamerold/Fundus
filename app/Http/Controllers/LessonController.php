@@ -11,7 +11,7 @@ use App\Module;
 use App\Lesson;
 use App\File;
 
-class LessonController extends Controller
+class LessonController extends NavbarController
 {
   public function showContent($id, $type){
     $user = Auth::user();

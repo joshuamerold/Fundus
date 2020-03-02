@@ -14,7 +14,7 @@ use App\Module;
 use App\Lesson;
 use App\File;
 
-class ProfileController extends Controller
+class ProfileController extends NavbarController
 {
     public function showProfile($username){
         $currentUser = Auth::user();

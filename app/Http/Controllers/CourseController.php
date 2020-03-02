@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Module;
 use App\User;
 
-class CourseController extends Controller
+class CourseController extends NavbarController
 {
     //
 }
