@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 
-class PostController extends Controller
+class PostController extends NavbarController
 {
     //
 }

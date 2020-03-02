@@ -57,17 +57,21 @@
             </div>
           </div>
           <hr class="hr-side">
+          @foreach($dates as $date)
+          @if($date->courseid === Auth::user()->courseid)
           <table>
             <tr>
               <td>
-                WebDesign
+                {{$date->name}}
               </td>
               <td class="date">
-                06.03.2020
+                {{$date->date}}
               </td>
             </tr>
           </table>
-
+          @endif
+          @endforeach
+          <a href="/add/date">Hier Datum hinzufügen</a>
         </div>
       </li>
     </ul>

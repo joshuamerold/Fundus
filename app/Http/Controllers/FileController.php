@@ -14,7 +14,7 @@ use App\Module;
 use App\Lesson;
 use App\File;
 
-class FileController extends Controller
+class FileController extends NavbarController
 {
   public function download($id)
   {

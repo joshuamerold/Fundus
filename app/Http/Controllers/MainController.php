@@ -10,7 +10,7 @@ use App\Course;
 use App\Module;
 use App\Lesson;
 
-class MainController extends Controller
+class MainController extends NavbarController
 {
     public function showContent(){
       $user = Auth::user();

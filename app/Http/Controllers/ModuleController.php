@@ -11,7 +11,7 @@ use App\Module;
 use App\Lesson;
 
 
-class ModuleController extends Controller
+class ModuleController extends NavbarController
 {
 
 

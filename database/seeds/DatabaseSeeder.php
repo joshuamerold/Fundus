@@ -107,5 +107,16 @@ class DatabaseSeeder extends Seeder
           'userid' => 1,
           'fileid' => 1,
         ]);
+
+        App\Date::create([
+          'name' =>'Starzmann Abgabe Redesign',
+          'date' => '29.03.2020',
+          'day' => 29,
+          'month' => 03,
+          'year' => 2020,
+          'creatoruserid' => 1,
+          'courseid' => 1,
+          'year' => 2020
+        ]);
     }
 }
