@@ -46,8 +46,16 @@
     <ul class="nav nav-pills nav-sidebar flex-column">
       <li class="nav-item">
         <!-- Sidebar Karten -->
+
         <div class="sidebar-card">
-          <b>Aktuelle Fristen</b><br>
+          <div class="row">
+            <div class="col-md-11">
+              <b>Aktuelle Fristen</b><br>
+            </div>
+            <div class="justify-content-end add-date">
+              <a href="#" class="fa fa-plus"></a> <!-- hier neue Kalendereinträge einfügen --> 
+            </div>
+          </div>
           <hr class="hr-side">
           @foreach($dates as $date)
           @if($date->courseid === Auth::user()->courseid)
