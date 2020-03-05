@@ -29,9 +29,11 @@
 
 
 <script type="text/javascript">
+var date = new Date();
+date.setDate(date.getDate());
 
     $('.date').datepicker({
-
+        startDate: date,
         locale: 'de',
        format: 'dd.mm.yyyy'
 
