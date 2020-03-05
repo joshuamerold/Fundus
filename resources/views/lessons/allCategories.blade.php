@@ -1,4 +1,5 @@
 <!-- Zusammenfassung-Part -->
+<a href="/{{$currentLesson->id}}/add/File" class="button-add-file">FIle hinzufügen</a>
 <table>
   <thead>
     <th>Typ</th>
