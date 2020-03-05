@@ -53,48 +53,59 @@ class FileController extends NavbarController
           'fileToUpload' => 'required'
         ]);
 
-    $user = Auth::user();
-    $userid = $user->id;
+    $filename = $request->fileToUpload;
+    $extension = $filename->getClientOriginalExtension();
 
-    $courseid = $user->courseid;
+    $arr_extensions=Array('pdf', 'txt', 'jpeg', 'jpg', 'png', 'doc', 'docx', 'ppt', 'pptx', 'ai', 'indd', 'psd', 'xd');
+    foreach ($arr_extensions as $goodExtension) {
+      if($goodExtension == $extension){
 
-      //$eingabe nimmt die hochgeladene Datei entgegnen
-      $eingabe = $request->fileToUpload;
+        $user = Auth::user();
+        $userid = $user->id;
 
-      //schreibt den Namen der Datei in $filename
-      $filename = $eingabe->getClientOriginalName();
+        $courseid = $user->courseid;
 
-      //gibt den Pfad für Speicherung des Bildes an (nicht public)
-      $file_path = public_path() . "/files/" .$filename;
+        //$eingabe nimmt die hochgeladene Datei entgegnen
+        $eingabe = $request->fileToUpload;
 
-      //Erstellt Datei in Datenbank
-      //Object von File (Model) wird erstellt
-      $file = new File;
+        //schreibt den Namen der Datei in $filename
+        $filename = $eingabe->getClientOriginalName();
 
-      //Daten werden den Eigenschaften des Models zugewiesen
-      $file->name = $eingabe->getClientOriginalName();
-      $file->extension = $eingabe->getClientOriginalExtension();
-      // $file->size = $eingabe->getClientSize()/1000;
-      $file->path = "/files/".$filename;
-      $file->type = $request->type;
-      $file->lessonid = $id;
-      $file->creatoruserid = $userid;
-      $file->courseid = $courseid;
-      $file->voting = 0;
+        //gibt den Pfad für Speicherung des Bildes an (nicht public)
+        $file_path = public_path() . "/files/" .$filename;
 
-      //mit save() werden die Einträge an die Datenbank übermittelt und gespeichert
-      $file->save();
+        //Erstellt Datei in Datenbank
+        //Object von File (Model) wird erstellt
+        $file = new File;
 
-      //wurde der "submit" Button geklickt wird die Datei in das gewünschte Verzeichnes geladen
+        //Daten werden den Eigenschaften des Models zugewiesen
+        $file->name = $eingabe->getClientOriginalName();
+        $file->extension = $eingabe->getClientOriginalExtension();
+        // $file->size = $eingabe->getClientSize()/1000;
+        $file->path = "/files/".$filename;
+        $file->type = $request->type;
+        $file->lessonid = $id;
+        $file->creatoruserid = $userid;
+        $file->courseid = $courseid;
+        $file->voting = 0;
 
-      move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_path);
+        //mit save() werden die Einträge an die Datenbank übermittelt und gespeichert
+        $file->save();
+
+        //wurde der "submit" Button geklickt wird die Datei in das gewünschte Verzeichnes geladen
+
+        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $file_path);
 
 
-      //Durch redirect wird man auf eine gewünschte Seite geleitet.
-      // mit ->with() habe ich dem View gewünschte Mitteilungen(Hier eine success-Meldung wenn es geklappt hat) übergeben
-      return redirect('/'.$id.'/show')->with('success', 'Datei Hochgeladen!');
+        //Durch redirect wird man auf eine gewünschte Seite geleitet.
+        // mit ->with() habe ich dem View gewünschte Mitteilungen(Hier eine success-Meldung wenn es geklappt hat) übergeben
+        return redirect('/'.$id.'/show')->with('success', 'Datei Hochgeladen!');
 
-      //Seite wird geladen...
+        //Seite wird geladen...
+
+      }
+    }
+    return redirect('/'.$id.'/add/File')->with('error', 'kein gültiges Dateiformat!');
   }
 
   public function destroy($type, $lessonID, $fileID)
