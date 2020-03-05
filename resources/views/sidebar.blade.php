@@ -53,7 +53,7 @@
               <b>Aktuelle Fristen</b><br>
             </div>
             <div class="justify-content-end add-date">
-              <a href="#" class="fa fa-plus"></a> <!-- hier neue Kalendereinträge einfügen --> 
+              <a href="#" class="fa fa-plus"></a> <!-- hier neue Kalendereinträge einfügen -->
             </div>
           </div>
           <hr class="hr-side">
@@ -66,6 +66,13 @@
               </td>
               <td class="date">
                 {{$date->date}}
+                @if($date->creatoruserid === Auth::user()->id)
+                <form class="" action="/{{$date->id}}/delete" method="post">
+                  @csrf
+                  <input type="submit" name="" value="del">
+                  <input type="text" name="currentURL" value="{{url()->current()}} " style="display:none;">
+                </form>
+                @endif
               </td>
             </tr>
           </table>
