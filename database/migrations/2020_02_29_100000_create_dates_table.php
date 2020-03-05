@@ -23,6 +23,7 @@ class CreateDatesTable extends Migration
           $table->integer('creatoruserid');
           $table->integer('courseid');
           $table->integer('lessonid')->nullable();
+          $table->integer('datecalc');
           $table->timestamps();
         });
     }
