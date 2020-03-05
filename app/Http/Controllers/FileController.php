@@ -65,7 +65,7 @@ class FileController extends NavbarController
       $filename = $eingabe->getClientOriginalName();
 
       //gibt den Pfad für Speicherung des Bildes an (nicht public)
-      $file_path = storage_path() . "/../public/files/" .$filename;
+      $file_path = public_path() . "/files/" .$filename;
 
       //Erstellt Datei in Datenbank
       //Object von File (Model) wird erstellt
@@ -92,7 +92,7 @@ class FileController extends NavbarController
 
       //Durch redirect wird man auf eine gewünschte Seite geleitet.
       // mit ->with() habe ich dem View gewünschte Mitteilungen(Hier eine success-Meldung wenn es geklappt hat) übergeben
-      return redirect('/'.$id.'/show/'.$request->type)->with('success', 'Datei Hochgeladen!');
+      return redirect('/'.$id.'/show')->with('success', 'Datei Hochgeladen!');
 
       //Seite wird geladen...
   }
