@@ -4,31 +4,36 @@
 
 <script>
 $(document).ready(function () {
-$('#dtBasicExample').DataTable();
+$('#dtBasicExample').DataTable({
+"ordering": false // false to disable sorting (or any other option)
+});
 $('.dataTables_length').addClass('bs-select');
 });
 </script>
 
-<body class="allCategories-body">
-  <a href="/{{$currentLesson->id}}/add/File" class="button-add-file"></a> <!--  -->
 
+<body class="allCategories-body">
   <!--TABS ab hier -->
   <div class="row">
     <div class="col-md-12">
       <ul class=" nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Zusammenfassungen</a>
+          <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Zusammenfassungen</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Altklausuren</a>
+          <a class="nav-link" id="old-test-tab" data-toggle="tab" href="#old-test" role="tab" aria-controls="old-test" aria-selected="false">Altklausuren</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Karteikarten</a>
+          <a class="nav-link" style="color: white;" id="index-cards-tab" data-toggle="tab" href="#index-cards" role="tab" aria-controls="index-cards" aria-selected="false">Karteikarten</a>
         </li>
+        <div class="button-div">
+        <a href="/{{$currentLesson->id}}/add/File" class="button-add-file"></a>
+        </div>
+
       </ul>
       <!-- Tab Zusammenfassungen -->
       <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
           <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <th class="th-sm">Typ</th>
@@ -84,9 +89,8 @@ $('.dataTables_length').addClass('bs-select');
             @endforeach
           </table>
         </div>
-
         <!-- Tab Altklausuren -->
-        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="tab-pane fade" id="old-test" role="tabpanel" aria-labelledby="old-test-tab">
           <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <th>Typ</th>
@@ -144,7 +148,7 @@ $('.dataTables_length').addClass('bs-select');
           </table>
         </div>
         <!-- Tab Karteikarten -->
-        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+        <div class="tab-pane fade" id="index-cards" role="tabpanel" aria-labelledby="index-cards-tab">
           <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
               <th>Typ</th>
