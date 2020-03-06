@@ -61,10 +61,10 @@
           @if($date->courseid === Auth::user()->courseid)
           <table>
             <tr>
-              <td>
+              <td class="date-name">
                 {{$date->name}}
               </td>
-              <td class="date">
+              <td class="date-date">
                 {{$date->date}}
                 @if($date->creatoruserid === Auth::user()->id)
               </td>
