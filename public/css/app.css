@@ -11010,7 +11010,6 @@ span.add-module {
   position: fixed;
   top: 0;
   background-color: #CF2D25;
-  box-shadow: 0px 5px 30px 5px #cccccc;
   width: 250px;
 }
 
@@ -11026,7 +11025,6 @@ span.add-module {
 
 .user-panel,
 .user-panel .info {
-  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -11126,5 +11124,36 @@ files-body {
   display: inline-block;
   height: 30px;
   width: 30px;
+}
+
+.allCategories-body {
+  margin-left: 250px;
+  padding: 0px 10px;
+}
+
+.inner-table {
+  background: white;
+}
+
+.button-add-file {
+  background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background-size: contain;
+  cursor: pointer;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: 0.5em;
 }
 
