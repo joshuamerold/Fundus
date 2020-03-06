@@ -17,6 +17,7 @@ class CreateModulesTable extends Migration
           $table->bigIncrements('id');
           $table->string('name')->nullable();
           $table->integer('courseid');
+          $table->integer('creatoruserid');
           $table->timestamps();
         });
     }

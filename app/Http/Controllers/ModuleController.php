@@ -25,8 +25,35 @@ class ModuleController extends NavbarController
     $module = new Module;
     $module->name = $request->form_modulename;
     $module->courseid = $currentCourse->id;
+    $module->creatoruserid = $currentUser->id;
     $module->save();
 
     return redirect('/home')->with('success', ' Modul erfolgreich angelegt :-)');
+  }
+
+  public function editShow($id){
+    $currentModule = Module::all()->where('id', $id)->first();
+    if(Auth::user()->id == $currentModule->id){
+        return view('forms.editModule')->with('currentModule', $currentModule);
+    }
+    return redirect('/home')->with('error', 'Du hast keine Berechtigungen für diese Aktion!');
+  }
+
+  public function edit(Request $request, $id){
+    $currentModule = Module::all()->where('id', $id)->first();
+
+    $currentModule->name = $request->name;
+    $currentModule->save();
+
+    return redirect('/home')->with('Modul erfolgreich bearbeitet!');
+  }
+
+  public function delete(Request $request, $id){
+    $currentModule = Module::all()->where('id', $id)->first();
+    if(Auth::user()->id == $currentModule->creatoruserid){
+      $currentModule->delete();
+      return redirect('/home')->with('success', 'Modul erfolgreich gelöscht!');
+    }
+    return redirect('/home')->with('error', 'Du hast keine Berechtigungen für diese Aktion!');
   }
 }

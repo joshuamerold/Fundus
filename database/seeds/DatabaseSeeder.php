@@ -35,11 +35,13 @@ class DatabaseSeeder extends Seeder
 
         App\Module::create([
           'name' => 'WebTech 1',
-          'courseid' => '1'
+          'courseid' => '1',
+          'creatoruserid' => '1'
         ]);
         App\Module::create([
           'name' =>'WebUsability1',
-          'courseid' => '1'
+          'courseid' => '1',
+          'creatoruserid' => '1'
         ]);
 
         App\Lesson::create([

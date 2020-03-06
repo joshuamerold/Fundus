@@ -29,13 +29,15 @@
                   <div class="row">
                     <div class="col-md-11"><b>{{$module->name}}</b><br>
                     </div>
+                    @if($module->creatoruserid == Auth::user()->id)
                     <div class="justify-content-end dropdown">
                       <i class="fa fa-caret-down"></i>
                       <div class="dropdown-content">
-                        <a href="#">Modul bearbeiten</a>
-                        <a href="#">Modul löschen</a>
+                        <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                        <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
                       </div>
                     </div>
+                    @endif
                   </div>
                     <hr>
                     @foreach($lessons as $lesson)

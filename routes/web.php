@@ -24,20 +24,21 @@ Route::post('/register/create', 'Auth\RegisterController@registerNEW');
 
 Route::get('/home', 'MainController@showContent')->middleware('auth');
 
+//Lessonsthings
 Route::get('/{lesson}/show/{zusammenfassung}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/{altklausur}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/{karteikarte}', 'LessonController@showContent')->middleware('auth');
-
 Route::get('/{lesson}/show/', 'LessonController@showAllContent')->middleware('auth');
-
-
-//Lessonsthings
 Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
 Route::post('/add/lesson/create', 'LessonController@add')->middleware('auth');
 
-
+//Modulethings
 Route::get('/add/module', 'ModuleController@show')->middleware('auth');
 Route::post('/add/module/create', 'ModuleController@add')->middleware('auth');
+Route::get('/edit/module/{module}', 'ModuleController@editShow')->middleware('auth');
+Route::post('/edit/module/{module}/store', 'ModuleController@edit')->middleware('auth');
+Route::post('/delete/module/{module}', 'ModuleController@delete')->middleware('auth');
+
 
 //Files Side
 Route::get('/download/{file}', 'FileController@download')->middleware('auth');
