@@ -10953,6 +10953,10 @@ h2 *.login {
   color: white;
 }
 
+.home-body {
+  margin-left: 250px;
+}
+
 .module-card {
   background-color: white;
   box-shadow: 0px 5px 30px 5px #cccccc;
@@ -10962,10 +10966,6 @@ h2 *.login {
 
 .module-card hr {
   margin: 0px 0px 5px 0px;
-}
-
-.card-container {
-  margin-left: 250px;
 }
 
 .card-container li {
@@ -11097,10 +11097,6 @@ span.add-module {
 
 .sidebar-card .date {
   text-align: right;
-}
-
-.navbar {
-  margin-left: 250px;
 }
 
 .fa-file-text {
