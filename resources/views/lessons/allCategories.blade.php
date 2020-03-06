@@ -14,8 +14,8 @@ $('.dataTables_length').addClass('bs-select');
 
 <body class="allCategories-body">
   <!--TABS ab hier -->
-  <div class="row">
-    <div class="col-md-12">
+  <div class="tab-body row col-md-12">
+
       <ul class=" nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Zusammenfassungen</a>
@@ -32,7 +32,7 @@ $('.dataTables_length').addClass('bs-select');
 
       </ul>
       <!-- Tab Zusammenfassungen -->
-      <div class="tab-content" id="myTabContent">
+      <div class="tab-content col-md-12" id="myTabContent">
         <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
           <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
             <thead>
@@ -207,6 +207,6 @@ $('.dataTables_length').addClass('bs-select');
 
         </div>
       </div>
-    </div>
+
   </div>
 </body>
