@@ -11099,6 +11099,14 @@ span.add-module {
   text-align: right;
 }
 
+.dropdown-toggle {
+  color: white;
+}
+
+.fa.fa-plus {
+  color: white;
+}
+
 .fa-file-text {
   color: black;
 }
