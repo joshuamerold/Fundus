@@ -13,7 +13,9 @@ use App\Lesson;
 
 class ModuleController extends NavbarController
 {
-
+  public function show(){
+    return view('forms.addModule');
+  }
 
   public function add(Request $request){
 
