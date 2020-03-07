@@ -38,7 +38,7 @@ class FileController extends NavbarController
           return \Response::download( $file_path, $filename, $headers );
       } else {
           //Fehlermeldung wenn Datei nicht mehr auf dem Server ist. Wird in Files ausgegeben
-          return redirect('/files')->with('error', 'Datei ist nicht mehr auf dem Server...');
+          return redirect('/home')->with('error', 'Datei ist nicht mehr auf dem Server! Bitte wenden Sie sich an den System-Administrator!');
       }
 
   }
@@ -128,7 +128,7 @@ class FileController extends NavbarController
         $file->delete();
       }
       //Anschließend wird eine Nachricht an die files blade übergeben und angezeigt
-      return redirect('/'.$lessonID.'/show/'.$type)->with('success', 'Die Datei wurde erfolgreich gelöscht');
+      return redirect('/'.$lessonID.'/show/')->with('success', 'Die Datei wurde erfolgreich gelöscht');
 
   }
 }
