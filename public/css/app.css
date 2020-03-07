@@ -11141,9 +11141,15 @@ files-body {
   width: 30px;
 }
 
+@font-face {
+  font-family: "Generis-DHBW";
+  src: url("/fonts/Generis Sans W01 Thin.ttf?e4234af22b0cfcd8079698731355324d");
+}
+
 .allCategories-body {
   margin-left: 250px;
   padding: 0px 10px;
+  font-family: "Generis-DHBW";
 }
 
 .inner-table {
@@ -11203,7 +11209,7 @@ button {
 }
 
 #myTab .nav-item .nav-link.active {
-  color: black !important;
+  color: black;
 }
 
 #abstract-tab,

@@ -34,8 +34,8 @@ $('.dataTables_length').addClass('bs-select');
       <!-- Tab Zusammenfassungen -->
       <div class="tab-content col-md-12" id="myTabContent">
         <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
-          <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
-            <thead>
+          <table class="table table-striped  table-sm" cellspacing="0" width="100%">
+            <thead style="border-bottom: 1px solid grey;">
               <th class="th-sm">Typ</th>
               <th class="th-sm">Dateiname</th>
               <th class="th-sm">Dozent</th>
