@@ -11,6 +11,10 @@
 
 .inner-table {
   background: white;
+  border: 0px solid white;
+  tr > td {
+    border: none;
+  }
 }
 
 

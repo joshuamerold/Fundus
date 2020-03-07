@@ -11154,6 +11154,11 @@ files-body {
 
 .inner-table {
   background: white;
+  border: 0px solid white;
+}
+
+.inner-table tr > td {
+  border: none;
 }
 
 .button-add-file {
