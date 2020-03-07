@@ -20,21 +20,17 @@
 
 .user-panel {
   position: relative;
-
   &,
   .info {
     white-space: nowrap;
   }
-
   .image {
     display: inline-block;
   }
-
   img {
     height: 50px;
     width: 50px;
   }
-
   .info {
     display: inline-block;
     padding: 5px 5px 5px 10px;

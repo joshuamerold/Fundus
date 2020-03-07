@@ -1,6 +1,12 @@
+@font-face {
+  font-family: "Generis-DHBW";
+  src: url("resources/font/Generis Sans W01 Thin.ttf");
+}
+
 .allCategories-body {
   margin-left: 250px;
   padding: 0px 10px;
+  font-family: "Generis-DHBW";
 }
 
 .inner-table {
@@ -59,7 +65,7 @@ button {
   .nav-item {
     border-radius: 12px 12px 0px 0px;
     .nav-link.active {
-      color: black !important;
+      color: black;
     }
   }
 }
@@ -73,7 +79,7 @@ button {
 table.table {
   margin-top: 15px;
 }
-// 
+//
 // .tab-body {
 //   margin-left: 0px;
 //   margin-right: 0px;

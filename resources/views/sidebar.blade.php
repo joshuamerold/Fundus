@@ -3,7 +3,7 @@
 <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar User Panel -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="user-panel mt-3 mb-3 d-flex">
       <div class="image">
         <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" class="img-circle" alt="Profilbild">
       </div>
