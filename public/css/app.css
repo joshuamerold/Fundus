@@ -10953,6 +10953,10 @@ h2 *.login {
   color: white;
 }
 
+.home-body {
+  margin-left: 250px;
+}
+
 .module-card {
   background-color: white;
   box-shadow: 0px 5px 30px 5px #cccccc;
@@ -10962,10 +10966,6 @@ h2 *.login {
 
 .module-card hr {
   margin: 0px 0px 5px 0px;
-}
-
-.card-container {
-  margin-left: 250px;
 }
 
 .card-container li {
@@ -11099,8 +11099,23 @@ span.add-module {
   text-align: right;
 }
 
-.navbar {
-  margin-left: 250px;
+.dropdown-toggle {
+  color: white;
+}
+
+.fa.fa-plus {
+  color: white;
+}
+
+.date-name,
+.date-date {
+  font-size: 10pt;
+  vertical-align: top;
+  width: 100%;
+}
+
+.date-date {
+  text-align: right;
 }
 
 .fa-file-text {
@@ -11137,11 +11152,13 @@ files-body {
 
 .button-add-file {
   background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background-position: center center;
   background-size: contain;
   cursor: pointer;
   display: inline-block;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
+  vertical-align: middle;
 }
 
 table.dataTable thead .sorting:after,
@@ -11155,5 +11172,47 @@ table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
   bottom: 0.5em;
+}
+
+button {
+  border: none;
+  border-radius: 50px;
+}
+
+.text {
+  padding-top: 50px;
+  font-family: "Helvetica Neue", Helvetica, "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.nav-link .active {
+  color: black;
+}
+
+#myTab .nav-item {
+  margin-right: 5px;
+  border-radius: 12px 12px 0px 0px;
+  background: #CF2D25;
+}
+
+#myTab .nav-item .nav-link {
+  color: white;
+}
+
+#myTab .nav-item {
+  border-radius: 12px 12px 0px 0px;
+}
+
+#myTab .nav-item .nav-link.active {
+  color: black !important;
+}
+
+#abstract-tab,
+#old-test-tab,
+#index-cards-tab {
+  border-radius: 12px 12px 0px 0px;
+}
+
+table.table {
+  margin-top: 15px;
 }
 
