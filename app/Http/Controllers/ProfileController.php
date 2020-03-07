@@ -55,7 +55,7 @@ class ProfileController extends NavbarController
 
               move_uploaded_file($_FILES["profileIMG"]["tmp_name"], $file_path);
 
-              return redirect('profile/'.$username)->with('success', 'erfolgreich aktualisiert!');
+              return redirect('/home')->with('success', 'Dein Profil wurde erfolgreich aktualisiert!');
             }
           }
 
