@@ -10953,8 +10953,13 @@ h2 *.login {
   color: white;
 }
 
-.home-body {
-  margin-left: 250px;
+.card-container {
+  margin-top: 75px;
+}
+
+.card-container li {
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .module-card {
@@ -10966,11 +10971,6 @@ h2 *.login {
 
 .module-card hr {
   margin: 0px 0px 5px 0px;
-}
-
-.card-container li {
-  padding-left: 8px;
-  padding-right: 8px;
 }
 
 span.add-module {
@@ -11118,8 +11118,19 @@ span.add-module {
   text-align: right;
 }
 
+#wrapper {
+  margin-left: 250px;
+}
+
 .fa-file-text {
   color: black;
+}
+
+.topbar-container {
+  top: 0%;
+  position: fixed;
+  z-index: 1200;
+  width: 100%;
 }
 
 .form-container {
@@ -11141,15 +11152,17 @@ files-body {
   width: 30px;
 }
 
-@font-face {
-  font-family: "Generis-DHBW";
-  src: url("/fonts/Generis Sans W01 Thin.ttf?e4234af22b0cfcd8079698731355324d");
+#wrapper > div.tab-body.row.col-md-12y {
+  margin-top: 75px;
+  margin-left: 5px;
 }
 
 .allCategories-body {
-  margin-left: 250px;
-  padding: 0px 10px;
-  font-family: "Generis-DHBW";
+  margin-top: 75px;
+}
+
+.tab-body {
+  margin-left: 0px;
 }
 
 .inner-table {
@@ -11225,5 +11238,15 @@ button {
 
 table.table {
   margin-top: 15px;
+}
+
+.fa-arrow-circle-o-down,
+.fa-comment-o,
+.fa-trash {
+  color: black;
+}
+
+.content {
+  margin-top: 50px;
 }
 

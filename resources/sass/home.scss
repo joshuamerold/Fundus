@@ -1,5 +1,9 @@
-.home-body {
-  margin-left: 250px;
+.card-container {
+  margin-top: 75px;
+  li {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
 }
 
 .module-card {
@@ -9,14 +13,6 @@
   padding: 8px 16px;
   hr {
     margin: 0px 0px 5px 0px;
-  }
-}
-
-.card-container {
-  // margin-left: 250px;
-  li {
-    padding-left: 8px;
-    padding-right: 8px;
   }
 }
 

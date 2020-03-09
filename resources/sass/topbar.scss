@@ -1,8 +1,15 @@
-// .navbar {
-//   margin-left: 250px;
-// }
+#wrapper {
+  margin-left: 250px;
+}
 
 .fa-file-text {
 // content:"\f15c";
 color: black;
+}
+
+.topbar-container {
+  top: 0%;
+  position: fixed;
+  z-index: 1200;
+  width: 100%;
 }

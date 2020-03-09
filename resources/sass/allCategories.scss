@@ -1,12 +1,20 @@
-@font-face {
-  font-family: "Generis-DHBW";
-  src: url("resources/font/Generis Sans W01 Thin.ttf");
+// @font-face {
+//   font-family: "Generis-DHBW";
+//   src: url("resources/font/Generis Sans W01 Thin.ttf");
+// }
+
+#wrapper > div.tab-body.row.col-md-12y {
+  margin-top: 75px;
+  margin-left: 5px;
 }
 
+
 .allCategories-body {
-  margin-left: 250px;
-  padding: 0px 10px;
-  font-family: "Generis-DHBW";
+  margin-top: 75px;
+}
+
+.tab-body {
+  margin-left: 0px;
 }
 
 .inner-table {
@@ -83,8 +91,7 @@ button {
 table.table {
   margin-top: 15px;
 }
-//
-// .tab-body {
-//   margin-left: 0px;
-//   margin-right: 0px;
-// }
+
+.fa-arrow-circle-o-down, .fa-comment-o, .fa-trash {
+  color: black;
+}
