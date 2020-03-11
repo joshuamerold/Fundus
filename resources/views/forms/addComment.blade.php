@@ -1,5 +1,9 @@
 <h1>Comments hier</h1>
- <iframe src="http://fundus.localhost/.{{$fileToShow->path}}" frameborder="0" height="500px" width="500px"></iframe>
+@if($fileToShow->extension != 'pdf' && $fileToShow->extension != 'txt')
+  <p>keine Vorschau</p>
+@else
+<iframe src="http://fundus.localhost/.{{$fileToShow->path}}" frameborder="0" height="500px" width="500px"></iframe>
+@endif
 
 <h2>Votes für die File lol</h2>
 {{$rating}} <br>
