@@ -48,16 +48,20 @@ class DatabaseSeeder extends Seeder
         ]);
 
         App\Course::create([
-          'name' =>  'Onlinemedien'
+          'name' =>  'Onlinemedien',
+          'shortcut' => 'ON'
         ]);
         App\Course::create([
-          'name' =>  'Holzhandel'
+          'name' =>  'Holzhandel',
+          'shortcut' => 'HH'
         ]);
         App\Course::create([
-          'name' =>  'Wirtschaftsinformatik'
+          'name' =>  'Wirtschaftsinformatik',
+          'shortcut' => 'WI'
         ]);
         App\Course::create([
-          'name' =>  'Baustoffe'
+          'name' =>  'Baustoffe',
+          'shortcut' => 'BA'
         ]);
 
 
