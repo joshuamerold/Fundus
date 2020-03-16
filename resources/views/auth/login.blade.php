@@ -28,7 +28,6 @@
       </svg>
     </div>
 
-
   <div class="row justify-content-around card-row">
       <div class="col-md-3">
           <div>
@@ -83,22 +82,12 @@
                 <form method="POST" action="/register/create">
                         @csrf
 
-                        <div class="form-group row justify-content-around">
-                            <div>
-                                <input id="register_name" type="text" class="form-control @error('register_name') is-invalid @enderror" name="register_name" value="{{ old('register_name') }}" required autocomplete="name" placeholder="{{ __('Name') }}" autofocus>
 
-                                @error('register_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="form-group row justify-content-around">
                           <div>
-                             <input id="register_email" type="email" class="form-control @error('register_email') is-invalid @enderror" name="register_email" value="{{ old('register_email') }}" placeholder="{{ __('E-Mail') }}" required autocomplete="email">
-
+                             <input id="register_email" type="text" class="form-control" name="register_email" value="{{ old('register_email') }}" placeholder="{{ __('E-Mail') }}" required autocomplete="email">
+                             @lehre.mosbach.dhbw.de
                                 @error('register_email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -106,6 +95,11 @@
                                 @enderror
                             </div>
                         </div>
+                        <select id="studygang" name="course">
+                          @foreach($courses as $course)
+                         <option value="{{$course->id}}">{{$course->name}}</option>
+                         @endforeach
+                        </select>
 
                         <div class="form-group row justify-content-around">
                            <div>

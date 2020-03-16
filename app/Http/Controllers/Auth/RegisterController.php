@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 
 use App\User;
+use App\Course;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Str;
 
 class RegisterController extends Controller
 {
@@ -83,13 +85,21 @@ class RegisterController extends Controller
     }
 
     public function registerNEW(Request $request){
+
       $user = new User;
-      $user->username = $request->register_name;
+
+      $courseShortcut = Course::all()->where('id', $request->course)->first()->shortcut;
+
+      $user->username = $request->register_email;
       $user->password = Hash::make($request->register_password);
-      $user->email = $request->register_email;
+      $user->email = $request->register_email."@lehre.mosbach.dhbw.de";
       $user->courseid = $request->register_courseid;
-      $user->coursename = 'ON18';
+      $user->coursename = $courseShortcut.Str::substr($request->register_email, -2);;
       $user->save();
       return redirect('/login')->with('success', 'Bitte melde dich an!');
+    }
+
+    public function showRegistrationForm(){
+      return redirect('/login');
     }
 }
