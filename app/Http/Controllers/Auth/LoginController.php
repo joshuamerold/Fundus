@@ -43,4 +43,8 @@ class LoginController extends Controller
       $courses = Course::all();
       return view('auth.login')->with('courses', $courses);
     }
+
+    public function username(){
+      return "username";
+    }
 }
