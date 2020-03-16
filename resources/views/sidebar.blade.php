@@ -62,7 +62,7 @@
           </div>
           <hr class="hr-side">
           @foreach($dates as $date)
-          @if($date->courseid === Auth::user()->courseid)
+          @if($date->yeargang === Auth::user()->coursename)
           <table>
             <tr>
               <td class="date-name">

@@ -17,8 +17,8 @@ class MainController extends NavbarController
       $userid = $user->id;
       $courseid = $user->courseid;
 
-      $courses = Course::all()->where('id', $courseid);
-      $currentCourse = $courses->first();
+      $currentCourse = Course::all()->where('id', $courseid)->first();
+      $currentCourseName = $currentCourse->studycoursename;
 
       $modules = Module::all()->where('courseid', $currentCourse->id);
       $lessons = Lesson::all();

@@ -37,7 +37,7 @@ class DateController extends NavbarController
       $newDate->year = $year;
       $newDate->creatoruserid = Auth::user()->id;
       $newDate->datecalc = $datecalc;
-      $newDate->courseid = Auth::user()->courseid;
+      $newDate->yeargang = Auth::user()->coursename;
 
       $newDate->save();
 

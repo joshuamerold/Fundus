@@ -25,13 +25,41 @@ class DatabaseSeeder extends Seeder
           'courseid' => 1,
           'coursename' => 'ON18'
         ]);
+        App\User::create([
+          'username' =>'ON17',
+          'email' => 'ON17@admin.de',
+          'password' => Hash::make('admin'),
+          'courseid' => 1,
+          'coursename' => 'ON17'
+        ]);
+        App\User::create([
+          'username' =>'ON16',
+          'email' => 'ON16@admin.de',
+          'password' => Hash::make('admin'),
+          'courseid' => 1,
+          'coursename' => 'ON16'
+        ]);
+        App\User::create([
+          'username' =>'holzer',
+          'email' => 'admin@holzer.de',
+          'password' => Hash::make('admin'),
+          'courseid' => 2,
+          'coursename' => 'HH20'
+        ]);
 
         App\Course::create([
-          'representativeid' =>1,
-          'secondrepresentativeid' => 1,
-          'name' => 'ON18'
-
+          'name' =>  'Onlinemedien'
         ]);
+        App\Course::create([
+          'name' =>  'Holzhandel'
+        ]);
+        App\Course::create([
+          'name' =>  'Wirtschaftsinformatik'
+        ]);
+        App\Course::create([
+          'name' =>  'Baustoffe'
+        ]);
+
 
         App\Module::create([
           'name' => 'WebTech 1',
@@ -117,9 +145,10 @@ class DatabaseSeeder extends Seeder
           'month' => 03,
           'year' => 2020,
           'creatoruserid' => 1,
-          'courseid' => 1,
+          'yeargang' => 'ON18',
           'year' => 20,
           'datecalc'=> 200329
         ]);
+
     }
 }

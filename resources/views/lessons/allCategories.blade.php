@@ -54,11 +54,7 @@ $('.dataTables_length').addClass('bs-select');
               <td>
                 @foreach($allUsers as $tempUser)
                   @if($file->creatoruserid == $tempUser->id)
-                    @foreach($courses as $course)
-                      @if($tempUser->courseid == $course->id)
-                        {{$course->name}}
-                      @endif
-                    @endforeach
+                    {{$tempUser->coursename}}
                   @endif
                 @endforeach
               </td>
