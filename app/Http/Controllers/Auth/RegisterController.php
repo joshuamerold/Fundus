@@ -80,7 +80,7 @@ class RegisterController extends Controller
             'username' => $data['register_name'],
             'email' => $data['register_email'],
             'password' => Hash::make($data['register_password']),
-            'courseid' => $data['register_courseid'],
+            'courseid' => $data['course'],
         ]);
     }
 
@@ -93,7 +93,7 @@ class RegisterController extends Controller
       $user->username = $request->register_email;
       $user->password = Hash::make($request->register_password);
       $user->email = $request->register_email."@lehre.mosbach.dhbw.de";
-      $user->courseid = $request->register_courseid;
+      $user->courseid = $request->course;
       $user->coursename = $courseShortcut.Str::substr($request->register_email, -2);;
       $user->save();
       return redirect('/login')->with('success', 'Bitte melde dich an!');

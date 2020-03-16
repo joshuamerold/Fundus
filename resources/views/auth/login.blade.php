@@ -113,8 +113,6 @@
                             </div>
                         </div>
 
-                        <input style="display:none;"type="text" id="register_courseid" name="register_courseid" value="1">
-
                         <div class="form-group row justify-content-around">
                               <div>
                                   <input id="password-confirm" type="password" class="form-control" name="register_password_confirmation" placeholder="{{ __('Passwort wiederholen') }}" required autocomplete="new-password">
