@@ -28,11 +28,15 @@ class LessonController extends NavbarController
     $user = Auth::user();
     $allUsers = User::all();
     $files = File::all()->where('lessonid', $id);
+    $fileZcount = File::all()->where('lessonid', $id)->where('type', "zusammenfassung")->count();
+    $fileAcount = File::all()->where('lessonid', $id)->where('type', "altklausur")->count();
+    $fileKcount = File::all()->where('lessonid', $id)->where('type', "karteikarte")->count();
+
     $creators = User::all();
     $currentLesson = Lesson::all()->where('id', $id)->first();
     $courses = Course::all();
 
-    return view('lessons.allCategories')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user)->with('courses', $courses)->with('allUsers', $allUsers);
+    return view('lessons.allCategories')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user)->with('courses', $courses)->with('allUsers', $allUsers)->with('fileZcount', $fileZcount)->with('fileAcount', $fileAcount)->with('fileKcount', $fileKcount);
   }
 
   public function show(){

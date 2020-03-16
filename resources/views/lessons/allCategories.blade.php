@@ -18,13 +18,13 @@ $('.dataTables_length').addClass('bs-select');
 
       <ul class=" nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Zusammenfassungen</a>
+          <a class="nav-link active" id="abstract-tab" data-toggle="tab" href="#abstract" role="tab" aria-controls="abstract" aria-selected="true">Zusammenfassungen ({{$fileZcount}})</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" id="old-test-tab" data-toggle="tab" href="#old-test" role="tab" aria-controls="old-test" aria-selected="false">Altklausuren</a>
+          <a class="nav-link" id="old-test-tab" data-toggle="tab" href="#old-test" role="tab" aria-controls="old-test" aria-selected="false">Altklausuren ({{$fileAcount}})</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" style="color: white;" id="index-cards-tab" data-toggle="tab" href="#index-cards" role="tab" aria-controls="index-cards" aria-selected="false">Karteikarten</a>
+          <a class="nav-link" style="color: white;" id="index-cards-tab" data-toggle="tab" href="#index-cards" role="tab" aria-controls="index-cards" aria-selected="false">Karteikarten ({{$fileKcount}})</a>
         </li>
         <div class="button-div">
         <a href="/{{$currentLesson->id}}/add/File" class="button-add-file"></a>
@@ -105,15 +105,11 @@ $('.dataTables_length').addClass('bs-select');
               <td>{{$file->name}}</td>
               <td>{{$currentLesson->professorname}}</td>
               <td>
-                  @foreach($allUsers as $tempUser)
-                    @if($file->creatoruserid == $tempUser->id)
-                      @foreach($courses as $course)
-                        @if($tempUser->courseid == $course->id)
-                          {{$course->name}}
-                        @endif
-                      @endforeach
-                    @endif
-                  @endforeach
+                @foreach($allUsers as $tempUser)
+                  @if($file->creatoruserid == $tempUser->id)
+                    {{$tempUser->coursename}}
+                  @endif
+                @endforeach
               </td>
               <td>{{$file->updated_at}}</td>
               <td>
@@ -163,15 +159,11 @@ $('.dataTables_length').addClass('bs-select');
               <td>{{$file->name}}</td>
               <td>{{$currentLesson->professorname}}</td>
               <td>
-                  @foreach($allUsers as $tempUser)
-                    @if($file->creatoruserid == $tempUser->id)
-                      @foreach($courses as $course)
-                        @if($tempUser->courseid == $course->id)
-                          {{$course->name}}
-                        @endif
-                      @endforeach
-                    @endif
-                  @endforeach
+                @foreach($allUsers as $tempUser)
+                  @if($file->creatoruserid == $tempUser->id)
+                    {{$tempUser->coursename}}
+                  @endif
+                @endforeach
               </td>
               <td>{{$file->updated_at}}</td>
               <td>
