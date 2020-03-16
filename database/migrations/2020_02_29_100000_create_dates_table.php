@@ -21,7 +21,7 @@ class CreateDatesTable extends Migration
           $table->string('month');
           $table->string('year');
           $table->integer('creatoruserid');
-          $table->integer('courseid');
+          $table->string('yeargang');
           $table->integer('lessonid')->nullable();
           $table->integer('datecalc');
           $table->timestamps();
