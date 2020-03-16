@@ -28,5 +28,4 @@ class MainController extends NavbarController
       // $users = User::all();
       // return view('test')->with('users', $users);
     }
-
 }
