@@ -42,7 +42,61 @@
                     <hr>
                     @foreach($lessons as $lesson)
                       @if($lesson->moduleid == $module->id)
-                        <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a><br>
+                        <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                        <!-- Hier Status ob bereits etwas hochgeladen -->
+                        @php
+                            $settedFileZ = true;
+                            $settedFileA = true;
+                            $settedFileK = true;
+                        @endphp
+                        <span class="">
+                            @foreach($files as $file)
+                              @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                                <strong style="color:red">Z</strong>
+                                @php
+                                $settedFileZ = false;
+                                @endphp
+                                @break
+                              @endif
+                            @endforeach
+
+                            @if($settedFileZ)
+                              <strong style="color:grey">Z</strong>
+                            @endif
+                        </span>
+
+                        <span class="">
+                            @foreach($files as $file)
+                              @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                                <strong style="color:red">A</strong>
+                                @php
+                                $settedFileA = false;
+                                @endphp
+                                @break
+                              @endif
+                            @endforeach
+
+                            @if($settedFileA)
+                              <strong style="color:grey">A</strong>
+                            @endif
+                        </span>
+
+                        <span class="">
+                            @foreach($files as $file)
+                              @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                                <strong style="color:red">K</strong>
+                                @php
+                                $settedFileK = false;
+                                @endphp
+                                @break
+                              @endif
+                            @endforeach
+
+                            @if($settedFileK)
+                              <strong style="color:grey">K</strong>
+                            @endif
+                        </span>
+                        <br>
                         <p>{{$lesson->professorname}}</p>
                       @endif
                     @endforeach

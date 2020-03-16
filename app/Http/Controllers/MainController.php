@@ -9,6 +9,7 @@ use App\User;
 use App\Course;
 use App\Module;
 use App\Lesson;
+use App\File;
 
 class MainController extends NavbarController
 {
@@ -22,8 +23,9 @@ class MainController extends NavbarController
 
       $modules = Module::all()->where('courseid', $currentCourse->id);
       $lessons = Lesson::all();
+      $files = File::all();
 
-      return view('home')->with('user',$user)->with('course', $currentCourse)->with('modules', $modules)->with('lessons', $lessons);
+      return view('home')->with('user',$user)->with('course', $currentCourse)->with('modules', $modules)->with('lessons', $lessons)->with('files', $files);
       // $modules = Modules::all()->where('')
       // $users = User::all();
       // return view('test')->with('users', $users);
