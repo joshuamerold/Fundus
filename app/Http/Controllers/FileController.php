@@ -56,7 +56,7 @@ class FileController extends NavbarController
     $filename = $request->fileToUpload;
     $extension = $filename->getClientOriginalExtension();
 
-    $arr_extensions=Array('pdf', 'txt', 'jpeg', 'jpg', 'png', 'doc', 'docx', 'ppt', 'pptx', 'ai', 'indd', 'psd', 'xd');
+    $arr_extensions=Array('pdf', 'txt', 'jpeg', 'JPG', 'jpg', 'png', 'doc', 'docx', 'ppt', 'pptx', 'ai', 'indd', 'psd', 'xd');
     foreach ($arr_extensions as $goodExtension) {
       if($goodExtension == $extension){
 
