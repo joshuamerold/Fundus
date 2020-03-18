@@ -88,15 +88,24 @@ class RegisterController extends Controller
 
       $user = new User;
 
-      $courseShortcut = Course::all()->where('id', $request->course)->first()->shortcut;
+      if(is_numeric(Str::substr($request->register_email, -2))){
 
-      $user->username = $request->register_email;
-      $user->password = Hash::make($request->register_password);
-      $user->email = $request->register_email."@lehre.mosbach.dhbw.de";
-      $user->courseid = $request->course;
-      $user->coursename = $courseShortcut.Str::substr($request->register_email, -2);;
-      $user->save();
-      return redirect('/login')->with('success', 'Bitte melde dich an!');
+        $courseShortcut = Course::all()->where('id', $request->course)->first()->shortcut;
+
+        $user->username = $request->register_email;
+        $user->password = Hash::make($request->register_password);
+        $user->email = $request->register_email."@lehre.mosbach.dhbw.de";
+        $user->courseid = $request->course;
+        $user->coursename = $courseShortcut.Str::substr($request->register_email, -2);
+        $user->save();
+        return redirect('/login')->with('success', 'Erfolgreich registriert! Bitte melde dich an!');
+      }
+      else {
+        return redirect('/login')->with('error', 'Es handelt sich bei der von Ihnen eingegebenen Kennung um keine E-Mail der DHBW Mosbach. Bsp.: test.test.20');
+      }
+
+
+
     }
 
     public function showRegistrationForm(){
