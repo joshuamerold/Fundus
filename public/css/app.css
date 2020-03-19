@@ -1,5 +1,12 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/*
+$theme-colors: (
+    "primary": $red,
+    "danger": #0000ff,
+);
+*/
+
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10933,6 +10940,11 @@ h2 *.login {
   width: 250px;
 }
 
+.form-group select {
+  border-radius: 10px;
+  width: 250px;
+}
+
 .btn {
   border-radius: 10px;
   width: 250px;
@@ -11120,6 +11132,15 @@ span.add-module {
   text-align: right;
 }
 
+.img-circle {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.btn-hidden {
+  border: none !important;
+}
+
 .fa-file-text {
   color: black;
 }
@@ -11232,5 +11253,51 @@ table.table {
 #btn-addFile {
   background-color: #CF2D25;
   color: white;
+}
+
+.form-group input {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.btn-red {
+  background-color: #e63329;
+  border: none;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: #CF2D25;
+  border: none;
+  color: white;
+}
+
+.btn-outline-red {
+  border: #CF2D25;
+}
+
+.profile-card {
+  background-color: white;
+  box-shadow: 0px 5px 30px 5px #cccccc;
+  border-radius: 10px;
+  padding: 8px 16px;
+}
+
+.img-circle {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.profile-img {
+  width: 125px;
+  height: 125px;
+}
+
+.long-td {
+  width: 120px;
+}
+
+.text-red {
+  color: #CF2D25;
 }
 

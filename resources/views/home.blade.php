@@ -5,8 +5,6 @@
 @include('sidebar')
 @include('topbar')
 
-
-
     <div class="card-container">
         <div class="col-md-8">
             <div>

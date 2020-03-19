@@ -38,22 +38,11 @@
                       <div class="form-group row justify-content-around">
                           <div>
                               <input id="username" type="text" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" placeholder="{{ __('Username') }}" required autocomplete="username" autofocus>
-                              @error('username')
-                                  <span class="invalid-feedback" role="alert">
-                                      <strong>{{ $message }}</strong>
-                                  </span>
-                              @enderror
                           </div>
                       </div>
                       <div class="form-group row justify-content-around">
                            <div>
                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Passwort') }}" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                           </div>
                       </div>
                         <div>
@@ -85,37 +74,29 @@
 
 
                         <div class="form-group row justify-content-around">
-                          <div>
-                             <input id="register_email" type="text" class="form-control" name="register_email" value="{{ old('register_email') }}" placeholder="{{ __('E-Mail') }}" required autocomplete="email">
-                             @lehre.mosbach.dhbw.de
-                                @error('register_email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                            <div>
+                                <input id="register_email" type="text" class="form-control" name="register_email" value="{{ old('register_email') }}" placeholder="{{ __('E-Mail') }}" required autocomplete="email">
+                                @lehre.mosbach.dhbw.de
                             </div>
                         </div>
-                        <select id="studygang" name="course">
-                          @foreach($courses as $course)
-                         <option value="{{$course->id}}">{{$course->name}}</option>
-                         @endforeach
-                        </select>
 
                         <div class="form-group row justify-content-around">
-                           <div>
+                            <select id="studygang" name="course" class="custom-select">
+                                @foreach($courses as $course)
+                                    <option value="{{$course->id}}">{{$course->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                     
+                        <div class="form-group row justify-content-around">
+                            <div>
                                <input id="register_password" type="password" class="form-control @error('register_password') is-invalid @enderror" name="register_password" placeholder="{{ __('Passwort') }}" required autocomplete="new-password">
-
-                                @error('register_password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
                             </div>
                         </div>
 
                         <div class="form-group row justify-content-around">
-                              <div>
-                                  <input id="password-confirm" type="password" class="form-control" name="register_password_confirmation" placeholder="{{ __('Passwort wiederholen') }}" required autocomplete="new-password">
+                            <div>
+                                <input id="password-confirm" type="password" class="form-control" name="register_password_confirmation" placeholder="{{ __('Passwort wiederholen') }}" required autocomplete="new-password">
                             </div>
                         </div>
 
