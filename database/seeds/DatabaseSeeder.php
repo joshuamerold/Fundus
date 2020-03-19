@@ -156,7 +156,8 @@ class DatabaseSeeder extends Seeder
 
         App\CourseRight::create([
           'coursepartition' =>'ON18',
-
+          'representative1' => 'none',
+          'representative2' => 'none'
         ]);
 
     }
