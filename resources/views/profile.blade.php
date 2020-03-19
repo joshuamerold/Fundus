@@ -7,12 +7,12 @@
 @include('inc.messages')
 
     @if($user->id == $currentUser->id)   
-        <form method="POST" action="/profile/{{$user->username}}/update" enctype="multipart/form-data" class="mt-2">
+        <form method="POST" action="/profile/{{$user->username}}/update" enctype="multipart/form-data" class="mt-4">
             <div class="form-group row justify-content-center">
                 @if(!empty($user->imageURL))
-                    <img src="{{$user->imageURL}}" alt="Profilbild"/>
+                    <img src="{{$user->imageURL}}" alt="Profilbild"/ class="img-circle profile-img">
                 @else
-                    <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" width="100px" alt="Platzhalter für Profilbild"/>
+                    <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" alt="Platzhalter für Profilbild"/ class="img-circle profile-img">
                 @endif
             </div>
 
@@ -50,36 +50,46 @@
 
         </form>
     @else
-        @if(!empty($user->imageURL))
-            <img src="{{$user->imageURL}}" alt="Profilbild"/>
-        @else
-            <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" width="100px" alt="Platzhalter für Profilbild"/>
-        @endif
-        </br>
-
-        Username =
-        {{$user->username}}
-        </br>
-
-        Vorname =
-        @if(!empty($user->firstname))
-            {{$user->firstname}}
-        @else
-            Kein Vorname festgelegt
-        @endif
-        </br>
-
-        Nachname =
-        @if(!empty($user->lastname))
-            {{$user->lastname}}
-        @else
-            Kein Nachname festgelegt
-        @endif
-        </br>
-
-        Jahrgang =
-        {{$course}}
-        </br>
+        <div class="row justify-content-center mt-3">
+            @if(!empty($user->imageURL))
+                <img src="{{$user->imageURL}}" alt="Profilbild"/ class="img-circle profile-img">
+            @else
+                <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" alt="Platzhalter für Profilbild"/ class="img-circle profile-img">
+            @endif
+        </div>
+        
+        <div class="row justify-content-center mt-3">
+            <table>
+                <tr>
+                    <th class="long-th">Username</th>
+                    <td>{{$user->username}}</td>
+                </tr>
+                <tr>
+                    <th class="long-th">Vorname</th>
+                    <td>       
+                        @if(!empty($user->firstname))
+                            {{$user->firstname}}
+                        @else
+                            Kein Vorname festgelegt
+                        @endif
+                    </td>
+                </tr>
+                <tr>
+                    <th class="long-th">Nachname</th>
+                    <td>
+                    @if(!empty($user->lastname))
+                        {{$user->lastname}}
+                    @else
+                        Kein Nachname festgelegt
+                    @endif
+                    </td>
+                </tr>
+                <tr>
+                    <th class="long-th">Jahrgang</th>
+                    <td>{{$course}}</td>
+                </tr>
+            </table>
+        </div>
     @endif
 </body>
 </html>
