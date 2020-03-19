@@ -8,7 +8,7 @@
         @if(!empty(Auth::user()->imageURL))
             <img src="{{Auth::user()->imageURL}}" alt="Profilbild" class="img-circle"/>
         @else
-            <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" width="100px" class="img-circle" alt="Profilbild"/>
+            <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" class="img-circle" alt="Profilbild"/>
         @endif
       </div>
 
@@ -31,7 +31,7 @@
                 {{ Auth::user()->name }} <span class="caret"></span>
               </a>
               <div class="dropdown-menu" aria-labelledby="LogoutDropdown">
-                <a class="dropdown-item" href="{{ route('logout') }}"                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">
                   {{ __('Logout') }}
                 </a>
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -73,20 +73,17 @@
                 @if($date->creatoruserid === Auth::user()->id)
               </td>
               <td>
-                <form class="" action="/{{$date->id}}/delete" method="post">
-                  @csrf
-                  <div class="dropdown">
-                    <a id="LogoutDropdown" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                      {{ Auth::user()->name }} <span class="caret"></span>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="LogoutDropdown">
-                      <form class="" action="/{{$date->id}}/delete" method="post">
-                        <input type="submit" name="" value="del">
-                        <input type="text" name="currentURL" value="{{url()->current()}} " style="display:none;">
-                        @csrf
-                      </form>
-                    </div>
+                <div class="dropdown">  
+                  <a id="deleteFrist" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->name }} <span class="caret"></span></a>  
+                  <div class="dropdown-menu" aria-labelledby="deleteFrist" style="width: 90px;">
+                  @csrf                    
+                    <form action="/{{$date->id}}/delete" method="post">
+                      <button class="btn-hidden btn-sm form-control" type="submit" name="">entfernen</button>
+                      <input type="text" name="currentURL" value="{{url()->current()}} " style="display:none;">
+                      @csrf
+                    </form>
                   </div>
+                </div>
                 @endif
               </td>
             </tr>

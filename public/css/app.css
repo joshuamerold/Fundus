@@ -11121,6 +11121,15 @@ span.add-module {
   text-align: right;
 }
 
+.img-circle {
+  -o-object-fit: cover !important;
+     object-fit: cover !important;
+}
+
+.btn-hidden {
+  border: none !important;
+}
+
 .fa-file-text {
   color: black;
 }
