@@ -1,0 +1,27 @@
+.form-group input {
+    border-radius: 10px;
+    width: 250px;
+  }
+
+  .btn-red {
+    background-color: $lightRed;
+    border: none;
+    color: white;
+  }
+
+  .btn-red:hover {
+    background-color: $red;
+    border: none;
+    color: white;
+  }
+
+  .btn-outline-red {
+    border: $red;
+  }
+
+  .profile-card {
+    background-color: white;
+    box-shadow: 0px 5px 30px 5px rgba(204,204,204,1);
+    border-radius: 10px;
+    padding: 8px 16px;
+  }
