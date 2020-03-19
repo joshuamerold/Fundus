@@ -11269,11 +11269,15 @@ table.table {
 }
 
 .profile-img {
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
 }
 
-.long-th {
-  width: 100px;
+.long-td {
+  width: 120px;
+}
+
+.text-red {
+  color: #CF2D25;
 }
 

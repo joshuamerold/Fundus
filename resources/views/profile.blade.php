@@ -1,5 +1,5 @@
 @include('standards/head')
-
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <body class="home-body">
 
 @include('sidebar')
@@ -50,7 +50,7 @@
 
         </form>
     @else
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-4">
             @if(!empty($user->imageURL))
                 <img src="{{$user->imageURL}}" alt="Profilbild"/ class="img-circle profile-img">
             @else
@@ -58,14 +58,14 @@
             @endif
         </div>
         
-        <div class="row justify-content-center mt-3">
+        <div class="row justify-content-center mt-4">
             <table>
                 <tr>
-                    <th class="long-th">Username</th>
+                    <td class="long-td text-red">Username</th>
                     <td>{{$user->username}}</td>
                 </tr>
                 <tr>
-                    <th class="long-th">Vorname</th>
+                    <td class="long-td text-red">Vorname</th>
                     <td>       
                         @if(!empty($user->firstname))
                             {{$user->firstname}}
@@ -75,7 +75,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="long-th">Nachname</th>
+                    <td class="long-td text-red">Nachname</th>
                     <td>
                     @if(!empty($user->lastname))
                         {{$user->lastname}}
@@ -85,11 +85,61 @@
                     </td>
                 </tr>
                 <tr>
-                    <th class="long-th">Jahrgang</th>
+                    <td class="long-td text-red">Jahrgang</th>
                     <td>{{$course}}</td>
                 </tr>
             </table>
         </div>
+
+        <div class="row justify-content-center">
+            <table class="mt-4">
+                <tr>
+                    <td class="long-td">
+                        <div>
+                            <p>Upvotes</p>
+                            <p class="counter-count">879</p>  
+                        </div>
+                    </td>
+
+                    <td class="long-td">
+                        <div>
+                            <p>Zusammenfassungen</p>
+                            <p class="counter-count">360</p>
+                        </div>
+                    </td>
+
+                    <td class="long-td">
+                        <div>
+                            <p>Altklausuren</p>
+                            <p class="counter-count">125</p>
+                        </div>
+                    </td>
+
+                    <td class="long-td">
+                        <div>
+                            <p>Karteikarten</p>    
+                            <p class="counter-count">652</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>    
+        </div>
+     
+
+        <script>
+            $('.counter-count').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 5000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        </script>
+
     @endif
 </body>
 </html>
