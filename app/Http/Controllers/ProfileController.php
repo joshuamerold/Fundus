@@ -44,6 +44,7 @@ class ProfileController extends NavbarController
           foreach ($arr_extensions as $goodExtension) {
             if($goodExtension == $extension){
               $file_path = public_path() . "/profilePictures/" .$file;
+
               $public_path = "/profilePictures/" .$file;
 
               $user->username = $request->username;

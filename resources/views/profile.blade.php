@@ -6,7 +6,7 @@
 @include('topbar')
 @include('inc.messages')
 
-    @if($user->id == $currentUser->id)   
+    @if($user->id == $currentUser->id)
         <form method="POST" action="/profile/{{$user->username}}/update" enctype="multipart/form-data" class="mt-4">
             <div class="form-group row justify-content-center">
                 @if(!empty($user->imageURL))
@@ -17,7 +17,7 @@
             </div>
 
             @csrf
-            <div class="form-group row justify-content-center">   
+            <div class="form-group row justify-content-center">
                 <label class="btn btn-outline-secondary">
                     Profilbild aktualisieren <input hidden type="file" name="profileIMG" accept=".png, .jpg, .jpeg, .gif" class="btn btn-primary"></input>
                 </label>
@@ -31,11 +31,11 @@
             <div class="form-group row justify-content-center">
                 <input class="form-control" type="text" name="firstname" value="{{$user->firstname}}" placeholder="Kein Vorname vergeben"></input>
             </div>
-            
+
             <div class="form-group row justify-content-center">
                 <input class="form-control" type="text" name="lastname" value="{{$user->lastname}}" placeholder="Kein Nachname vergeben"></input>
             </div>
-            
+
             <div class="form-group row justify-content-center">
                 <input class="form-control" type="text" name="email" value="{{$user->email}}"></input>
             </div>
@@ -57,7 +57,7 @@
                 <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" alt="Platzhalter für Profilbild"/ class="img-circle profile-img">
             @endif
         </div>
-        
+
         <div class="row justify-content-center mt-4">
             <table>
                 <tr>
@@ -66,7 +66,7 @@
                 </tr>
                 <tr>
                     <td class="long-td text-red">Vorname</th>
-                    <td>       
+                    <td>
                         @if(!empty($user->firstname))
                             {{$user->firstname}}
                         @else
@@ -97,7 +97,7 @@
                     <td class="long-td">
                         <div>
                             <p>Upvotes</p>
-                            <p class="counter-count">879</p>  
+                            <p class="counter-count">879</p>
                         </div>
                     </td>
 
@@ -117,14 +117,14 @@
 
                     <td class="long-td">
                         <div>
-                            <p>Karteikarten</p>    
+                            <p>Karteikarten</p>
                             <p class="counter-count">652</p>
                         </div>
                     </td>
                 </tr>
-            </table>    
+            </table>
         </div>
-     
+
 
         <script>
             $('.counter-count').each(function () {
