@@ -154,5 +154,10 @@ class DatabaseSeeder extends Seeder
           'datecalc'=> 200329
         ]);
 
+        App\CourseRight::create([
+          'coursepartition' =>'ON18',
+
+        ]);
+
     }
 }
