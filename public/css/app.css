@@ -10959,6 +10959,8 @@ h2 *.login {
 
 .module-card {
   background-color: white;
+  width: 350px;
+  margin-top: 10px;
   box-shadow: 0px 5px 30px 5px #cccccc;
   border-radius: 10px;
   padding: 8px 16px;
@@ -11214,5 +11216,21 @@ button {
 
 table.table {
   margin-top: 15px;
+}
+
+.addFile-body {
+  margin-left: 250px;
+  padding-left: 10px;
+}
+
+.card {
+  margin-top: 50px;
+  box-shadow: 0px 5px 30px 5px #cccccc;
+  border-radius: 10px;
+}
+
+#btn-addFile {
+  background-color: #CF2D25;
+  color: white;
 }
 

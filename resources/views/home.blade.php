@@ -25,7 +25,7 @@
 
                 @foreach($modules as $module)
 
-                <div class="mt-3 module-card col-md-6">
+                <div class="module-card">
                   <div class="row">
                     <div class="col-md-11"><b>{{$module->name}}</b><br>
                     </div>
