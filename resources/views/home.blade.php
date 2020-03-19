@@ -11,6 +11,36 @@
               <div>
                 <i class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="add-module"></span>
                 </i>
+                @if(!$alreadyAdmins)
+                <!-- Das hier erscheint, wenn noch keine Kurssprecher bestimmt wurden. -->
+                <h2>Sie haben noch keinen Kurssprecher hinterlegt</h2>
+                <p>
+                  Um alle Inhalte von Fundus zu nutzen, müssen die Kurssprecher bestimmt werden.<br>
+                  Bitte wählen Sie die Kurssprecher unten aus.<br>
+                  Sollte sich der Kurssprecher nicht in der Liste befinden, bitte ich Sie diese zur Registrierung zu führen.
+                </p>
+                <form class="" action="/add/adminuser/{{$user->coursename}}" method="post">
+                  @csrf
+                  Hier ersten Kurssprecher bestimmen: <br>
+                  <select id="adminuser1" name="adminuser1">
+                    @foreach($allCourseUsers as $allCourseUser)
+                    Hier ersten Kurssprecher bestimmen: <br>
+                    <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
+                    @endforeach
+                  </select> <br>
+                  Hier zweiten Kurssprecher bestimmen: <br>
+                  <select id="adminuser2" name="adminuser2">
+                    @foreach($allCourseUsers as $allCourseUser)
+
+                    <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
+                    @endforeach
+                  </select>
+                </br><button type="submit" name="button" value="bestimmen">bestimmen</button>
+                </form>
+
+
+                @else
+                <!-- Alle Inhalte die für jeden mit hinterlegten Kurssprecher hinterlegt sind. -->
                 <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                   <li><a href="/add/module">Modul hinzufügen</a></li>
 		              <li><a href="/add/lesson">Lehrveranstaltung hinzufügen</a></li>
@@ -27,7 +57,7 @@
                   <div class="row">
                     <div class="col-md-11"><b>{{$module->name}}</b><br>
                     </div>
-                    @if($module->creatoruserid == Auth::user()->id)
+                    @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="justify-content-end dropdown">
                       <i class="fa fa-caret-down"></i>
                       <div class="dropdown-content">
@@ -105,5 +135,6 @@
             </div>
         </div>
     </div>
+    @endif
 
 </body>

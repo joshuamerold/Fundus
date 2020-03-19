@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 
 use App\User;
 use App\Course;
+use App\CourseRight;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -92,11 +93,22 @@ class RegisterController extends Controller
 
         $courseShortcut = Course::all()->where('id', $request->course)->first()->shortcut;
 
+        $validator = Courseright::all()->where('coursepartition', $courseShortcut.Str::substr($request->register_email, -2));
+
+        if(count($validator) === 0){
+          $newCourseRight = new Courseright;
+          $newCourseRight->coursepartition = $courseShortcut.Str::substr($request->register_email, -2);
+          $newCourseRight->representative1 = "none";
+          $newCourseRight->representative2 = "none";
+          $newCourseRight->save();
+        }
+
         $user->username = $request->register_email;
         $user->password = Hash::make($request->register_password);
         $user->email = $request->register_email."@lehre.mosbach.dhbw.de";
         $user->courseid = $request->course;
         $user->coursename = $courseShortcut.Str::substr($request->register_email, -2);
+        $user->rights = "basic";
         $user->save();
         return redirect('/login')->with('success', 'Erfolgreich registriert! Bitte melde dich an!');
       }

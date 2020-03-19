@@ -63,3 +63,6 @@ Route::post('/profile/{username}/update', 'ProfileController@updateProfile')->mi
 Route::get('/add/date', 'DateController@show')->middleware('auth');
 Route::post('/add/date/create', 'DateController@add')->middleware('auth');
 Route::post('/{date}/delete', 'DateController@delete')->middleware('auth');
+
+//rights
+Route::post('/add/adminuser/{coursename}', 'MainController@add')->middleware('auth'); 

@@ -33,7 +33,7 @@ class ModuleController extends NavbarController
 
   public function editShow($id){
     $currentModule = Module::all()->where('id', $id)->first();
-    if(Auth::user()->id == $currentModule->id){
+    if(Auth::user()->id == $currentModule->id || Auth::user()->rights == "admin"){
         return view('forms.editModule')->with('currentModule', $currentModule);
     }
     return redirect('/home')->with('error', 'Du hast keine Berechtigungen für diese Aktion!');
@@ -50,7 +50,7 @@ class ModuleController extends NavbarController
 
   public function delete(Request $request, $id){
     $currentModule = Module::all()->where('id', $id)->first();
-    if(Auth::user()->id == $currentModule->creatoruserid){
+    if(Auth::user()->id == $currentModule->creatoruserid || Auth::user()->rights == "admin"){
       $currentModule->delete();
       return redirect('/home')->with('success', 'Modul erfolgreich gelöscht!');
     }

@@ -70,7 +70,7 @@
               </td>
               <td class="date-date">
                 {{$date->date}}
-                @if($date->creatoruserid === Auth::user()->id)
+                @if($date->creatoruserid === Auth::user()->id || Auth::user()->rights == "admin")
               </td>
               <td>
                 <div class="dropdown">  

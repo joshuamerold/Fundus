@@ -73,7 +73,7 @@ $('.dataTables_length').addClass('bs-select');
                     <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
                     <td><a href="/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
                     <td>
-                    @if($file->creatoruserid == $user->id)
+                    @if($file->creatoruserid == $user->id || Auth::user()->rights == "admin")
                     <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
                     @endif
                     </td>
