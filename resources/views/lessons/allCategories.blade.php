@@ -71,7 +71,7 @@ $('.dataTables_length').addClass('bs-select');
                 <table class="inner-table">
                   <tr>
                     <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
+                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
                     <td>
                     @if($file->creatoruserid == $user->id || Auth::user()->rights == "admin")
                     <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
@@ -125,7 +125,7 @@ $('.dataTables_length').addClass('bs-select');
                 <table class="inner-table">
                   <tr>
                     <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
+                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
                     <td>
                     @if($file->creatoruserid == $user->id)
                     <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
@@ -179,7 +179,7 @@ $('.dataTables_length').addClass('bs-select');
                 <table class="inner-table">
                   <tr>
                     <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
+                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
                     <td>
                     @if($file->creatoruserid == $user->id)
                     <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
@@ -196,5 +196,8 @@ $('.dataTables_length').addClass('bs-select');
         </div>
       </div>
 
+  </div>
+  <div class="form-group row justify-content-left">
+    <a href="/"><button class="btn btn-red">zurück</button></a>
   </div>
 </body>

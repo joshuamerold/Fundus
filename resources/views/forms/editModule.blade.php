@@ -4,3 +4,6 @@
   <input type="text" name="name" value="{{$currentModule->name}}"/>
   <input type="submit" name="" value="ändern"/>
 </form>
+<div class="form-group row justify-content-center">
+  <a href="/"<button type="button" name="button">zurück</button>
+</div>

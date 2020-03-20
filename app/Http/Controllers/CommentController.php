@@ -13,7 +13,7 @@ use App\Vote;
 
 class CommentController extends NavbarController
 {
-    public function show($id){
+    public function show($lessonId, $id){
 
       $rating = 0;
 
@@ -28,7 +28,7 @@ class CommentController extends NavbarController
       }
 
 
-      return view('forms.addComment')->with('comments', $comments)->with('fileToShow', $fileToShow)->with('users', $users)->with('courses', $courses)->with('rating', $rating);
+      return view('forms.addComment')->with('comments', $comments)->with('fileToShow', $fileToShow)->with('users', $users)->with('courses', $courses)->with('rating', $rating)->with('lessonId', $lessonId);
 
     }
 
