@@ -19,7 +19,7 @@
     <!-- <div class="circle">
 
     </div> -->
-    <div class="outer">
+    <div class="outer" style="z-index:0;">
       <svg viewBox="0 0 150 150" preserveAspectRatio="xMinYMin meet">
         <g>
           <circle r="50%" cx="50%" cy="50%" class="circle-back" />
@@ -87,7 +87,7 @@
                                 @endforeach
                             </select>
                         </div>
-                     
+
                         <div class="form-group row justify-content-around">
                             <div>
                                <input id="register_password" type="password" class="form-control @error('register_password') is-invalid @enderror" name="register_password" placeholder="{{ __('Passwort') }}" required autocomplete="new-password">
