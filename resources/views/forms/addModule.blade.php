@@ -11,4 +11,7 @@
     <input type="submit" name="" value="absenden">
     @csrf
   </form>
+  <div class="form-group row justify-content-center">
+    <a href="/"<button type="button" name="button">zurück</button>
+  </div>
 </div>

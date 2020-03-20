@@ -48,7 +48,7 @@ Route::post('/{lesson}/add/File/store', 'FileController@store')->middleware('aut
 Route::get('{type}/{lesson}/{file}/delete', 'FileController@destroy')->middleware('auth');
 
 //Comments SQLiteDatabase
-Route::get('/{file}/add/comment', 'CommentController@show')->middleware('auth');
+Route::get('/{lesson}/{file}/add/comment', 'CommentController@show')->middleware('auth');
 Route::post('/{file}/add/comment/store', 'CommentController@store')->middleware('auth');
 
 //Votes
@@ -65,4 +65,4 @@ Route::post('/add/date/create', 'DateController@add')->middleware('auth');
 Route::post('/{date}/delete', 'DateController@delete')->middleware('auth');
 
 //rights
-Route::post('/add/adminuser/{coursename}', 'MainController@add')->middleware('auth'); 
+Route::post('/add/adminuser/{coursename}', 'MainController@add')->middleware('auth');

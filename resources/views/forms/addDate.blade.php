@@ -24,7 +24,9 @@
       <input type="text" name="name" value="neuer Terminname">
       <input type="submit" name="" value="senden">
     </form>
-
+    <div class="form-group row justify-content-center">
+      <a href="/"<button type="button" name="button">zurück</button>
+    </div>
 </div>
 
 

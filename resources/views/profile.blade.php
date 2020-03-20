@@ -49,6 +49,7 @@
             </div>
 
         </form>
+
     @else
         <div class="row justify-content-center mt-4">
             @if(!empty($user->imageURL))
@@ -141,5 +142,8 @@
         </script>
 
     @endif
+    <div class="form-group row justify-content-center">
+      <a href="/"><button class="btn btn-red">abbrechen</button></a>
+    </div>
 </body>
 </html>

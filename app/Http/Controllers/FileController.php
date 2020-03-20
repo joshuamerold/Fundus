@@ -44,7 +44,7 @@ class FileController extends NavbarController
   }
 
   public function add($id){
-    return view('forms.addFile');
+    return view('forms.addFile')->with('id', $id);
   }
 
   public function store(Request $request, $id){

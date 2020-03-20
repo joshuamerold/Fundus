@@ -37,6 +37,9 @@
             <input class="btn col-md-2 offset-md-5" id="btn-addFile" type="submit" name="" value="Hochladen">
           </div>
         </form>
+        <div class="form-group row justify-content-center">
+          <a href="/{{$id}}/show"<button type="button" name="button">zurück</button>
+        </div>
       </div>
     </div>
   </div>

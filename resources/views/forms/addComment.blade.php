@@ -39,3 +39,7 @@
   <input type="submit" name="" value="abschicken">
   @csrf
 </form>
+
+<div class="form-group row justify-content-center">
+  <a href="/{{$lessonId}}/show"<button type="button" name="button">zurück</button>
+</div>
