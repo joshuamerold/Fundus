@@ -67,13 +67,33 @@ class DatabaseSeeder extends Seeder
 
         App\Module::create([
           'name' => 'WebTech 1',
-          'courseid' => '1',
-          'creatoruserid' => '1'
+          'courseid' => 1,
+          'creatoruserid' => 1,
+          'semester' => 1
         ]);
         App\Module::create([
           'name' =>'WebUsability1',
-          'courseid' => '1',
-          'creatoruserid' => '1'
+          'courseid' => 1,
+          'creatoruserid' => 1,
+          'semester' => 1
+        ]);
+        App\Module::create([
+          'name' =>'WebScience2',
+          'courseid' => 1,
+          'creatoruserid' => 1,
+          'semester' => 2
+        ]);
+        App\Module::create([
+          'name' =>'Webshit1',
+          'courseid' => 1,
+          'creatoruserid' => 1,
+          'semester' => 2
+        ]);
+        App\Module::create([
+          'name' =>'WebMan1',
+          'courseid' => 1,
+          'creatoruserid' => 1,
+          'semester' => 5
         ]);
 
         App\Lesson::create([
@@ -156,7 +176,7 @@ class DatabaseSeeder extends Seeder
 
         App\CourseRight::create([
           'coursepartition' =>'ON18',
-          'representative1' => 'none',
+          'representative1' => 'fit',
           'representative2' => 'none'
         ]);
 

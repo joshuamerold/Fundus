@@ -145,9 +145,86 @@
       </i></b>
 
   		<ul class="list-items">
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
+        @foreach($modules as $module)
+        @if($module->semester === 2)
+        <li>
+          <div class="row">
+            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            </div>
+            @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+            <div class="justify-content-end dropdown">
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+              </div>
+            </div>
+            @endif
+          </div>
+            <hr>
+            @foreach($lessons as $lesson)
+              @if($lesson->moduleid == $module->id)
+              <div class="row">
+              <div class="col-md-9">
+                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <!-- Hier Status ob bereits etwas hochgeladen -->
+                @php
+                  $settedFileZ = true;
+                  $settedFileA = true;
+                  $settedFileK = true;
+                @endphp
+              </div>
+              <div class="col-md-3">
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">Z</strong>
+                      @php
+                      $settedFileZ = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileZ)
+                    <strong style="color:grey">Z</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">A</strong>
+                      @php
+                      $settedFileA = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileA)
+                    <strong style="color:grey">A</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">K</strong>
+                      @php
+                      $settedFileK = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileK)
+                    <strong style="color:grey">K</strong>
+                  @endif
+                </span>
+              </div>
+            </div>
+                <p>{{$lesson->professorname}}</p>
+              @endif
+            @endforeach
+        </li>
+        @endif
+        @endforeach
   		</ul>
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
@@ -155,33 +232,344 @@
   	<div class="list">
   		<b class="list-title">3. Semester</b>
   		<ul class="list-items">
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
+        @foreach($modules as $module)
+        @if($module->semester === 3)
+        <li>
+          <div class="row">
+            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            </div>
+            @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+            <div class="justify-content-end dropdown">
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+              </div>
+            </div>
+            @endif
+          </div>
+            <hr>
+            @foreach($lessons as $lesson)
+              @if($lesson->moduleid == $module->id)
+              <div class="row">
+              <div class="col-md-9">
+                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <!-- Hier Status ob bereits etwas hochgeladen -->
+                @php
+                  $settedFileZ = true;
+                  $settedFileA = true;
+                  $settedFileK = true;
+                @endphp
+              </div>
+              <div class="col-md-3">
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">Z</strong>
+                      @php
+                      $settedFileZ = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileZ)
+                    <strong style="color:grey">Z</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">A</strong>
+                      @php
+                      $settedFileA = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileA)
+                    <strong style="color:grey">A</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">K</strong>
+                      @php
+                      $settedFileK = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileK)
+                    <strong style="color:grey">K</strong>
+                  @endif
+                </span>
+              </div>
+            </div>
+                <p>{{$lesson->professorname}}</p>
+              @endif
+            @endforeach
+        </li>
+        @endif
+        @endforeach
   		</ul>
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
   		<b class="list-title">4. Semester</b>
   		<ul class="list-items">
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
+        @foreach($modules as $module)
+        @if($module->semester === 4)
+        <li>
+          <div class="row">
+            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            </div>
+            @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+            <div class="justify-content-end dropdown">
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+              </div>
+            </div>
+            @endif
+          </div>
+            <hr>
+            @foreach($lessons as $lesson)
+              @if($lesson->moduleid == $module->id)
+              <div class="row">
+              <div class="col-md-9">
+                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <!-- Hier Status ob bereits etwas hochgeladen -->
+                @php
+                  $settedFileZ = true;
+                  $settedFileA = true;
+                  $settedFileK = true;
+                @endphp
+              </div>
+              <div class="col-md-3">
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">Z</strong>
+                      @php
+                      $settedFileZ = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileZ)
+                    <strong style="color:grey">Z</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">A</strong>
+                      @php
+                      $settedFileA = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileA)
+                    <strong style="color:grey">A</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">K</strong>
+                      @php
+                      $settedFileK = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileK)
+                    <strong style="color:grey">K</strong>
+                  @endif
+                </span>
+              </div>
+            </div>
+                <p>{{$lesson->professorname}}</p>
+              @endif
+            @endforeach
+        </li>
+        @endif
+        @endforeach
   		</ul>
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
   		<b class="list-title">5. Semester</b>
   		<ul class="list-items">
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
+        @foreach($modules as $module)
+        @if($module->semester === 5)
+        <li>
+          <div class="row">
+            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            </div>
+            @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+            <div class="justify-content-end dropdown">
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+              </div>
+            </div>
+            @endif
+          </div>
+            <hr>
+            @foreach($lessons as $lesson)
+              @if($lesson->moduleid == $module->id)
+              <div class="row">
+              <div class="col-md-9">
+                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <!-- Hier Status ob bereits etwas hochgeladen -->
+                @php
+                  $settedFileZ = true;
+                  $settedFileA = true;
+                  $settedFileK = true;
+                @endphp
+              </div>
+              <div class="col-md-3">
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">Z</strong>
+                      @php
+                      $settedFileZ = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileZ)
+                    <strong style="color:grey">Z</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">A</strong>
+                      @php
+                      $settedFileA = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileA)
+                    <strong style="color:grey">A</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">K</strong>
+                      @php
+                      $settedFileK = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileK)
+                    <strong style="color:grey">K</strong>
+                  @endif
+                </span>
+              </div>
+            </div>
+                <p>{{$lesson->professorname}}</p>
+              @endif
+            @endforeach
+        </li>
+        @endif
+        @endforeach
   		</ul>
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
   		<b class="list-title">6. Semester</b>
   		<ul class="list-items">
-  			<li>Placeholder</li>
-  			<li>Placeholder</li>
+        @foreach($modules as $module)
+        @if($module->semester === 6)
+        <li>
+          <div class="row">
+            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            </div>
+            @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+            <div class="justify-content-end dropdown">
+              <i class="fa fa-caret-down"></i>
+              <div class="dropdown-content">
+                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
+                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+              </div>
+            </div>
+            @endif
+          </div>
+            <hr>
+            @foreach($lessons as $lesson)
+              @if($lesson->moduleid == $module->id)
+              <div class="row">
+              <div class="col-md-9">
+                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <!-- Hier Status ob bereits etwas hochgeladen -->
+                @php
+                  $settedFileZ = true;
+                  $settedFileA = true;
+                  $settedFileK = true;
+                @endphp
+              </div>
+              <div class="col-md-3">
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">Z</strong>
+                      @php
+                      $settedFileZ = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileZ)
+                    <strong style="color:grey">Z</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">A</strong>
+                      @php
+                      $settedFileA = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileA)
+                    <strong style="color:grey">A</strong>
+                  @endif
+                </span>
+                <span class="">
+                  @foreach($files as $file)
+                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                      <strong style="color:red">K</strong>
+                      @php
+                      $settedFileK = false;
+                      @endphp
+                      @break
+                    @endif
+                  @endforeach
+                  @if($settedFileK)
+                    <strong style="color:grey">K</strong>
+                  @endif
+                </span>
+              </div>
+            </div>
+                <p>{{$lesson->professorname}}</p>
+              @endif
+            @endforeach
+        </li>
+        @endif
+        @endforeach
   		</ul>
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
