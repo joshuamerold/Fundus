@@ -10,7 +10,7 @@
   border-radius: 10px;
   padding: 8px 16px;
   hr {
-    margin: 0px 0px 5px 0px;
+    margin: 5px 0px !important;
   }
 }
 
@@ -27,8 +27,12 @@ span.add-module {
     background-size: contain;
     cursor: pointer;
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 23px;
+    width: 23px;
+}
+
+.button-add-lessons {
+  float: right;
 }
 
 .dropdown {
@@ -116,7 +120,7 @@ span.add-module {
 }
 
 .board-title h2 {
-    font-size: 1.8rem;
+    font-size: 1.1rem;
     font-weight: 700;
     white-space: nowrap;
 }
@@ -124,7 +128,7 @@ span.add-module {
 /* Lists */
 
 .lists-container::-webkit-scrollbar {
-    height: 1.4rem;
+    height: 1rem;
 }
 
 .lists-container::-webkit-scrollbar-thumb {
@@ -156,10 +160,10 @@ span.add-module {
 }
 
 .list-title {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #333;
-    padding: 1rem;
+    padding: 0.6rem;
 }
 
 .list-items {
@@ -172,16 +176,16 @@ span.add-module {
 }
 
 .list-items::-webkit-scrollbar {
-    width: 1.6rem;
+    width: 0.8rem;
 }
 
 .list-items::-webkit-scrollbar-thumb {
     background-color: #c4c9cc;
-    border-right: 0.6rem solid #e2e4e6;
+    border-right: 0.4rem solid #e2e4e6;
 }
 
 .list-items li {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
     background-color: #fff;
@@ -227,7 +231,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
     .lists-container {
         display: grid;
-        grid-auto-columns: 27rem;
+        grid-auto-columns: 20rem;
         grid-auto-flow: column;
         grid-column-gap: 1rem;
     }
