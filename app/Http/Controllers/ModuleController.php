@@ -13,17 +13,18 @@ use App\Lesson;
 
 class ModuleController extends NavbarController
 {
-  public function show(){
-    return view('forms.addModule');
+  public function show($semester){
+    return view('forms.addModule')->with('semester', $semester);
   }
 
-  public function add(Request $request){
+  public function add(Request $request, $semester){
 
     $currentUser = Auth::user();
     $currentCourse = Course::all()->where('id', $currentUser->courseid)->first();
 
     $module = new Module;
     $module->name = $request->form_modulename;
+    $module->semester = $semester;
     $module->courseid = $currentCourse->id;
     $module->creatoruserid = $currentUser->id;
     $module->save();
@@ -43,6 +44,7 @@ class ModuleController extends NavbarController
     $currentModule = Module::all()->where('id', $id)->first();
 
     $currentModule->name = $request->name;
+    $currentModule->semester = $request->semester;
     $currentModule->save();
 
     return redirect('/home')->with('Modul erfolgreich bearbeitet!');

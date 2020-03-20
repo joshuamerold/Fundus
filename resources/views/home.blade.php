@@ -52,14 +52,14 @@
       </div>
     </div>
   </div>
-  @endif
+
   <section class="lists-container">
   	<div class="list">
       <b class="list-title">1. Semester<i class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="add-module"></span>
       </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
-
+        @if($module->semester === 1)
         <li>
           <div class="row">
             <div class="col-md-11"><b>{{$module->name}}</b><br>
@@ -136,6 +136,7 @@
               @endif
             @endforeach
         </li>
+        @endif
         @endforeach
   		</ul>
 
@@ -574,6 +575,6 @@
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   </section>
-
+@endif
 
 </body>

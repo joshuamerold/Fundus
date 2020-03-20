@@ -5,7 +5,7 @@
   @include('sidebar')
   @include('topbar')
 <div class="form-container">
-  <form class="module-card" action="/add/module/create" method="post">
+  <form class="module-card" action="/add/{{$semester}}/module/create" method="post">
     <input type="text" name="form_modulename" placeholder="Name des Moduls">
     <!--in Backend noch Courseid eintragen.-->
     <input type="submit" name="" value="absenden">

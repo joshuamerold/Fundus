@@ -33,8 +33,8 @@ Route::get('/add/lesson', 'LessonController@show')->middleware('auth');
 Route::post('/add/lesson/create', 'LessonController@add')->middleware('auth');
 
 //Modulethings
-Route::get('/add/module', 'ModuleController@show')->middleware('auth');
-Route::post('/add/module/create', 'ModuleController@add')->middleware('auth');
+Route::get('/add/{semester}/module', 'ModuleController@show')->middleware('auth');
+Route::post('/add/{semester}/module/create', 'ModuleController@add')->middleware('auth');
 Route::get('/edit/module/{module}', 'ModuleController@editShow')->middleware('auth');
 Route::post('/edit/module/{module}/store', 'ModuleController@edit')->middleware('auth');
 Route::post('/delete/module/{module}', 'ModuleController@delete')->middleware('auth');
