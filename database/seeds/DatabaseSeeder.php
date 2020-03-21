@@ -66,35 +66,35 @@ class DatabaseSeeder extends Seeder
 
 
         App\Module::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
+          'id' => 'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'name' => 'WebTech 1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 1
         ]);
         App\Module::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6ussdsdsdsdssssssfQpVVPdGgYEZhBva',
+          'id' => 'M$2y$10$q.LpuWRa1ITL2ofXRPYe6ussdsdsdsdssssssfQpVVPdGgYEZhBva',
           'name' =>'WebUsability1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 1
         ]);
         App\Module::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9XfvfghzdsssssfQpVVPdGgYEZhBva',
+          'id' => 'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9XfvfghzdsssssfQpVVPdGgYEZhBva',
           'name' =>'WebScience2',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 2
         ]);
         App\Module::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
+          'id' => 'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
           'name' =>'Webshit1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 2
         ]);
         App\Module::create([
-          'id' => 'L$2y$10$s,dljuwh1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
+          'id' => 'M$2y$10$s,dljuwh1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'name' =>'WebMan1',
           'courseid' => 1,
           'creatoruserid' => 1,
@@ -105,26 +105,26 @@ class DatabaseSeeder extends Seeder
           'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
           'lessonname' =>'Datenbanksysteme und Integration',
           'professorname' => 'Herr Seith',
-          'moduleid' =>  'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
+          'moduleid' =>  'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
         App\Lesson::create([
           'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdG22222222',
           'lessonname' =>'Katastrophale Java-Vorlesung',
           'professorname' => 'Herr Schadt',
-          'moduleid' =>  'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
+          'moduleid' =>  'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
         App\Lesson::create([
           'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGdsfdfggds',
           'lessonname' =>'Statistik und BlaBla',
           'professorname' => 'Herr Weird',
-          'moduleid' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
+          'moduleid' => 'M$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
 
         App\File::create([
-          'id' => 'L$2y$10$q.LpuWRasaTL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
+          'id' => 'F$2y$10$q.LpuWRasaTL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
           'name' =>'Web Usability Semester3 zusammendfa.pdf',
           'extension' => 'pdf',
           'path' => '/files/Web Usability Semester3 zusammendfa.pdf',
@@ -135,7 +135,7 @@ class DatabaseSeeder extends Seeder
           'voting' => 0
         ]);
         App\File::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rI55555555VPdGgYEZhBva',
+          'id' => 'F$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rI55555555VPdGgYEZhBva',
           'name' =>'Ajax.pdf',
           'extension' => 'pdf',
           'path' => '/files/Ajax.pdf',
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
           'voting' => 0
         ]);
         App\File::create([
-          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVV11111111Bva',
+          'id' => 'F$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVV11111111Bva',
           'name' =>'Java.pdf',
           'extension' => 'pdf',
           'path' => '/files/Java.pdf',
