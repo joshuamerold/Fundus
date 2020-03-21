@@ -25,7 +25,7 @@
             <div class="input-group-prepend">
               <label class="input-group-text" for="inputGroupSelect01">Kategorie</label>
             </div>
-            <select class="custom-select" id="inputGroupSelect01">
+            <select name="type" class="custom-select" id="inputGroupSelect01">
               <option selected>Kategorie auswählen ...</option>
               <option value="zusammenfassung">Zusammenfassung</option>
               <option value="altklausur">Altklausur</option>

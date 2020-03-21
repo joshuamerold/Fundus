@@ -14,10 +14,11 @@ class CreateLessonsTable extends Migration
     public function up()
     {
         Schema::create('lessons', function (Blueprint $table) {
-          $table->bigIncrements('id');
+          $table->string('id')->nullable();
+          $table->bigIncrements('counter');
           $table->string('lessonname');
           $table->string('professorname');
-          $table->integer('moduleid')->nullable();
+          $table->string('moduleid')->nullable();
           $table->integer('creator_userid');
           $table->timestamps();
         });

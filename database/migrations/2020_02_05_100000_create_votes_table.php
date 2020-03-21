@@ -16,7 +16,7 @@ class CreateVotesTable extends Migration
         Schema::create('votes', function (Blueprint $table) {
           $table->bigIncrements('id');
           $table->integer('userid');
-          $table->integer('fileid');
+          $table->string('fileid');
           $table->integer('vote');
           // $table->integer('commentid');
           $table->timestamps();

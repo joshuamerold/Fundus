@@ -66,30 +66,35 @@ class DatabaseSeeder extends Seeder
 
 
         App\Module::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'name' => 'WebTech 1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 1
         ]);
         App\Module::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6ussdsdsdsdssssssfQpVVPdGgYEZhBva',
           'name' =>'WebUsability1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 1
         ]);
         App\Module::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9XfvfghzdsssssfQpVVPdGgYEZhBva',
           'name' =>'WebScience2',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 2
         ]);
         App\Module::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
           'name' =>'Webshit1',
           'courseid' => 1,
           'creatoruserid' => 1,
           'semester' => 2
         ]);
         App\Module::create([
+          'id' => 'L$2y$10$s,dljuwh1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'name' =>'WebMan1',
           'courseid' => 1,
           'creatoruserid' => 1,
@@ -97,50 +102,56 @@ class DatabaseSeeder extends Seeder
         ]);
 
         App\Lesson::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
           'lessonname' =>'Datenbanksysteme und Integration',
           'professorname' => 'Herr Seith',
-          'moduleid' => 1,
+          'moduleid' =>  'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
         App\Lesson::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdG22222222',
           'lessonname' =>'Katastrophale Java-Vorlesung',
           'professorname' => 'Herr Schadt',
-          'moduleid' => 1,
+          'moduleid' =>  'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7PzssssssssfQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
         App\Lesson::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGdsfdfggds',
           'lessonname' =>'Statistik und BlaBla',
           'professorname' => 'Herr Weird',
-          'moduleid' => 2,
+          'moduleid' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzdsdkjui8fQpVVPdGgYEZhBva',
           'creator_userid' =>1
         ]);
 
         App\File::create([
+          'id' => 'L$2y$10$q.LpuWRasaTL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
           'name' =>'Web Usability Semester3 zusammendfa.pdf',
           'extension' => 'pdf',
           'path' => '/files/Web Usability Semester3 zusammendfa.pdf',
           'type' => 'zusammenfassung',
-          'lessonid' => 3,
+          'lessonid' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGgYEZhBva',
           'creatoruserid' => 1,
           'courseid' => 1,
           'voting' => 0
         ]);
         App\File::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rI55555555VPdGgYEZhBva',
           'name' =>'Ajax.pdf',
           'extension' => 'pdf',
           'path' => '/files/Ajax.pdf',
           'type' => 'zusammenfassung',
-          'lessonid' => 1,
+          'lessonid' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGdsfdfggds',
           'creatoruserid' => 1,
           'courseid' => 1,
           'voting' => 0
         ]);
         App\File::create([
+          'id' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVV11111111Bva',
           'name' =>'Java.pdf',
           'extension' => 'pdf',
           'path' => '/files/Java.pdf',
-          'type' => 'zusammenfassung',
-          'lessonid' => 1,
+          'type' => 'altklausur',
+          'lessonid' => 'L$2y$10$q.LpuWRa1ITL2ofXRPYe6us9Xi7Pzr4rIIH3pfQpVVPdGdsfdfggds',
           'creatoruserid' => 2,
           'courseid' => 1,
           'voting' => 0

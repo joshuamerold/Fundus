@@ -49,11 +49,11 @@ Route::get('{type}/{lesson}/{file}/delete', 'FileController@destroy')->middlewar
 
 //Comments SQLiteDatabase
 Route::get('/{lesson}/{file}/add/comment', 'CommentController@show')->middleware('auth');
-Route::post('/{file}/add/comment/store', 'CommentController@store')->middleware('auth');
+Route::post('/{lesson}/{file}/add/comment/store', 'CommentController@store')->middleware('auth');
 
 //Votes
-Route::get('/{file}/add/comment/up', 'VoteController@up')->middleware('auth');
-Route::get('/{file}/add/comment/down', 'VoteController@down')->middleware('auth');
+Route::get('/{lesson}/{file}/add/comment/up', 'VoteController@up')->middleware('auth');
+Route::get('/{lesson}/{file}/add/comment/down', 'VoteController@down')->middleware('auth');
 
 //User Profile
 Route::get('/profile/{username}', 'ProfileController@showProfile')->middleware('auth');
