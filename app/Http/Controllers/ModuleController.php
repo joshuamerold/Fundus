@@ -25,7 +25,7 @@ class ModuleController extends NavbarController
     $currentCourse = Course::all()->where('id', $currentUser->courseid)->first();
 
     $currentModuleCounter = Module::all()->last()->counter;
-    $idEntry =  'L'.Hash::make($currentModuleCounter+1);
+    $idEntry =  'M'.Hash::make($currentModuleCounter+1);
     $idEntry = Str::replaceArray('/', ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I'], $idEntry);
 
     $module = new Module;
