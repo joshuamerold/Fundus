@@ -3,7 +3,6 @@
 <body class="home-body">
 @include('sidebar')
 @include('topbar')
-  <div class="card-container">
     <div class="col-md-8">
       <div>
         <div>
@@ -51,7 +50,6 @@
           <!-- ->with('users',$user)->with('courses', $courses)->with('modules', $modules)->with('lessons', $lessons); -->
       </div>
     </div>
-  </div>
 
   <section class="lists-container">
   	<div class="list">
@@ -400,7 +398,6 @@
         @endif
         @endforeach
   		</ul>
-  		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
   		<b class="list-title">5. Semester</b>
