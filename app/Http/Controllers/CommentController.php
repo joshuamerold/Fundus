@@ -32,14 +32,14 @@ class CommentController extends NavbarController
 
     }
 
-    public function store(Request $request, $id){
+    public function store(Request $request, $lessonid, $fileid){
 
 
       $newComment = new Comment;
       $newComment->content = $request->content;
       $newComment->userid = Auth::user()->id;
-      $newComment->fileid = $id;
+      $newComment->fileid = $fileid;
       $newComment->save();
-      return redirect('/'.$id.'/add/comment')->with('success', 'erfolgreich kommentiert');
+      return redirect($lessonid.'/'.$fileid.'/add/comment')->with('success', 'erfolgreich kommentiert');
     }
 }

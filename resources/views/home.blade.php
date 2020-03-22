@@ -80,7 +80,7 @@
               <div class="row">
               <div class="col-md-9">
                 <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
+                <!-- Hier Status   ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
                   $settedFileA = true;

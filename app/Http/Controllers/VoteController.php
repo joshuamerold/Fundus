@@ -13,13 +13,13 @@ use App\Vote;
 
 class VoteController extends NavbarController
 {
-    public function up($id){
+    public function up($lessonid, $id){
 
       $userid = Auth::user()->id;
       $voteYet = Vote::all()->where('userid', $userid)->where('fileid', $id);
 
       if(sizeof($voteYet) != 0){
-        return redirect('/'.$id.'/add/comment')->with('error', 'Du hast dieses DIng bereits bewertet.');
+        return redirect($lessonid.'/'.$id.'/add/comment')->with('error', 'Du hast dieses DIng bereits bewertet.');
       }
 
       $currentFile = File::all()->where('id', $id)->first();
@@ -35,15 +35,15 @@ class VoteController extends NavbarController
       $currentVote->vote = 1;
       $currentVote->save();
 
-      return redirect('/'.$id.'/add/comment')->with('success', 'Erfolgreich bewertet.');
+      return redirect($lessonid.'/'.$id.'/add/comment')->with('success', 'Erfolgreich bewertet.');
     }
 
-    public function down($id){
+    public function down($lessonid, $id){
       $userid = Auth::user()->id;
       $voteYet = Vote::all()->where('userid', $userid)->where('fileid', $id);
 
       if(sizeof($voteYet) != 0){
-        return redirect('/'.$id.'/add/comment')->with('error', 'Du hast dieses DIng bereits bewertet.');
+        return redirect($lessonid.'/'.$id.'/add/comment')->with('error', 'Du hast dieses DIng bereits bewertet.');
       }
 
       $currentFile = File::all()->where('id', $id)->first();
@@ -59,6 +59,6 @@ class VoteController extends NavbarController
       $currentVote->vote = -1;
       $currentVote->save();
 
-      return redirect('/'.$id.'/add/comment')->with('success', 'Erfolgreich bewertet.');
+      return redirect($lessonid.'/'.$id.'/add/comment')->with('success', 'Erfolgreich bewertet.');
     }
 }

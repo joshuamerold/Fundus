@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 use App\User;
 use App\Course;
@@ -22,7 +24,12 @@ class ModuleController extends NavbarController
     $currentUser = Auth::user();
     $currentCourse = Course::all()->where('id', $currentUser->courseid)->first();
 
+    $currentModuleCounter = Module::all()->last()->counter;
+    $idEntry =  'M'.Hash::make($currentModuleCounter+1);
+    $idEntry = Str::replaceArray('/', ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I'], $idEntry);
+
     $module = new Module;
+    $module->id = $idEntry;
     $module->name = $request->form_modulename;
     $module->semester = $semester;
     $module->courseid = $currentCourse->id;

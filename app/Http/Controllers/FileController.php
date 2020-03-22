@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\File as LaraFile;
 
 use App\User;
@@ -56,6 +57,12 @@ class FileController extends NavbarController
     $filename = $request->fileToUpload;
     $extension = $filename->getClientOriginalExtension();
 
+    $currentFileCounter = File::all()->last()->counter;
+    $idEntry =  'F'.Hash::make($currentFileCounter+1);
+    $idEntry = Str::replaceArray('/', ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I'], $idEntry);
+
+
+
     $arr_extensions=Array('pdf', 'txt', 'jpeg', 'JPG', 'jpg', 'png', 'doc', 'docx', 'ppt', 'pptx', 'ai', 'indd', 'psd', 'xd');
     foreach ($arr_extensions as $goodExtension) {
       if($goodExtension == $extension){
@@ -83,6 +90,7 @@ class FileController extends NavbarController
         $file->extension = $eingabe->getClientOriginalExtension();
         // $file->size = $eingabe->getClientSize()/1000;
         $file->path = "/files/".$filename;
+        $file->id = $idEntry;
         $file->type = $request->type;
         $file->lessonid = $id;
         $file->creatoruserid = $userid;
