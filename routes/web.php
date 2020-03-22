@@ -30,7 +30,7 @@ Route::get('/{lesson}/show/{altklausur}', 'LessonController@showContent')->middl
 Route::get('/{lesson}/show/{karteikarte}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/', 'LessonController@showAllContent')->middleware('auth');
 Route::get('/{semester}/add/lesson', 'LessonController@show')->middleware('auth');
-Route::post('/{semester}/add/lesson/create', 'LessonController@add')->middleware('auth');
+Route::post('/{semester}/add/lesson/create/{type}', 'LessonController@add')->middleware('auth');
 
 //Modulethings
 Route::get('/add/{semester}/module', 'ModuleController@show')->middleware('auth');
