@@ -54,7 +54,6 @@
   </div>
   @else
   @include('inc.messages')
->>>>>>> 9d5f2080c059f728a1942cbb9c2057b539675553
 
   <section class="lists-container">
   	<div class="list">
