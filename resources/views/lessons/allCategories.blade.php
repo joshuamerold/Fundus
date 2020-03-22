@@ -34,7 +34,7 @@ $('.dataTables_length').addClass('bs-select');
       <!-- Tab Zusammenfassungen -->
       <div class="tab-content col-md-12" id="myTabContent">
         <div class="tab-pane fade show active" id="abstract" role="tabpanel" aria-labelledby="abstract-tab">
-          <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+          <table class="table table-striped table-sm" cellspacing="0" width="100%">
             <thead>
               <th class="th-sm">Typ</th>
               <th class="th-sm">Dateiname</th>
@@ -67,7 +67,7 @@ $('.dataTables_length').addClass('bs-select');
                 @endforeach
               </td>
               <td>{{$file->voting}}</td>
-              <td>
+              <td class="inner-table-align">
                 <table class="inner-table">
                   <tr>
                     <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
@@ -87,7 +87,7 @@ $('.dataTables_length').addClass('bs-select');
         </div>
         <!-- Tab Altklausuren -->
         <div class="tab-pane fade" id="old-test" role="tabpanel" aria-labelledby="old-test-tab">
-          <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+          <table class="table table-striped table-sm" cellspacing="0" width="100%">
             <thead>
               <th>Typ</th>
               <th>Dateiname</th>
@@ -120,7 +120,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endforeach
               </td>
               <td>{{$file->voting}}</td>
-              <td>
+              <td class="inner-table-align">
                 <!-- {{Request::path()}} -->
                 <table class="inner-table">
                   <tr>
@@ -141,7 +141,7 @@ $('.dataTables_length').addClass('bs-select');
         </div>
         <!-- Tab Karteikarten -->
         <div class="tab-pane fade" id="index-cards" role="tabpanel" aria-labelledby="index-cards-tab">
-          <table class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+          <table class="table table-striped table-sm" cellspacing="0" width="100%">
             <thead>
               <th>Typ</th>
               <th>Dateiname</th>
@@ -174,7 +174,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endforeach
               </td>
               <td>{{$file->voting}}</td>
-              <td>
+              <td class="inner-table-align">
                 <!-- {{Request::path()}} -->
                 <table class="inner-table">
                   <tr>
