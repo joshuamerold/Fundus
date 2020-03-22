@@ -192,12 +192,7 @@ $('.dataTables_length').addClass('bs-select');
             @endif
             @endforeach
           </table>
-
         </div>
       </div>
-
-  </div>
-  <div class="form-group row justify-content-left">
-    <a href="/"><button class="btn btn-red">zurück</button></a>
   </div>
 </body>

@@ -20,7 +20,6 @@
             </div>
           </div>
 
-
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <label class="input-group-text" for="inputGroupSelect01">Kategorie</label>
@@ -38,7 +37,7 @@
           </div>
         </form>
         <div class="form-group row justify-content-center">
-          <a href="/{{$id}}/show"<button type="button" name="button">zurück</button>
+          <a href="/{{$id}}/show"<button type="button" name="button">Abbrechen</button>
         </div>
       </div>
     </div>
