@@ -11366,8 +11366,16 @@ files-body {
   padding: 0px 10px;
 }
 
+.inner-table-align {
+  vertical-align: middle !important;
+}
+
 .inner-table {
   background: white;
+}
+
+.inner-table-align > table > tbody > tr > td {
+  border-top: none;
 }
 
 .button-add-file {

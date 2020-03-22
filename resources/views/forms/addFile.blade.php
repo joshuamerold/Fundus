@@ -1,22 +1,20 @@
 @include('standards/head')
 @include('sidebar')
-
 @include('inc/messages')
 <body class="addFile-body">
   <div class="card offset-md-2 col-md-8">
   <h2 class="mt-3">Datei hinzufügen</h2>
     <div class="card-body">
-
       <form class="" action="File/store" method="post" enctype="multipart/form-data">
         @csrf
 
           <div class="input-group mb-3">
             <div class="input-group-prepend">
-              <span class="input-group-text">Hochladen</span>
+              <span class="input-group-text" id="inputGroupFileAddon01">Hochladen</span>
             </div>
             <div class="custom-file">
-              <input type="file" name="fileToUpload" id="fileToUpload" value="" accept=".pdf, .txt, .jpeg, .jpg, .png, .doc, .docx, .ppt, .pptx, .ai, .indd, .psd, .xd">
-              <label class="custom-file-label" for="inputGroupFile01">Datei auswählen</label>
+              <input type="file" class="custom-file-input" id="fileToUpload" name="fileToUpload" aria-describedby="inputGroupFileAddon01" accept=".pdf, .txt, .jpeg, .jpg, .png, .doc, .docx, .ppt, .pptx, .ai, .indd, .psd, .xd">
+              <label class="custom-file-label" for="fileToUpload">Datei auswählen</label>
             </div>
           </div>
 
