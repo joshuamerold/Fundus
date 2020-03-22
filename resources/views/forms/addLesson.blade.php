@@ -1,3 +1,4 @@
+<h1>Füge nun eine Lehrveranstaltung für das {{$semester}}.Semester hinzu.</h1>
 <form class="" action="/add/lesson/create" method="post">
   @csrf
 <input type="text" name="lessonname" value="" placeholder="Name der Vorlesung"><br>
