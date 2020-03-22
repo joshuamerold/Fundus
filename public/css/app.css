@@ -11096,7 +11096,7 @@ span.add-module {
 
 .lists-container {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   padding: 0 0.8rem 0.8rem;
   overflow-x: auto;
   height: calc(100vh - 8.6rem);
@@ -11127,7 +11127,7 @@ span.add-module {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-content: start;
+  align-content: flex-start;
   padding: 0 0.6rem 0.5rem;
   overflow-y: auto;
 }
