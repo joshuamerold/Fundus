@@ -41,7 +41,7 @@ class LessonController extends NavbarController
     return view('lessons.allCategories')->with('files', $files)->with('creators', $creators)->with('currentLesson', $currentLesson)->with('user', $user)->with('courses', $courses)->with('allUsers', $allUsers)->with('fileZcount', $fileZcount)->with('fileAcount', $fileAcount)->with('fileKcount', $fileKcount);
   }
 
-  public function show(){
+  public function show($semester){
 
     $user = Auth::user();
     $userid = $user->id;
@@ -50,7 +50,7 @@ class LessonController extends NavbarController
     $currentCourse = $courses->first();
 
     $modules = Module::all()->where('courseid', $currentCourse->id);
-    return view('forms.addLesson')->with('modules', $modules);
+    return view('forms.addLesson')->with('modules', $modules)->with('semester', $semester);
   }
 
   public function add(Request $request){
