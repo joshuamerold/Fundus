@@ -49,26 +49,63 @@ class LessonController extends NavbarController
     $courses = Course::all()->where('id', $courseid);
     $currentCourse = $courses->first();
 
-    $modules = Module::all()->where('courseid', $currentCourse->id);
+    $modules = Module::all()->where('courseid', $currentCourse->id)->where('semester', $semester);
     return view('forms.addLesson')->with('modules', $modules)->with('semester', $semester);
   }
 
-  public function add(Request $request){
+  public function add(Request $request, $semester, $type){
     $userid = Auth::user()->id;
     $currentLessonCounter = Lesson::all()->last()->counter;
     $idEntry =  'L'.Hash::make($currentLessonCounter+1);
     $idEntry = Str::replaceArray('/', ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I'], $idEntry);
 
-    $lesson = new Lesson;
-    $lesson->lessonname = $request->lessonname;
-    $lesson->id = $idEntry;
-    $lesson->professorname = $request->sex." ".$request->professorname;
-    $lesson->moduleid = $request->module;
-    $lesson->creator_userid = $userid;
-    $lesson->save();
+    if($type == "lesson"){
+      //hier wenn Lesson mit bereits existierenden MOdules angelegt wird
+      $lesson = new Lesson;
+      $lesson->lessonname = $request->lessonname;
+      $lesson->id = $idEntry;
+      $lesson->professorname = $request->sex." ".$request->professorname;
+      $lesson->moduleid = $request->module;
+      $lesson->creator_userid = $userid;
+      $lesson->save();
 
 
-    return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
+      return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
+    }
+
+    else{
+      //hier, wenn neues Modul angelegt wurde
+      $currentCourse = Course::all()->where('id', Auth::user()->courseid)->first();
+      $currentModuleCounter = Module::all()->last()->counter;
+      $idEntry2 =  'M'.Hash::make($currentModuleCounter+1);
+      $idEntry2 = Str::replaceArray('/', ['I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I', 'I'], $idEntry2);
+
+      $module = new Module;
+      $module->id = $idEntry2;
+      $module->name = $request->newModule;
+      $module->semester = $semester;
+      $module->courseid = $currentCourse->id;
+      $module->creatoruserid = $userid;
+      $module->save();
+
+
+      $lesson = new Lesson;
+      $lesson->lessonname = $request->lessonname;
+      $lesson->id = $idEntry;
+      $lesson->professorname = $request->sex." ".$request->professorname;
+      $lesson->moduleid = $request->module;
+      $lesson->creator_userid = $userid;
+      $lesson->save();
+
+      $newModuleId = Module::all()->where('id', $idEntry2)->first()->id;
+      $newLesson = Lesson::all()->where('id', $idEntry)->first();
+      $newLesson->moduleid = $newModuleId;
+      $newLesson->save();
+
+
+      return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
+    }
+
 
   }
 }
