@@ -3,10 +3,11 @@
 <body class="home-body">
 @include('sidebar')
 @include('topbar')
+@if(!$alreadyAdmins)
+  <div class="card-container">
     <div class="col-md-8">
       <div>
         <div>
-          @if(!$alreadyAdmins)
           <!-- Das hier erscheint, wenn noch keine Kurssprecher bestimmt wurden. -->
           <h2>Sie haben noch keinen Kurssprecher hinterlegt</h2>
           <p>
@@ -34,7 +35,6 @@
           </form>
 
 
-          @else
           <!-- Alle Inhalte die für jeden mit hinterlegten Kurssprecher hinterlegt sind. -->
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <li><a href="/add/module">Modul hinzufügen</a></li>
@@ -42,7 +42,6 @@
           </div>
         </div>
 
-          @include('inc.messages')
           <!-- <a href="/add/module">Modul hinzufügen</a>
           <a href="/add/lesson">Lehrveranstaltung hinzufügen</a> -->
 
@@ -50,10 +49,18 @@
           <!-- ->with('users',$user)->with('courses', $courses)->with('modules', $modules)->with('lessons', $lessons); -->
       </div>
     </div>
+<<<<<<< HEAD
+=======
+  </div>
+  @else
+  @include('inc.messages')
+>>>>>>> 9d5f2080c059f728a1942cbb9c2057b539675553
 
   <section class="lists-container">
   	<div class="list">
-      <b class="list-title">1. Semester<i class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="add-module"></span>
+      <b class="list-title">1. Semester
+        <a href="/1/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
       </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
@@ -140,7 +147,9 @@
 
   	</div>
   	<div class="list">
-  		<b class="list-title">2. Semester<i class="button-add-lessons" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="add-module"></span>
+  		<b class="list-title">2. Semester
+        <a href="/2/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
       </i></b>
 
   		<ul class="list-items">
@@ -229,7 +238,10 @@
   	</div>
 
   	<div class="list">
-  		<b class="list-title">3. Semester</b>
+      <b class="list-title">3. Semester
+        <a href="/3/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
+      </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
         @if($module->semester === 3)
@@ -315,7 +327,10 @@
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
-  		<b class="list-title">4. Semester</b>
+      <b class="list-title">4. Semester
+        <a href="/4/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
+      </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
         @if($module->semester === 4)
@@ -400,7 +415,10 @@
   		</ul>
   	</div>
   	<div class="list">
-  		<b class="list-title">5. Semester</b>
+      <b class="list-title">5. Semester
+        <a href="/5/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
+      </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
         @if($module->semester === 5)
@@ -486,7 +504,10 @@
   		<button class="add-card-btn btn">Add a card</button>
   	</div>
   	<div class="list">
-  		<b class="list-title">6. Semester</b>
+      <b class="list-title">6. Semester
+        <a href="/6/add/lesson"><i class="button-add-lessons" type="button" id="dropdownMenu2" aria-haspopup="true" aria-expanded="false">
+        <span class="add-module"></span></a>
+      </i></b>
   		<ul class="list-items">
         @foreach($modules as $module)
         @if($module->semester === 6)
