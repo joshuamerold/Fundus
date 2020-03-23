@@ -13,7 +13,7 @@
       </div>
 
       <div class="info">
-        <a href="/profile/{{ Auth::user()->username }}" class="profile-link">{{ Auth::user()->username }}</a>
+        <a href="/profile/{{ Auth::user()->username }}" class="profile-link text-white">{{ Auth::user()->username }}</a>
         <!-- LogoutDropdown -->
         <div class="logout">
           @guest
@@ -41,7 +41,7 @@
             </div>
           @endguest
           </div>
-          <span>{{ Auth::user()->coursename }}</span>
+          <span class="text-white">{{ Auth::user()->coursename }}</span>
         </div>
       </div>
   <hr>

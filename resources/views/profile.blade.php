@@ -48,8 +48,10 @@
                 <button class="btn btn-red" type="submit">Profil aktualisieren</button>
             </div>
 
+            <div class="form-group row justify-content-center">
+                <a href="/"><button class="btn btn-outline-secondary">abbrechen</button></a>
+            </div>
         </form>
-
     @else
         <div class="row justify-content-center mt-4">
             @if(!empty($user->imageURL))
@@ -142,8 +144,5 @@
         </script>
 
     @endif
-    <div class="form-group row justify-content-center">
-      <a href="/"><button class="btn btn-red">abbrechen</button></a>
-    </div>
 </body>
 </html>
