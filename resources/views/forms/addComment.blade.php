@@ -16,16 +16,19 @@
 @foreach($comments as $comment)
 <p>
   <div class="">
-    Name des Kommentierers=
     @foreach($users as $user)
       @if($comment->userid == $user->id)
+        <div class="image">
+          @if(!empty($user->imageURL))
+              <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width:50px"/>
+          @else
+              <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width:50px" class="img-circle" alt="Profilbild"/>
+          @endif
+        </div>
+        Name des Kommentierers=
         {{$user->username}} <br>
         Kurs des Kommentierers=
-        @foreach($courses as $course)
-          @if($user->courseid == $course->id)
-          {{$course->name}}<br>
-          @endif
-        @endforeach
+        {{$user->coursename}} <br>
         Inhalt des KOmmentars= {{$comment->content}}
       @endif
     @endforeach
