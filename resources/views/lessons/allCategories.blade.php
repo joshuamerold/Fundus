@@ -58,7 +58,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->updated_at}}</td>
+              <td>{{$file->created_at}}</td>
               <td>
                 @foreach($creators as $creator)
                   @if($file->creatoruserid == $creator->id)
@@ -111,7 +111,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->updated_at}}</td>
+              <td>{{$file->created_at}}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
@@ -165,7 +165,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->updated_at}}</td>
+              <td>{{$file->created_at}}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
