@@ -72,7 +72,7 @@
                 {{$date->date}}
                 @if($date->creatoruserid === Auth::user()->id || Auth::user()->rights == "admin")
               </td>
-              <td>
+              <td style="vertical-align:top">
                 <div class="dropdown">  
                   <a id="deleteFrist" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->name }} <span class="caret"></span></a>  
                   <div class="dropdown-menu" aria-labelledby="deleteFrist" style="width: 90px;">
