@@ -1,5 +1,6 @@
 @include('standards/head')
 @include('sidebar')
+@include('topbar')
 @include('inc/messages')
 <body class="addFile-body">
   <div class="card offset-md-2 col-md-8">

@@ -5159,12 +5159,10 @@ input[type=button].btn-block {
 
 @media (min-width: 576px) {
   .card-columns {
-    -webkit-column-count: 3;
-       -moz-column-count: 3;
-            column-count: 3;
-    -webkit-column-gap: 1.25rem;
-       -moz-column-gap: 1.25rem;
-            column-gap: 1.25rem;
+    -moz-column-count: 3;
+         column-count: 3;
+    -moz-column-gap: 1.25rem;
+         column-gap: 1.25rem;
     orphans: 1;
     widows: 1;
   }
@@ -10988,7 +10986,7 @@ h2 *.login {
 }
 
 span.add-module {
-  background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background: url(/images/Add_Plus.svg?ad49a3fb23189667f5d8caac58f47ebf);
   background-size: contain;
   cursor: pointer;
   display: inline-block;
@@ -11353,7 +11351,7 @@ files-body {
 }
 
 .button-add-file {
-  background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background: url(/images/Add_Plus.svg?ad49a3fb23189667f5d8caac58f47ebf);
   background-size: contain;
   cursor: pointer;
   display: inline-block;
@@ -11379,7 +11377,7 @@ files-body {
 }
 
 .button-add-file {
-  background: url(/images/Add_Plus.svg?928aece3b2a755ca5342b11f6bd0feec);
+  background: url(/images/Add_Plus.svg?ad49a3fb23189667f5d8caac58f47ebf);
   background-position: center center;
   background-size: contain;
   cursor: pointer;
@@ -11446,7 +11444,6 @@ table.table {
 
 .addFile-body {
   margin-left: 250px;
-  padding-left: 10px;
 }
 
 .card {
@@ -11505,5 +11502,16 @@ table.table {
 
 .text-red {
   color: #CF2D25;
+}
+
+.editModule-body {
+  margin-left: 250px;
+}
+
+.editModule-card {
+  margin-top: 50px;
+  box-shadow: 0px 5px 30px 5px #cccccc;
+  border-radius: 10px;
+  height: 320px;
 }
 
