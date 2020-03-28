@@ -11515,3 +11515,15 @@ table.table {
   height: 320px;
 }
 
+.addLesson-body {
+  margin-left: 250px;
+}
+
+.addComment-body {
+  margin-left: 250px;
+}
+
+.addDate-body {
+  margin-left: 250px;
+}
+

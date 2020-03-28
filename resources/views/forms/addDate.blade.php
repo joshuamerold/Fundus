@@ -11,7 +11,7 @@
 
 </head>
 
-<body>
+<body class="addDate-body">
 <div class="container">
   <h1>Neuen Termin erstellen</h1>
   <form class="" action="/add/date/create" method="post">
