@@ -28,9 +28,9 @@
       </svg>
     </div>
 
-  <div class="row justify-content-around card-row">
+  <div class="row justify-content-around card-row" style="margin-top: 200px">
       <div class="col-md-3">
-          <div>
+          <div >
               <h2 class="login-title">{{ __('Willkommen zurück!') }}</h2>
               <div class="card-body">
                   <form method="POST" action="{{ route('login') }}">
