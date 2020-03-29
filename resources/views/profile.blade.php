@@ -49,7 +49,7 @@
             </div>
 
             <div class="form-group row justify-content-center">
-                <a href="/"><button class="btn btn-outline-secondary">abbrechen</button></a>
+                <a href="/" class="btn btn-outline-secondary">abbrechen</a>
             </div>
         </form>
     @else
