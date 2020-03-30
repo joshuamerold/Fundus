@@ -8,22 +8,22 @@
       <div>
         <div>
           <!-- Das hier erscheint, wenn noch keine Kurssprecher bestimmt wurden. -->
-          <h2>Sie haben noch keinen Kurssprecher hinterlegt</h2>
+          <h2>Bitte Kurssprecher festlegen</h2>
           <p>
             Um alle Inhalte von Fundus zu nutzen, müssen die Kurssprecher bestimmt werden.<br>
             Bitte wählen Sie die Kurssprecher unten aus.<br>
-            Sollte sich der Kurssprecher nicht in der Liste befinden, bitte ich Sie diese zur Registrierung zu führen.
+            Sollte sich der Kurssprecher nicht in der Liste befinden, fordern Sie diese bitte auf sich zu registrieren.
           </p>
           <form class="" action="/add/adminuser/{{$user->coursename}}" method="post">
             @csrf
-            Hier ersten Kurssprecher bestimmen: <br>
+            Kurssprecher bestimmen: <br>
             <select id="adminuser1" name="adminuser1">
               @foreach($allCourseUsers as $allCourseUser)
-              Hier ersten Kurssprecher bestimmen: <br>
+              Kurssprecher bestimmen: <br>
               <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
               @endforeach
             </select> <br>
-            Hier zweiten Kurssprecher bestimmen: <br>
+            HStellvertretenden Kurssprecher bestimmen: <br>
             <select id="adminuser2" name="adminuser2">
               @foreach($allCourseUsers as $allCourseUser)
 
