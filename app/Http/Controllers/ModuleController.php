@@ -48,6 +48,9 @@ class ModuleController extends NavbarController
   }
 
   public function edit(Request $request, $id){
+    if($request->name === "happy easter"){
+      return view('happyEaster');
+    }
     $currentModule = Module::all()->where('id', $id)->first();
 
     $currentModule->name = $request->name;
