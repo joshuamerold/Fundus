@@ -41,7 +41,7 @@ class ModuleController extends NavbarController
 
   public function editShow($id){
     $currentModule = Module::all()->where('id', $id)->first();
-    if(Auth::user()->id == $currentModule->id || Auth::user()->rights == "admin"){
+    if(Auth::user()->id == $currentModule->creatoruserid || Auth::user()->rights == "admin"){
         return view('forms.editModule')->with('currentModule', $currentModule);
     }
     return redirect('/home')->with('error', 'Du hast keine Berechtigungen für diese Aktion!');
