@@ -18,6 +18,7 @@
   <div class="">
     @foreach($users as $user)
       @if($comment->userid == $user->id)
+      <a href="/profile/{{$user->username}}">
         <div class="image">
           @if(!empty($user->imageURL))
               <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width:50px"/>
@@ -25,8 +26,9 @@
               <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width:50px" class="img-circle" alt="Profilbild"/>
           @endif
         </div>
+      </a>
         Name des Kommentierers=
-        {{$user->username}} <br>
+        <a href="/profile/{{$user->username}}">{{$user->username}}</a> <br>
         Kurs des Kommentierers=
         {{$user->coursename}} <br>
         Inhalt des KOmmentars= {{$comment->content}}
