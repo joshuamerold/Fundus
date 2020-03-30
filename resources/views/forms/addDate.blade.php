@@ -12,8 +12,8 @@
   <h1>Neuen Termin erstellen</h1>
   <form class="" action="/add/date/create" method="post">
     @csrf
-    <input class="date form-control" type="text" name="date">
-    <input type="text" name="name" value="neuer Terminname">
+    <input class="date form-control" type="text" name="date" required>
+    <input type="text" name="name" value="neuer Terminname" required>
     <input type="submit" name="" value="senden">
   </form>
   <div class="form-group row justify-content-center">
