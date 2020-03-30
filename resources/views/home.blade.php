@@ -80,7 +80,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status   ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
@@ -170,7 +170,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
@@ -260,7 +260,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
@@ -348,7 +348,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
@@ -436,7 +436,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
@@ -524,7 +524,7 @@
               @if($lesson->moduleid == $module->id)
               <div class="row">
               <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show">{{$lesson->lessonname}}</a>
+                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
