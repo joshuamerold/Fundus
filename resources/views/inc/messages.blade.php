@@ -13,7 +13,7 @@ Beinhalten Error-Messages! werden an verschiedene Templates weitergegeben und fa
 @if(session('success'))
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-<div id="success-alert" class="alert alert-success alert-dismissible fade show" role="alert">
+<div id="success-alert" class="alert alert-success alert-dismissible fade show" style="height: 50px; width: 100vw; position: absolute; top: 60px;" role="alert">
   {{session('success')}}
 </div>
 <script type="text/javascript">
@@ -25,7 +25,7 @@ $("#success-alert").fadeTo(2000, 500).slideUp(500, function(){
 
 @if(session('error'))
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<div id="error-alert" class="alert alert-danger text-center mb-0">
+<div id="error-alert" class="alert alert-danger text-center mb-0" style="height: 50px; width: 100vw; position: absolute; top: 60px;" >
   {{session('error')}}
 </div>
 <script type="text/javascript">
