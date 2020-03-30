@@ -27,7 +27,7 @@
             <button class="btn btn-red" href="/" type="submit" name="button">Ändern</button>
           </div>
           <div class="form-group row justify-content-center">
-            <button class="btn btn-outline-secondary" href="/" type="button" name="button">zurück</button>
+            <a class="btn btn-outline-secondary" href="/" type="button" name="button">zurück</a>
           </div>
         </form>
 
