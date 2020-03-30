@@ -1,5 +1,4 @@
 @include('standards/head')
-
 <body class="home-body">
 @include('sidebar')
 @include('topbar')
@@ -52,7 +51,6 @@
 
   </div>
   @else
-  @include('inc.messages')
 
   <section class="lists-container">
   	<div class="list">

@@ -5,3 +5,4 @@
     </a>
   </nav>
 </div>
+@include('inc.messages')
