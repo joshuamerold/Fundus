@@ -2,11 +2,11 @@
 @include('sidebar')
 @include('topbar')
 
-
 <body class="addLesson-body">
   <div class="card offset-md-2 col-md-8">
     <h2 class="mt-3">Lehrveranstaltung für das {{$semester}}.Semester hinzufügen</h2>
     <p></p>
+    <div class="card-body">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <form id="lessonForm" class="" action="/{{$semester}}/add/lesson/create/lesson" method="post">
       @csrf
@@ -56,16 +56,16 @@
             </div>
 
         </br>
-
-        <br>
         <div class="form-group row justify-content-center">
           <input  type="submit" name="" value="abschicken" class="btn btn-red">
         </div>
       </form>
-        
+
         <div class="form-group row justify-content-center">
           <a href="/home"<button type="button" name="button">zurück</button>
           </div>
         </div>
       </div>
+    </div>
+
     </body>
