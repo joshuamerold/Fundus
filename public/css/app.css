@@ -10898,7 +10898,7 @@ a.text-dark:focus {
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: 160px;
+  margin-top: 80px;
 }
 
 .circle {
@@ -10920,6 +10920,14 @@ a.text-dark:focus {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+}
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  position: absolute !important;
 }
 
 svg {
@@ -10989,6 +10997,11 @@ h2 *.login {
   background-color: white !important;
   color: #CF2D25 !important;
   border: 1px solid #CF2D25 !important;
+}
+
+.add-mail {
+  text-align: center;
+  color: grey;
 }
 
 .btn-link {

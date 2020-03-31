@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  margin-top: 160px;
+  margin-top: 80px;
 }
 
 .circle {
@@ -44,7 +44,9 @@
 //   z-index: 1000;
 // }
 
-
+.container-fluid {
+  position: absolute !important;
+}
 
 svg {
   height: 100%;
@@ -113,7 +115,10 @@ h2 {
   }
 }
 
-
+.add-mail {
+  text-align: center;
+  color: grey;
+}
 
 .btn-link {
   color: white;
