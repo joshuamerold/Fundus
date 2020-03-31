@@ -11544,19 +11544,42 @@ table.table {
 
 .addComment-body {
   margin-left: 250px;
+  padding-bottom: 50px;
 }
 
 div.scrollable {
   overflow-x: auto;
   height: 500px;
   width: 400px;
+  border: 1px solid #ced4da;
+  padding: 10px;
 }
 
-hr {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border: 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.noStyle {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.btn-sm-custom {
+  width: 100px !important;
+}
+
+.hr-custom {
+  width: 360px;
+  margin: 2px 0px;
+}
+
+.custom-link {
+  color: #868686;
+}
+
+.custom-link:hover {
+  color: #e63329;
+}
+
+.custom-frame {
+  border: 1px solid #ced4da;
 }
 
 .addDate-body {
