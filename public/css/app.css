@@ -10894,15 +10894,32 @@ a.text-dark:focus {
   width: 100%;
 }
 
-.outer {
-  align-items: center;
+.circle-container {
   display: flex;
-  height: 300px;
   justify-content: center;
-  max-width: 100%;
-  overflow: auto;
-  padding: 50px;
-  z-index: 1000;
+  position: relative;
+  margin-top: 160px;
+}
+
+.circle {
+  border: 3px solid #CF2D25;
+  border-radius: 50%;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.logo-login {
+  height: 50px;
+  z-index: 2000;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 svg {

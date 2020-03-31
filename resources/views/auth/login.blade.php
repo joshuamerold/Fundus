@@ -15,19 +15,12 @@
 
 @include('inc.messages')
 <body class="login-body">
-
-    <!-- <div class="circle">
-
-    </div> -->
-    <div class="outer" style="z-index:0;">
-      <svg viewBox="0 0 150 150" preserveAspectRatio="xMinYMin meet">
-        <g>
-          <circle r="50%" cx="50%" cy="50%" class="circle-back" />
-          <text x="50%" y="50%" text-anchor="middle" dy="0.3em">Fundus</text>
-        </g>
-      </svg>
+  <div class="circle-container">
+    <!-- Kreis mit Logo -->
+    <div class="circle">
+      <img src="/images/fundus_logo.png" alt="Logo" class="logo-login">
     </div>
-
+  </div>
   <div class="row justify-content-around card-row" style="margin-top: 200px">
       <div class="col-md-3">
           <div >
