@@ -83,9 +83,12 @@ h2 {
 }
 
 .btn-register {
-  background-color: $red;
-  border: none;
-  color: white;
+  background-color: $red !important;
+  border: none !important;
+  color: white !important;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
 }
 
 .btn-link {

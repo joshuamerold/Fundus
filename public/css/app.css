@@ -10960,9 +10960,12 @@ h2 *.login {
 }
 
 .btn-register {
-  background-color: #CF2D25;
-  border: none;
-  color: white;
+  background-color: #CF2D25 !important;
+  border: none !important;
+  color: white !important;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
 }
 
 .btn-link {
