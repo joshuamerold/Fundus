@@ -67,9 +67,19 @@ h2 {
   width: 250px;
 }
 
-.btn {
+.btn-anmelden {
   border-radius: 10px;
+  background-color: #cf2d25;
   width: 250px;
+  height: 35px;
+  border: 2px solid white !important;
+}
+
+.anmelden-btn-group {
+  color: white;
+  a:hover {
+    color: white;
+  }
 }
 
 .btn-register {

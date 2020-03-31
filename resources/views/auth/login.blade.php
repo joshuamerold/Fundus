@@ -45,10 +45,10 @@
                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="{{ __('Passwort') }}" required autocomplete="current-password">
                           </div>
                       </div>
-                        <div>
+                        <div class="anmelden-btn-group">
                           <div class="form-group row justify-content-around">
                             <div>
-                              <button type="submit" class="btn btn-outline-light">
+                              <button type="submit" class="btn btn-outline-light btn-anmelden">
                                 {{ __('Anmelden') }}
                               </button>
                               @if (Route::has('password.request'))
