@@ -6,32 +6,34 @@
   <div class="card-container">
     <div class="col-md-8">
       <div>
-        <div>
+        <div class="inner-container">
           <!-- Das hier erscheint, wenn noch keine Kurssprecher bestimmt wurden. -->
-          <h2>Bitte Kurssprecher festlegen</h2>
-          <p>
-            Um alle Inhalte von Fundus zu nutzen, müssen die Kurssprecher bestimmt werden.<br>
-            Bitte wählen Sie die Kurssprecher unten aus.<br>
-            Sollte sich der Kurssprecher nicht in der Liste befinden, fordern Sie diese bitte auf sich zu registrieren.
-          </p>
-          <form class="" action="/add/adminuser/{{$user->coursename}}" method="post">
-            @csrf
-            Kurssprecher bestimmen: <br>
-            <select id="adminuser1" name="adminuser1">
-              @foreach($allCourseUsers as $allCourseUser)
+          <div class="speaker-card">
+            <h2>Bitte Kurssprecher festlegen</h2>
+            <p>
+              Um alle Inhalte von Fundus zu nutzen, müssen die Kurssprecher bestimmt werden.<br>
+              Bitte wählen Sie die Kurssprecher aus der Benutzerliste unten aus.<br>
+              Sollte sich der Kurssprecher nicht in der Liste befinden, fordern Sie diese bitte auf sich zu registrieren.
+            </p>
+            <form class="" action="/add/adminuser/{{$user->coursename}}" method="post">
+              @csrf
               Kurssprecher bestimmen: <br>
-              <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
-              @endforeach
-            </select> <br>
-            HStellvertretenden Kurssprecher bestimmen: <br>
-            <select id="adminuser2" name="adminuser2">
-              @foreach($allCourseUsers as $allCourseUser)
+              <select id="adminuser1" name="adminuser1">
+                @foreach($allCourseUsers as $allCourseUser)
+                Kurssprecher bestimmen: <br>
+                <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
+                @endforeach
+              </select> <br>
+              Stellvertretenden Kurssprecher bestimmen: <br>
+              <select id="adminuser2" name="adminuser2">
+                @foreach($allCourseUsers as $allCourseUser)
 
-              <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
-              @endforeach
-            </select>
-          </br><button type="submit" name="button" value="bestimmen">bestimmen</button>
-          </form>
+                <option value="{{$allCourseUser->id}}">{{$allCourseUser->username}}</option>
+                @endforeach
+              </select>
+            </br><button type="submit" name="button" value="bestimmen">bestimmen</button>
+            </form>
+          </div>
 
 
           <!-- Alle Inhalte die für jeden mit hinterlegten Kurssprecher hinterlegt sind. -->
