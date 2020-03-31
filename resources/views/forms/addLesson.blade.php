@@ -43,7 +43,18 @@
             </select>
             <input type="text" id="moduleInput" name="newModule" style="display:none" value="" placeholder="Modulname"/>
 
-          </div>
+
+              <button id="addModule" type="button" class="form-control">oder: neues Modul hinzufügen</button>
+              <script type="text/javascript">
+              $('#addModule').click(function(){
+                $('#moduleInput').css('display','block');
+                $('#lessonForm').attr('action', '/{{$semester}}/add/lesson/create/module')
+                $('#module').remove();
+                $('#addModule').remove();
+              });
+              </script>
+            </div>
+
         </br>
 
         <br>
@@ -51,17 +62,7 @@
           <input  type="submit" name="" value="abschicken" class="btn btn-red">
         </div>
       </form>
-
-      <div class="form-group row justify-content-center">
-        <button id="addModule" type="button">neues Modul hinzufügen</button>
-        <script type="text/javascript">
-        $('#addModule').click(function(){
-          $('#moduleInput').css('display','block');
-          $('#lessonForm').attr('action', '/{{$semester}}/add/lesson/create/module')
-          $('#module').remove();
-          $('#addModule').remove();
-        });
-        </script>
+        
         <div class="form-group row justify-content-center">
           <a href="/home"<button type="button" name="button">zurück</button>
           </div>

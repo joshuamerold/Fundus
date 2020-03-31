@@ -14,6 +14,7 @@
   <div class="card offset-md-2 col-md-8">
   <h2 class="mt-3">Neuen Termin erstellen</h2>
   <p></p>
+
   <div class="input-group mb-3">
   <div class="input-group-prepend">
   <label class="input-group-text" for="inputGroupSelect01">Hier das Datum auswählen</label>
