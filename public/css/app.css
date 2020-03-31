@@ -10948,7 +10948,7 @@ h2 *.login {
   background-color: #cf2d25;
   width: 250px;
   height: 35px;
-  border: 2px solid white !important;
+  border: 1px solid white !important;
 }
 
 .anmelden-btn-group {
@@ -10966,6 +10966,12 @@ h2 *.login {
   width: 250px;
   height: 35px;
   border-radius: 10px;
+}
+
+.btn-register:hover {
+  background-color: white !important;
+  color: #CF2D25 !important;
+  border: 1px solid #CF2D25 !important;
 }
 
 .btn-link {
