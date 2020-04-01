@@ -29,6 +29,8 @@ Route::get('/{lesson}/show/{zusammenfassung}', 'LessonController@showContent')->
 Route::get('/{lesson}/show/{altklausur}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/{karteikarte}', 'LessonController@showContent')->middleware('auth');
 Route::get('/{lesson}/show/', 'LessonController@showAllContent')->middleware('auth');
+Route::get('/{lesson}/edit/show', 'LessonController@editForm')->middleware('auth');
+Route::post('/{lesson}/edit/show/add', 'LessonController@edit')->middleware('auth');
 Route::get('/{semester}/add/lesson', 'LessonController@show')->middleware('auth');
 Route::post('/{semester}/add/lesson/create/{type}', 'LessonController@add')->middleware('auth');
 

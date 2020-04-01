@@ -105,7 +105,26 @@ class LessonController extends NavbarController
 
       return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
     }
+  }
+
+  public function editForm($lessonid){
+    $currentLesson = Lesson::all()->where('id', $lessonid)->first();
+    $moduleSemester = Module::all()->where('id', $currentLesson->moduleid)->first()->semester;
+    $modules = Module::all()->where('semester', $moduleSemester)->where('courseid', Auth::user()->courseid);
 
 
+
+    return view('forms.editLesson')->with('currentLesson', $currentLesson)->with('modules', $modules);
+  }
+
+  public function edit(Request $request, $lessonid){
+    $currentLesson = Lesson::all()->where('id', $lessonid)->first();
+
+    $currentLesson->lessonname = $request->name;
+    $currentLesson->professorname = $request->professorname;
+    $currentLesson->moduleid = $request->module;
+    $currentLesson->save();
+
+    return redirect('/home')->with('success', 'Vorlesung erfolgreich bearbeitet!');
   }
 }

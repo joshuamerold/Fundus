@@ -84,7 +84,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-7">
                 <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                 <!-- Hier Status, ob bereits etwas hochgeladen -->
                 @php
@@ -93,7 +93,7 @@
                   $settedFileK = true;
                 @endphp
               </div>
-              <div class="col-md-4" style="text-align: right;">
+              <div class="col-md-5" style="text-align: right;">
                 <span>
                   @foreach($files as $file)
                     @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -134,6 +134,13 @@
                   @endforeach
                   @if($settedFileK)
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
+                  @endif
+                </span>
+                <span>
+                  @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                  <a href="/{{$lesson->id}}/edit/show">
+                    <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                  </a>
                   @endif
                 </span>
               </div>
@@ -177,7 +184,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                   <!-- Hier Status, ob bereits etwas hochgeladen -->
                   @php
@@ -186,7 +193,7 @@
                     $settedFileK = true;
                   @endphp
                 </div>
-                <div class="col-md-4" style="text-align: right;">
+                <div class="col-md-5" style="text-align: right;">
                   <span>
                     @foreach($files as $file)
                       @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -227,6 +234,13 @@
                   @endforeach
                   @if($settedFileK)
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    <a href="/{{$lesson->id}}/edit/show">
+                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                    </a>
                     @endif
                   </span>
                 </div>
@@ -270,7 +284,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                   <!-- Hier Status, ob bereits etwas hochgeladen -->
                   @php
@@ -279,7 +293,7 @@
                     $settedFileK = true;
                   @endphp
                 </div>
-                <div class="col-md-4" style="text-align: right;">
+                <div class="col-md-5" style="text-align: right;">
                   <span>
                     @foreach($files as $file)
                       @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -320,6 +334,13 @@
                   @endforeach
                   @if($settedFileK)
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    <a href="/{{$lesson->id}}/edit/show">
+                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                    </a>
                     @endif
                   </span>
                 </div>
@@ -361,7 +382,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                   <!-- Hier Status, ob bereits etwas hochgeladen -->
                   @php
@@ -370,7 +391,7 @@
                     $settedFileK = true;
                   @endphp
                 </div>
-                <div class="col-md-4" style="text-align: right;">
+                <div class="col-md-5" style="text-align: right;">
                   <span>
                     @foreach($files as $file)
                       @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -411,6 +432,13 @@
                   @endforeach
                   @if($settedFileK)
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    <a href="/{{$lesson->id}}/edit/show">
+                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                    </a>
                     @endif
                   </span>
                 </div>
@@ -452,7 +480,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                   <!-- Hier Status, ob bereits etwas hochgeladen -->
                   @php
@@ -461,7 +489,7 @@
                     $settedFileK = true;
                   @endphp
                 </div>
-                <div class="col-md-4" style="text-align: right;">
+                <div class="col-md-5" style="text-align: right;">
                   <span>
                     @foreach($files as $file)
                       @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -504,6 +532,13 @@
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
                     @endif
                   </span>
+                  <span>
+                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    <a href="/{{$lesson->id}}/edit/show">
+                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                    </a>
+                    @endif
+                  </span>
                 </div>
               </div>
                   <p>{{$lesson->professorname}}</p>
@@ -543,7 +578,7 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-                <div class="col-md-8">
+                <div class="col-md-7">
                   <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
                   <!-- Hier Status, ob bereits etwas hochgeladen -->
                   @php
@@ -552,7 +587,7 @@
                     $settedFileK = true;
                   @endphp
                 </div>
-                <div class="col-md-4" style="text-align: right;">
+                <div class="col-md-5" style="text-align: right;">
                   <span>
                     @foreach($files as $file)
                       @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
@@ -593,6 +628,13 @@
                   @endforeach
                   @if($settedFileK)
                     <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" title="Noch keine Karteikarten vorhanden" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    <a href="/{{$lesson->id}}/edit/show">
+                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
+                    </a>
                     @endif
                   </span>
                 </div>
