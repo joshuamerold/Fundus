@@ -29,12 +29,10 @@ class ProfileController extends NavbarController
         $user = Auth::user();
         $filename = $request->profileIMG;
         if(empty($filename)){
-          $user->username = $request->username;
           $user->firstname = $request->firstname;
           $user->lastname = $request->lastname;
-          $user->email = $request->email;
           $user->save();
-          return redirect('profile/'.$username)->with('success', 'erfolgreich aktualisiert!');
+          return redirect('/home')->with('success', 'Dein Profil wurde erfolgreich aktualisiert!');
         }
         else{
           $file = $filename->getClientOriginalName();
@@ -47,10 +45,10 @@ class ProfileController extends NavbarController
 
               $public_path = "/profilePictures/" .$file;
 
-              $user->username = $request->username;
+
               $user->firstname = $request->firstname;
               $user->lastname = $request->lastname;
-              $user->email = $request->email;
+
               $user->imageURL = $public_path;
               $user->save();
 

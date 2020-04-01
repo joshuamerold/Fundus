@@ -25,7 +25,7 @@
 
 
             <div class="form-group row justify-content-center">
-                <input class="form-control" type="text" name="username" value="{{$user->username}}"></input>
+                <input disabled class="form-control" type="text" name="username" value="{{$user->username}}"></input>
             </div>
 
             <div class="form-group row justify-content-center">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="form-group row justify-content-center">
-                <input class="form-control" type="text" name="email" value="{{$user->email}}"></input>
+                <input disabled class="form-control" type="text" name="email" value="{{$user->email}}"></input>
             </div>
 
             <div class="form-group row justify-content-center">
