@@ -50,6 +50,14 @@ span.add-module {
   color: black !important;
 }
 
+.delete-module {
+  background-color: white;
+  border: none;
+  &:hover {
+    background-color: #f8f9fa;
+  }
+}
+
 // .dropdown-content {
 //   display: none;
 //   position: fixed;
@@ -165,10 +173,11 @@ span.add-module {
     flex: 0 0 27rem;
     display: flex;
     flex-direction: column;
-    background-color: #e2e4e6;
+    background-color: #f8f9fa;
     max-height: 100vh;
     border-radius: 0.3rem;
     margin-right: 1rem;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
 }
 
 .list:last-of-type {
@@ -285,4 +294,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 .type-pic {
   height: 20px;
+}
+
+.dropdown-menu.show {
+    display: block;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.2);
+    border: none;
 }
