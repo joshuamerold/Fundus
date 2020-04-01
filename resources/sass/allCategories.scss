@@ -83,3 +83,12 @@ table.table {
 .tab-body {
   margin-left: 0px !important;
 }
+
+.file-name {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+  &:hover {
+    color: grey;
+  }
+}

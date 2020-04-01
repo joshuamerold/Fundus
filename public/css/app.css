@@ -11539,6 +11539,16 @@ table.table {
   margin-left: 0px !important;
 }
 
+.file-name {
+  text-decoration: none;
+  font-weight: 500;
+  color: black;
+}
+
+.file-name:hover {
+  color: grey;
+}
+
 .addFile-body {
   margin-left: 250px;
 }
