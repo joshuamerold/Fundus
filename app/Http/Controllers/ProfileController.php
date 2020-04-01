@@ -40,7 +40,7 @@ class ProfileController extends NavbarController
           $user->firstname = $request->firstname;
           $user->lastname = $request->lastname;
           $user->save();
-          return redirect('/home')->with('success', 'Dein Profil wurde erfolgreich aktualisiert!');
+          return redirect('/home')->with('success', 'Das Profil wurde erfolgreich aktualisiert!');
         }
         else{
           $file = $filename->getClientOriginalName();
@@ -62,7 +62,7 @@ class ProfileController extends NavbarController
 
               move_uploaded_file($_FILES["profileIMG"]["tmp_name"], $file_path);
 
-              return redirect('/home')->with('success', 'Dein Profil wurde erfolgreich aktualisiert!');
+              return redirect('/home')->with('success', 'Das Profil wurde erfolgreich aktualisiert!');
             }
           }
 

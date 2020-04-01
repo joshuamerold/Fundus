@@ -137,7 +137,7 @@
                   @endif
                 </span>
                 <span>
-                  @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                  @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                   <div class="dropdown">
                     <!-- <i class="fa fa-caret-down"></i> -->
                     <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -244,7 +244,7 @@
                     @endif
                   </span>
                   <span>
-                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -351,7 +351,7 @@
                     @endif
                   </span>
                   <span>
-                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -456,7 +456,7 @@
                     @endif
                   </span>
                   <span>
-                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -561,7 +561,7 @@
                     @endif
                   </span>
                   <span>
-                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
@@ -666,7 +666,7 @@
                     @endif
                   </span>
                   <span>
-                    @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
+                    @if($lesson->creator_userid == Auth::user()->id || Auth::user()->rights == "admin")
                     <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>

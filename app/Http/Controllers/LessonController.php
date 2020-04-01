@@ -70,7 +70,7 @@ class LessonController extends NavbarController
       $lesson->save();
 
 
-      return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
+      return redirect('/home')->with('success', ' Die Vorlesung wurde erfolgreich angelegt!');
     }
 
     else{
@@ -103,7 +103,7 @@ class LessonController extends NavbarController
       $newLesson->save();
 
 
-      return redirect('/home')->with('success', ' Vorlesung erfolgreich angelegt :-)');
+      return redirect('/home')->with('success', ' Das Modul und die zugehörige Vorlesung wurde erfolgreich angelegt!');
     }
   }
 
@@ -125,13 +125,13 @@ class LessonController extends NavbarController
     $currentLesson->moduleid = $request->module;
     $currentLesson->save();
 
-    return redirect('/home')->with('success', 'Vorlesung erfolgreich bearbeitet!');
+    return redirect('/home')->with('success', 'Die Vorlesung wurde erfolgreich bearbeitet!');
   }
 
   public function delete(Request $r, $lessonid){
     $currentLesson = Lesson::all()->where('id', $lessonid)->first();
     $currentLesson->delete();
-    return redirect('/home')->with('success', 'Lehrveranstaltung erfolgreich gelöscht!');
+    return redirect('/home')->with('success', 'Die Lehrveranstaltung wurde erfolgreich gelöscht!');
 
   }
 }

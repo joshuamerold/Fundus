@@ -107,13 +107,13 @@ class FileController extends NavbarController
 
         //Durch redirect wird man auf eine gewünschte Seite geleitet.
         // mit ->with() habe ich dem View gewünschte Mitteilungen(Hier eine success-Meldung wenn es geklappt hat) übergeben
-        return redirect('/'.$id.'/show')->with('success', 'Datei Hochgeladen!');
+        return redirect('/'.$id.'/show')->with('success', 'Datei wurde erfolgreich hochgeladen!');
 
         //Seite wird geladen...
 
       }
     }
-    return redirect('/'.$id.'/add/File')->with('error', 'kein gültiges Dateiformat!');
+    return redirect('/'.$id.'/add/File')->with('error', 'Der Dateityp ist nicht erlaubt. Bitte wählen Sie einen zugelassenen Dateityp!');
   }
 
   public function destroy($type, $lessonID, $fileID)
@@ -136,7 +136,7 @@ class FileController extends NavbarController
         $file->delete();
       }
       //Anschließend wird eine Nachricht an die files blade übergeben und angezeigt
-      return redirect('/'.$lessonID.'/show/')->with('success', 'Die Datei wurde erfolgreich gelöscht');
+      return redirect('/'.$lessonID.'/show/')->with('success', 'Die Datei wurde erfolgreich gelöscht!');
 
   }
 }
