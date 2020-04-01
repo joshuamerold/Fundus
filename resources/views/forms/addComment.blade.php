@@ -1,7 +1,6 @@
 @include('standards/head')
 @include('sidebar')
 @include('topbar')
-@include('inc/messages')
 <body class="addComment-body">
   <div class="row pl-4" >
     <div class="col">

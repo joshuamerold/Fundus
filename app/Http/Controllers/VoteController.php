@@ -19,7 +19,7 @@ class VoteController extends NavbarController
       $voteYet = Vote::all()->where('userid', $userid)->where('fileid', $id);
 
       if(sizeof($voteYet) != 0){
-        return redirect($lessonid.'/'.$id.'/add/comment')->with('error', 'Du hast dieses DIng bereits bewertet.');
+        return redirect($lessonid.'/'.$id.'/add/comment')->with('error', 'Du hast diese Datei bereits bewertet.');
       }
 
       $currentFile = File::all()->where('id', $id)->first();
@@ -43,7 +43,7 @@ class VoteController extends NavbarController
       $voteYet = Vote::all()->where('userid', $userid)->where('fileid', $id);
 
       if(sizeof($voteYet) != 0){
-        return redirect($lessonid.'/'.$id.'/add/comment');
+        return redirect($lessonid.'/'.$id.'/add/comment')->with('error', 'Du hast diese Datei bereits bewertet.');
       }
 
       $currentFile = File::all()->where('id', $id)->first();
