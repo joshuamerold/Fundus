@@ -37,7 +37,7 @@
 
   .info {
     display: inline-block;
-    padding: 5px 5px 5px 10px;
+    padding: 0px 5px 5px 5px;
   }
 }
 
@@ -67,6 +67,7 @@
 
 .profile-link {
   float: left;
+  font-weight: 500;
 }
 
 .logout {
@@ -119,4 +120,8 @@
 
 .btn-hidden {
   border: none !important;
+}
+
+#course-name {
+  font-size: 10pt;
 }

@@ -11333,7 +11333,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 .user-panel .info {
   display: inline-block;
-  padding: 5px 5px 5px 10px;
+  padding: 0px 5px 5px 5px;
 }
 
 .img-circle {
@@ -11362,6 +11362,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 .profile-link {
   float: left;
+  font-weight: 500;
 }
 
 .logout {
@@ -11419,6 +11420,10 @@ Remove or comment-out the code block below to see how the browser will fall-back
 
 .btn-hidden {
   border: none !important;
+}
+
+#course-name {
+  font-size: 10pt;
 }
 
 .topbar-container {

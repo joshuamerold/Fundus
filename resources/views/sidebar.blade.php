@@ -3,12 +3,16 @@
 <!-- Sidebar -->
   <div class="sidebar">
     <!-- Sidebar User Panel -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+    <div class="user-panel mt-3 mb-3 d-flex">
       <div class="image">
         @if(!empty(Auth::user()->imageURL))
-            <img src="{{Auth::user()->imageURL}}" alt="Profilbild" class="img-circle"/>
+            <a href="/profile/{{ Auth::user()->username }}">
+              <img src="{{Auth::user()->imageURL}}" alt="Profilbild" class="img-circle"/>
+            </a>
         @else
+          <a href="/profile/{{ Auth::user()->username }}">
             <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" class="img-circle" alt="Profilbild"/>
+          </a>
         @endif
       </div>
 
@@ -41,7 +45,7 @@
             </div>
           @endguest
           </div>
-          <span class="text-white">{{ Auth::user()->coursename }}</span>
+          <span class="text-white" id="course-name">{{ Auth::user()->coursename }}</span>
         </div>
       </div>
   <hr>
@@ -73,7 +77,7 @@
                 @if($date->creatoruserid === Auth::user()->id || Auth::user()->rights == "admin")
               </td>
               <td style="vertical-align:top">
-                <div>  
+                <div>
                   <a id="deleteFrist" class="dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>{{ Auth::user()->name }} <span class="caret"></span></a>
                   <div class="dropdown-menu" aria-labelledby="deleteFrist" style="width: 90px;">
                   @csrf
