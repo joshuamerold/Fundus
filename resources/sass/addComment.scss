@@ -31,7 +31,12 @@ div.scrollable {
   text-decoration: none !important;
 }
 
-.custom-link:hover {
+.custom-link-red {
+  color: rgb(230,51,41);
+  text-decoration: none !important;
+}
+
+.custom-link-red:hover {
   color: rgb(230,51,41);
   text-decoration: none !important;
 }

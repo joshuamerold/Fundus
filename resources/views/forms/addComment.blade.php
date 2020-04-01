@@ -62,7 +62,7 @@
 
                             <td class="align-bottom">
                               <div class="">
-                                <a href="/profile/{{$user->username}}">
+                                <a href="/profile/{{$user->username}}" class="custom-link-red">
                                   <small>{{$user->coursename}} | {{$user->username}}</small>
                                 </a>
                               </div>
