@@ -50,7 +50,7 @@
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                 @foreach($creators as $creator)
                   @if($file->creatoruserid == $creator->id)
@@ -103,7 +103,7 @@
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
@@ -157,7 +157,7 @@
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
