@@ -81,20 +81,20 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
+              <div class="col-md-8">
                 <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status   ob bereits etwas hochgeladen -->
+                <!-- Hier Status, ob bereits etwas hochgeladen -->
                 @php
                   $settedFileZ = true;
                   $settedFileA = true;
                   $settedFileK = true;
                 @endphp
               </div>
-              <div class="col-md-3">
-                <span class="">
+              <div class="col-md-4" style="text-align: right;">
+                <span>
                   @foreach($files as $file)
                     @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
+                      <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
                       @php
                       $settedFileZ = false;
                       @endphp
@@ -102,13 +102,13 @@
                     @endif
                   @endforeach
                   @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
+                    <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
                   @endif
                 </span>
-                <span class="">
+                <span>
                   @foreach($files as $file)
                     @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
+                        <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
                       @php
                       $settedFileA = false;
                       @endphp
@@ -116,13 +116,13 @@
                     @endif
                   @endforeach
                   @if($settedFileA)
-                    <strong style="color:grey">A</strong>
+                    <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
                   @endif
                 </span>
-                <span class="">
+                <span>
                   @foreach($files as $file)
                     @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
+                      <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
                       @php
                       $settedFileK = false;
                       @endphp
@@ -130,7 +130,7 @@
                     @endif
                   @endforeach
                   @if($settedFileK)
-                    <strong style="color:grey">K</strong>
+                    <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
                   @endif
                 </span>
               </div>
@@ -171,61 +171,61 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
-                @php
-                  $settedFileZ = true;
-                  $settedFileA = true;
-                  $settedFileK = true;
-                @endphp
+                <div class="col-md-8">
+                  <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
+                  <!-- Hier Status, ob bereits etwas hochgeladen -->
+                  @php
+                    $settedFileZ = true;
+                    $settedFileA = true;
+                    $settedFileK = true;
+                  @endphp
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
+                        @php
+                        $settedFileZ = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileZ)
+                      <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                          <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
+                        @php
+                        $settedFileA = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileA)
+                      <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
+                        @php
+                        $settedFileK = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileK)
+                      <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
+                    @endif
+                  </span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
-                      @php
-                      $settedFileZ = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
-                      @php
-                      $settedFileA = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileA)
-                    <strong style="color:grey">A</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
-                      @php
-                      $settedFileK = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileK)
-                    <strong style="color:grey">K</strong>
-                  @endif
-                </span>
-              </div>
-            </div>
-                <p>{{$lesson->professorname}}</p>
+                  <p>{{$lesson->professorname}}</p>
               @endif
             @endforeach
         </li>
@@ -261,61 +261,61 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
-                @php
-                  $settedFileZ = true;
-                  $settedFileA = true;
-                  $settedFileK = true;
-                @endphp
+                <div class="col-md-8">
+                  <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
+                  <!-- Hier Status, ob bereits etwas hochgeladen -->
+                  @php
+                    $settedFileZ = true;
+                    $settedFileA = true;
+                    $settedFileK = true;
+                  @endphp
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
+                        @php
+                        $settedFileZ = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileZ)
+                      <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                          <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
+                        @php
+                        $settedFileA = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileA)
+                      <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
+                        @php
+                        $settedFileK = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileK)
+                      <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
+                    @endif
+                  </span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
-                      @php
-                      $settedFileZ = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
-                      @php
-                      $settedFileA = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileA)
-                    <strong style="color:grey">A</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
-                      @php
-                      $settedFileK = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileK)
-                    <strong style="color:grey">K</strong>
-                  @endif
-                </span>
-              </div>
-            </div>
-                <p>{{$lesson->professorname}}</p>
+                  <p>{{$lesson->professorname}}</p>
               @endif
             @endforeach
         </li>
@@ -349,61 +349,61 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
-                @php
-                  $settedFileZ = true;
-                  $settedFileA = true;
-                  $settedFileK = true;
-                @endphp
+                <div class="col-md-8">
+                  <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
+                  <!-- Hier Status, ob bereits etwas hochgeladen -->
+                  @php
+                    $settedFileZ = true;
+                    $settedFileA = true;
+                    $settedFileK = true;
+                  @endphp
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
+                        @php
+                        $settedFileZ = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileZ)
+                      <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                          <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
+                        @php
+                        $settedFileA = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileA)
+                      <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
+                        @php
+                        $settedFileK = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileK)
+                      <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
+                    @endif
+                  </span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
-                      @php
-                      $settedFileZ = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
-                      @php
-                      $settedFileA = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileA)
-                    <strong style="color:grey">A</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
-                      @php
-                      $settedFileK = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileK)
-                    <strong style="color:grey">K</strong>
-                  @endif
-                </span>
-              </div>
-            </div>
-                <p>{{$lesson->professorname}}</p>
+                  <p>{{$lesson->professorname}}</p>
               @endif
             @endforeach
         </li>
@@ -437,61 +437,61 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
-                @php
-                  $settedFileZ = true;
-                  $settedFileA = true;
-                  $settedFileK = true;
-                @endphp
+                <div class="col-md-8">
+                  <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
+                  <!-- Hier Status, ob bereits etwas hochgeladen -->
+                  @php
+                    $settedFileZ = true;
+                    $settedFileA = true;
+                    $settedFileK = true;
+                  @endphp
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
+                        @php
+                        $settedFileZ = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileZ)
+                      <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                          <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
+                        @php
+                        $settedFileA = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileA)
+                      <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
+                        @php
+                        $settedFileK = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileK)
+                      <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
+                    @endif
+                  </span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
-                      @php
-                      $settedFileZ = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
-                      @php
-                      $settedFileA = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileA)
-                    <strong style="color:grey">A</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
-                      @php
-                      $settedFileK = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileK)
-                    <strong style="color:grey">K</strong>
-                  @endif
-                </span>
-              </div>
-            </div>
-                <p>{{$lesson->professorname}}</p>
+                  <p>{{$lesson->professorname}}</p>
               @endif
             @endforeach
         </li>
@@ -525,61 +525,61 @@
             @foreach($lessons as $lesson)
               @if($lesson->moduleid == $module->id)
               <div class="row">
-              <div class="col-md-9">
-                <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
-                <!-- Hier Status ob bereits etwas hochgeladen -->
-                @php
-                  $settedFileZ = true;
-                  $settedFileA = true;
-                  $settedFileK = true;
-                @endphp
+                <div class="col-md-8">
+                  <a href="/{{$lesson->id}}/show" class="lesson-name">{{$lesson->lessonname}}</a>
+                  <!-- Hier Status, ob bereits etwas hochgeladen -->
+                  @php
+                    $settedFileZ = true;
+                    $settedFileA = true;
+                    $settedFileK = true;
+                  @endphp
+                </div>
+                <div class="col-md-4" style="text-align: right;">
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Zusammenfassung.svg" alt="Zusammenfassung vorhanden" class="type-pic">
+                        @php
+                        $settedFileZ = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileZ)
+                      <img src="/assets/Zusammenfassung_grau.svg" alt="Zusammenfassung fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
+                          <img src="/assets/Altklausur.svg" alt="Altklausur vorhanden" class="type-pic">
+                        @php
+                        $settedFileA = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileA)
+                      <img src="/assets/Altklausur_grau.svg" alt="Altklausur fehlt" class="type-pic">
+                    @endif
+                  </span>
+                  <span>
+                    @foreach($files as $file)
+                      @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
+                        <img src="/assets/Karteikarten.svg" alt="Karteikarten vorhanden" class="type-pic">
+                        @php
+                        $settedFileK = false;
+                        @endphp
+                        @break
+                      @endif
+                    @endforeach
+                    @if($settedFileK)
+                      <img src="/assets/Karteikarten_grau.svg" alt="Karteikarten fehlen" class="type-pic">
+                    @endif
+                  </span>
+                </div>
               </div>
-              <div class="col-md-3">
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "zusammenfassung" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">Z</strong>
-                      @php
-                      $settedFileZ = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileZ)
-                    <strong style="color:grey">Z</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "altklausur" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">A</strong>
-                      @php
-                      $settedFileA = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileA)
-                    <strong style="color:grey">A</strong>
-                  @endif
-                </span>
-                <span class="">
-                  @foreach($files as $file)
-                    @if($file->type === "karteikarte" && $file->lessonid === $lesson->id)
-                      <strong style="color:red">K</strong>
-                      @php
-                      $settedFileK = false;
-                      @endphp
-                      @break
-                    @endif
-                  @endforeach
-                  @if($settedFileK)
-                    <strong style="color:grey">K</strong>
-                  @endif
-                </span>
-              </div>
-            </div>
-                <p>{{$lesson->professorname}}</p>
+                  <p>{{$lesson->professorname}}</p>
               @endif
             @endforeach
         </li>

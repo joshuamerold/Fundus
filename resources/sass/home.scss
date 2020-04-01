@@ -204,16 +204,12 @@ span.add-module {
     border-radius: 0.3rem;
     margin-bottom: 0.6rem;
     word-wrap: break-word;
-    cursor: pointer;
 }
 
 .list-items li:last-of-type {
     margin-bottom: 0;
 }
 
-.list-items li:hover {
-    background-color: #eee;
-}
 
 
 /*
@@ -278,4 +274,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
   border-radius: 10px;
   padding: 8px 16px;
   border: 3px solid $red;
+}
+
+.type-pic {
+  height: 20px;
 }
