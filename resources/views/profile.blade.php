@@ -25,7 +25,7 @@
 
 
             <div class="form-group row justify-content-center">
-                <input class="form-control" type="text" name="username" value="{{$user->username}}"></input>
+                <input disabled class="form-control" type="text" name="username" value="{{$user->username}}"></input>
             </div>
 
             <div class="form-group row justify-content-center">
@@ -37,7 +37,7 @@
             </div>
 
             <div class="form-group row justify-content-center">
-                <input class="form-control" type="text" name="email" value="{{$user->email}}"></input>
+                <input disabled class="form-control" type="text" name="email" value="{{$user->email}}"></input>
             </div>
 
             <div class="form-group row justify-content-center">
@@ -49,7 +49,7 @@
             </div>
 
             <div class="form-group row justify-content-center">
-                <a href="/"><button class="btn btn-outline-secondary">abbrechen</button></a>
+                <a href="/" class="btn btn-outline-secondary">abbrechen</a>
             </div>
         </form>
     @else
@@ -99,29 +99,22 @@
                 <tr>
                     <td class="long-td">
                         <div>
-                            <p>Upvotes</p>
-                            <p class="counter-count">879</p>
-                        </div>
-                    </td>
-
-                    <td class="long-td">
-                        <div>
                             <p>Zusammenfassungen</p>
-                            <p class="counter-count">360</p>
+                            <p class="counter-count">{{$countZ}}</p>
                         </div>
                     </td>
 
                     <td class="long-td">
                         <div>
                             <p>Altklausuren</p>
-                            <p class="counter-count">125</p>
+                            <p class="counter-count">{{$countA}}</p>
                         </div>
                     </td>
 
                     <td class="long-td">
                         <div>
                             <p>Karteikarten</p>
-                            <p class="counter-count">652</p>
+                            <p class="counter-count">{{$countK}}</p>
                         </div>
                     </td>
                 </tr>

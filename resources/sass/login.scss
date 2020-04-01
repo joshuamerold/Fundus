@@ -4,30 +4,48 @@
   width: 100%;
 }
 
-// .circle {
-//   border: 3px solid $red;
-//   border-radius: 50%;
-//   background-color: white;
-//   height: 250px;
-//   width: 250px;
-//   position: absolute;
-//   z-index: 2000;
-//   margin: 40px auto 0px auto;
-//   display: table-cell;
-//   text-align: center;
-//   vertical-align: middle;
+.circle-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 80px;
+}
+
+.circle {
+  border: 3px solid $red;
+  border-radius: 50%;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.logo-login {
+  height: 50px;
+  z-index: 2000;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//
+// .outer {
+//   align-items: center;
+//   display: flex;
+//   height: 300px;
+//   justify-content: center;
+//   max-width: 100%;
+//   overflow: auto;
+//   padding: 50px;
+//   z-index: 1000;
 // }
 
-
-.outer {
-  align-items: center;
-  display: flex;
-  height: 300px;
-  justify-content: center;
-  max-width: 100%;
-  overflow: auto;
-  padding: 50px;
-  z-index: 1000;
+.container-fluid {
+  position: absolute !important;
 }
 
 svg {
@@ -67,15 +85,39 @@ h2 {
   width: 250px;
 }
 
-.btn {
+.btn-anmelden {
   border-radius: 10px;
+  background-color: #cf2d25;
   width: 250px;
+  height: 35px;
+  border: 1px solid white !important;
+}
+
+.anmelden-btn-group {
+  color: white;
+  a:hover {
+    color: white;
+  }
 }
 
 .btn-register {
-  background-color: $red;
-  border: none;
-  color: white;
+  background-color: $red !important;
+  border: none !important;
+  color: white !important;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+  &:hover {
+    background-color: white !important;
+    color: $red !important;
+    border: 1px solid $red !important;
+
+  }
+}
+
+.add-mail {
+  text-align: center;
+  color: grey;
 }
 
 .btn-link {

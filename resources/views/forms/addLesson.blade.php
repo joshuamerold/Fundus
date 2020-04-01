@@ -1,5 +1,6 @@
 @include('standards/head')
 @include('sidebar')
+
 @include('topbar')
 
 <body class="addLesson-body">
@@ -69,3 +70,13 @@
     </div>
 
     </body>
+
+<script type="text/javascript">
+$('#addModule').click(function(){
+  $('#moduleInput').css('display','block');
+  $('#lessonForm').attr('action', '/{{$semester}}/add/lesson/create/module')
+  $('#module').remove();
+  $('#addModule').remove();
+});
+</script>
+

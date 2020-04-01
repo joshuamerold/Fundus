@@ -1,6 +1,5 @@
 .allCategories-body {
   margin-left: 250px;
-  padding: 0px 10px;
 }
 
 .inner-table-align {
@@ -80,8 +79,7 @@ button {
 table.table {
   margin-top: 15px;
 }
-//
-// .tab-body {
-//   margin-left: 0px;
-//   margin-right: 0px;
-// }
+
+.tab-body {
+  margin-left: 0px !important;
+}

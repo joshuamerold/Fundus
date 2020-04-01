@@ -10894,15 +10894,40 @@ a.text-dark:focus {
   width: 100%;
 }
 
-.outer {
-  align-items: center;
+.circle-container {
   display: flex;
-  height: 300px;
   justify-content: center;
-  max-width: 100%;
-  overflow: auto;
-  padding: 50px;
-  z-index: 1000;
+  position: relative;
+  margin-top: 80px;
+}
+
+.circle {
+  border: 3px solid #CF2D25;
+  border-radius: 50%;
+  background-color: white;
+  height: 250px;
+  width: 250px;
+  z-index: 2000;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+}
+
+.logo-login {
+  height: 50px;
+  z-index: 2000;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-fluid,
+.container-sm,
+.container-md,
+.container-lg,
+.container-xl {
+  position: absolute !important;
 }
 
 svg {
@@ -10943,15 +10968,40 @@ h2 *.login {
   width: 250px;
 }
 
-.btn {
+.btn-anmelden {
   border-radius: 10px;
+  background-color: #cf2d25;
   width: 250px;
+  height: 35px;
+  border: 1px solid white !important;
+}
+
+.anmelden-btn-group {
+  color: white;
+}
+
+.anmelden-btn-group a:hover {
+  color: white;
 }
 
 .btn-register {
-  background-color: #CF2D25;
-  border: none;
-  color: white;
+  background-color: #CF2D25 !important;
+  border: none !important;
+  color: white !important;
+  width: 250px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.btn-register:hover {
+  background-color: white !important;
+  color: #CF2D25 !important;
+  border: 1px solid #CF2D25 !important;
+}
+
+.add-mail {
+  text-align: center;
+  color: grey;
 }
 
 .btn-link {
@@ -11015,6 +11065,16 @@ span.add-module {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.lesson-name {
+  font-weight: 600;
+  color: black !important;
+}
+
+.lesson-name:hover {
+  font-weight: 600;
+  color: black !important;
 }
 
 .btn {
@@ -11097,7 +11157,7 @@ span.add-module {
   align-items: flex-start;
   padding: 0 0.8rem 0.8rem;
   overflow-x: auto;
-  height: calc(100vh - 8.6rem);
+  height: 100vh;
 }
 
 .list {
@@ -11105,7 +11165,7 @@ span.add-module {
   display: flex;
   flex-direction: column;
   background-color: #e2e4e6;
-  max-height: calc(100vh - 11.8rem);
+  max-height: 100vh;
   border-radius: 0.3rem;
   margin-right: 1rem;
 }
@@ -11150,15 +11210,10 @@ span.add-module {
   border-radius: 0.3rem;
   margin-bottom: 0.6rem;
   word-wrap: break-word;
-  cursor: pointer;
 }
 
 .list-items li:last-of-type {
   margin-bottom: 0;
-}
-
-.list-items li:hover {
-  background-color: #eee;
 }
 
 /*
@@ -11208,6 +11263,24 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .user-settings-btn {
     margin: 0;
   }
+}
+
+.inner-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.speaker-card {
+  background-color: white;
+  box-shadow: 0px 5px 30px 5px #cccccc;
+  border-radius: 10px;
+  padding: 8px 16px;
+  border: 3px solid #CF2D25;
+}
+
+.type-pic {
+  height: 20px;
 }
 
 .main-sidebar {
@@ -11336,8 +11409,14 @@ Remove or comment-out the code block below to see how the browser will fall-back
   border: none !important;
 }
 
-.fa-file-text {
-  color: black;
+.navbar {
+  margin: auto !important;
+}
+
+.fundus-logo {
+  background: url(/images/Fundus_Logo_small.svg?1d3defc63cfa69f131a2a6e95fd1c5b9);
+  height: 40px;
+  width: 40px;
 }
 
 .form-container {
@@ -11361,7 +11440,6 @@ files-body {
 
 .allCategories-body {
   margin-left: 250px;
-  padding: 0px 10px;
 }
 
 .inner-table-align {
@@ -11442,6 +11520,10 @@ table.table {
   margin-top: 15px;
 }
 
+.tab-body {
+  margin-left: 0px !important;
+}
+
 .addFile-body {
   margin-left: 250px;
 }
@@ -11519,11 +11601,57 @@ table.table {
   margin-left: 250px;
 }
 
+.lesson-container {
+  margin-left: 10px;
+}
+
 .addComment-body {
   margin-left: 250px;
+  padding-bottom: 50px;
+}
+
+div.scrollable {
+  overflow-x: auto;
+  height: 500px;
+  width: 300px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+}
+
+.noStyle {
+  list-style-type: none;
+  padding-left: 0px;
+  margin-bottom: 0px;
+}
+
+.btn-sm-custom {
+  width: 40px !important;
+}
+
+.hr-custom {
+  width: 260px;
+  margin: 2px 0px;
+}
+
+.custom-link {
+  color: #868686;
+  text-decoration: none !important;
+}
+
+.custom-link:hover {
+  color: #e63329;
+  text-decoration: none !important;
+}
+
+.custom-frame {
+  border: 1px solid #ced4da;
 }
 
 .addDate-body {
   margin-left: 250px;
+}
+
+.datepicker {
+  margin-left: 260px;
 }
 

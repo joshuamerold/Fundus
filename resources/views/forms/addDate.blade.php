@@ -2,10 +2,15 @@
 @include('sidebar')
 @include('topbar')
 @include('inc/messages')
-
+<style media="screen">
+.datepicker{
+  left: 265px !important;
+}
+</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
+
 
 <body class="addDate-body">
   <div class="card offset-md-2 col-md-8">
@@ -41,16 +46,18 @@
 var date = new Date();
 date.setDate(date.getDate());
 
+
     $('.date').datepicker({
         startDate: date,
         locale: 'de',
-       format: 'dd.mm.yyyy'
-
+       format: 'dd.mm.yyyy',
      });
+    </script>
 
-</script>
+    <script type="text/javascript">
+      $('.datepicker-dropdown').css('right', '700px');
+    </script>
 
-
-</body>
+  </body>
 
 </html>

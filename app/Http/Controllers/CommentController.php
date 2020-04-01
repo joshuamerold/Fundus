@@ -40,6 +40,6 @@ class CommentController extends NavbarController
       $newComment->userid = Auth::user()->id;
       $newComment->fileid = $fileid;
       $newComment->save();
-      return redirect($lessonid.'/'.$fileid.'/add/comment')->with('success', 'erfolgreich kommentiert');
+      return redirect($lessonid.'/'.$fileid.'/add/comment');
     }
 }

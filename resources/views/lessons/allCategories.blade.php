@@ -1,18 +1,10 @@
 @include('standards/head')
-@include('sidebar')
-@include('topbar')
-
-<script>
-$(document).ready(function () {
-$('#dtBasicExample').DataTable({
-"ordering": false // false to disable sorting (or any other option)
-});
-$('.dataTables_length').addClass('bs-select');
-});
-</script>
 
 
 <body class="allCategories-body">
+  @include('sidebar')
+  @include('topbar')
+
   <!--TABS ab hier -->
   <div class="tab-body row col-md-12">
 
@@ -58,7 +50,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                 @foreach($creators as $creator)
                   @if($file->creatoruserid == $creator->id)
@@ -111,7 +103,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
@@ -165,7 +157,7 @@ $('.dataTables_length').addClass('bs-select');
                   @endif
                 @endforeach
               </td>
-              <td>{{$file->created_at}}</td>
+              <td>{{ $file->created_at->format('d.m.Y') }}</td>
               <td>
                   @foreach($creators as $creator)
                     @if($file->creatoruserid == $creator->id)
