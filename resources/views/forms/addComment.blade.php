@@ -5,7 +5,7 @@
 <body class="addComment-body">
   <div class="row pl-4" >
     <div class="col">
-      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> zurück</a>    
+      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> zurück</a>
     </div>
   </div>
 
@@ -24,18 +24,18 @@
       <h4>Kommentare</h4>
     </div>
   </div>
-  
+
   <div class="row pl-4">
     <div class="col-6">
       <div class="row pl-3">
-        @if($fileToShow->extension != 'pdf' && $fileToShow->extension != 'txt')
+        @if($fileToShow->extension != 'pdf' && $fileToShow->extension != 'txt' && $fileToShow->extension != 'jpg')
           <div style="height: 545px; width: 600px;">
             <p>keine Vorschau</p>
           </div>
         @else
           <iframe src="http://fundus.localhost/.{{$fileToShow->path}}" class="custom-frame rounded-sm" height="545px" width="600px"></iframe>
-        @endif 
-      </div>  
+        @endif
+      </div>
     </div>
     <div class="col-6">
       <div class="row mb-1 scrollable rounded-sm">
@@ -50,20 +50,24 @@
                           <tr>
                             <td width="35px">
                               <div class="image">
+                                <a href="/profile/{{$user->username}}">
                                 @if(!empty($user->imageURL))
                                     <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width: 25px; height: 25px;"/>
                                 @else
                                     <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width: 25px; height: 25px;" class="img-circle" alt="Profilbild"/>
                                 @endif
+                                </a>
                               </div>
                             </td>
-                            
+
                             <td class="align-bottom">
                               <div class="">
-                              <small>{{$user->coursename}} | {{$user->username}}</small>
-                              </div> 
+                                <a href="/profile/{{$user->username}}">
+                                  <small>{{$user->coursename}} | {{$user->username}}</small>
+                                </a>
+                              </div>
                             </td>
-                          </tr>  
+                          </tr>
 
                           <tr>
                             <td colspan="2">{{$comment->content}} </td>
@@ -92,4 +96,3 @@
     </div>
   </div>
 </body>
-
