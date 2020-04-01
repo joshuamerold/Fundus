@@ -11613,7 +11613,7 @@ table.table {
 div.scrollable {
   overflow-x: auto;
   height: 500px;
-  width: 400px;
+  width: 300px;
   border: 1px solid #ced4da;
   padding: 10px;
 }
@@ -11625,20 +11625,22 @@ div.scrollable {
 }
 
 .btn-sm-custom {
-  width: 100px !important;
+  width: 40px !important;
 }
 
 .hr-custom {
-  width: 360px;
+  width: 260px;
   margin: 2px 0px;
 }
 
 .custom-link {
   color: #868686;
+  text-decoration: none !important;
 }
 
 .custom-link:hover {
   color: #e63329;
+  text-decoration: none !important;
 }
 
 .custom-frame {
