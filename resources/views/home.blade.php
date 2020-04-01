@@ -138,9 +138,16 @@
                 </span>
                 <span>
                   @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                  <a href="/{{$lesson->id}}/edit/show">
-                    <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                  </a>
+                  <div class="col-md-1 dropdown">
+                    <!-- <i class="fa fa-caret-down"></i> -->
+                    <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                    <div class="dropdown-menu">
+                      <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                      <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                    </div>
+                  </div>
                   @endif
                 </span>
               </div>
@@ -238,9 +245,16 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <a href="/{{$lesson->id}}/edit/show">
-                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                    </a>
+                    <div class="col-md-1 dropdown">
+                      <!-- <i class="fa fa-caret-down"></i> -->
+                      <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                      <div class="dropdown-menu">
+                        <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                        <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                      </div>
+                    </div>
                     @endif
                   </span>
                 </div>
@@ -338,9 +352,16 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <a href="/{{$lesson->id}}/edit/show">
-                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                    </a>
+                    <div class="col-md-1 dropdown">
+                      <!-- <i class="fa fa-caret-down"></i> -->
+                      <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                      <div class="dropdown-menu">
+                        <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                        <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                      </div>
+                    </div>
                     @endif
                   </span>
                 </div>
@@ -436,9 +457,16 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <a href="/{{$lesson->id}}/edit/show">
-                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                    </a>
+                    <div class="col-md-1 dropdown">
+                      <!-- <i class="fa fa-caret-down"></i> -->
+                      <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                      <div class="dropdown-menu">
+                        <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                        <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                      </div>
+                    </div>
                     @endif
                   </span>
                 </div>
@@ -534,9 +562,16 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <a href="/{{$lesson->id}}/edit/show">
-                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                    </a>
+                    <div class="col-md-1 dropdown">
+                      <!-- <i class="fa fa-caret-down"></i> -->
+                      <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                      <div class="dropdown-menu">
+                        <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                        <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                      </div>
+                    </div>
                     @endif
                   </span>
                 </div>
@@ -632,9 +667,16 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <a href="/{{$lesson->id}}/edit/show">
-                      <img src="/assets/edit.svg" alt="editieren" title="editieren" class="type-pic">
-                    </a>
+                    <div class="col-md-1 dropdown">
+                      <!-- <i class="fa fa-caret-down"></i> -->
+                      <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+                      <div class="dropdown-menu">
+                        <a class="no-link" href="/{{$lesson->id}}/edit/show"><button class="dropdown-item">Lehrveranstaltung bearbeiten</button></a>
+
+                        <button class="dropdown-item"><form action="/{{$lesson->id}}/edit/show/delete" method="post">@csrf<input class="delete-module" type="submit" value="Lehrveranstaltung löschen"/></form></button>
+                      </div>
+                    </div>
                     @endif
                   </span>
                 </div>

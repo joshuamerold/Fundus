@@ -127,4 +127,11 @@ class LessonController extends NavbarController
 
     return redirect('/home')->with('success', 'Vorlesung erfolgreich bearbeitet!');
   }
+
+  public function delete(Request $r, $lessonid){
+    $currentLesson = Lesson::all()->where('id', $lessonid)->first();
+    $currentLesson->delete();
+    return redirect('/home')->with('success', 'Lehrveranstaltung erfolgreich gelöscht!');
+
+  }
 }
