@@ -41,7 +41,7 @@
             @if($file->type == "zusammenfassung")
             <tbody>
               <td>{{$file->extension}}</td>
-              <td>{{$file->name}}</td>
+              <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="file-name">{{$file->name}}</a></td>
               <td>{{$currentLesson->professorname}}</td>
               <td>
                 @foreach($allUsers as $tempUser)
@@ -62,11 +62,21 @@
               <td class="inner-table-align">
                 <table class="inner-table">
                   <tr>
-                    <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
                     <td>
-                    @if($file->creatoruserid == $user->id || Auth::user()->rights == "admin")
-                    <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
+                      <a href="/download/{{$file->id}}" title="Download">
+                        <img src="/assets/download.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
+                    <td>
+                      <a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" title="Kommentieren">
+                        <img src="/assets/chat.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
+                    <td>
+                    @if($file->creatoruserid == $user->id)
+                      <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" title="Löschen">
+                        <img src="/assets/delete.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
                     @endif
                     </td>
                   </tr>
@@ -94,7 +104,7 @@
             @if($file->type == "altklausur")
             <tbody>
               <td>{{$file->extension}}</td>
-              <td>{{$file->name}}</td>
+              <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="file-name">{{$file->name}}</a></td>
               <td>{{$currentLesson->professorname}}</td>
               <td>
                 @foreach($allUsers as $tempUser)
@@ -116,11 +126,21 @@
                 <!-- {{Request::path()}} -->
                 <table class="inner-table">
                   <tr>
-                    <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
+                    <td>
+                      <a href="/download/{{$file->id}}" title="Download">
+                        <img src="/assets/download.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
+                    <td>
+                      <a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" title="Kommentieren">
+                        <img src="/assets/chat.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
                     <td>
                     @if($file->creatoruserid == $user->id)
-                    <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
+                      <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" title="Löschen">
+                        <img src="/assets/delete.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
                     @endif
                     </td>
                   </tr>
@@ -148,7 +168,7 @@
             @if($file->type == "karteikarte")
             <tbody>
               <td>{{$file->extension}}</td>
-              <td>{{$file->name}}</td>
+              <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="file-name">{{$file->name}}</a></td>
               <td>{{$currentLesson->professorname}}</td>
               <td>
                 @foreach($allUsers as $tempUser)
@@ -170,11 +190,21 @@
                 <!-- {{Request::path()}} -->
                 <table class="inner-table">
                   <tr>
-                    <td><a href="/download/{{$file->id}}" class="fa fa-arrow-circle-o-down"> </a></td>
-                    <td><a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" class="fa fa-comment-o" aria-hidden="true"> </a></td>
+                    <td>
+                      <a href="/download/{{$file->id}}" title="Download">
+                        <img src="/assets/download.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
+                    <td>
+                      <a href="/{{$currentLesson->id}}/{{$file->id}}/add/comment" title="Kommentieren">
+                        <img src="/assets/chat.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
+                    </td>
                     <td>
                     @if($file->creatoruserid == $user->id)
-                    <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" class="fa fa-trash"> </a>
+                      <a href="/zusammenfassung/{{$currentLesson->id}}/{{$file->id}}/delete" title="Löschen">
+                        <img src="/assets/delete.svg" style="height: 15px; vertical-align: baseline;"/>
+                      </a>
                     @endif
                     </td>
                   </tr>
