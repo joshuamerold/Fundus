@@ -243,14 +243,33 @@ class DatabaseSeeder extends Seeder
 
         App\Date::create([
           'name' =>'Starzmann Abgabe Redesign',
-          'date' => '29.03.20',
-          'day' => 29,
-          'month' => 03,
-          'year' => 2020,
+          'date' => '25.04.20',
+          'day' => 25,
+          'month' => 04,
+          'year' => 20,
           'creatoruserid' => 1,
           'yeargang' => 'ON18',
+          'datecalc'=> 200425
+        ]);
+        App\Date::create([
+          'name' =>'WT 4 Klausur',
+          'date' => '10.04.20',
+          'day' => 10,
+          'month' => 04,
           'year' => 20,
-          'datecalc'=> 200329
+          'creatoruserid' => 1,
+          'yeargang' => 'ON18',
+          'datecalc'=> 200410
+        ]);
+        App\Date::create([
+          'name' =>'Klausur Statistik',
+          'date' => '29.04.20',
+          'day' => 29,
+          'month' => 04,
+          'year' => 20,
+          'creatoruserid' => 1,
+          'yeargang' => 'ON18',
+          'datecalc'=> 200429
         ]);
 
         App\CourseRight::create([
