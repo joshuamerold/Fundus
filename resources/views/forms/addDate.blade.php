@@ -2,7 +2,11 @@
 @include('sidebar')
 @include('topbar')
 @include('inc/messages')
-
+<style media="screen">
+.datepicker{
+  left: 265px !important;
+}
+</style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.5.0/js/bootstrap-datepicker.js"></script>
@@ -12,7 +16,7 @@
       <h1>Neuen Termin erstellen</h1>
       <form class="" action="/add/date/create" method="post">
         @csrf
-        <input class="date form-control" type="text" name="date" required>
+        <input class="date form-control" type="text" name="date" autocomplete="off" required>
         <input type="text" name="name" value="neuer Terminname" required>
         <input type="submit" name="" value="senden">
       </form>
@@ -21,18 +25,20 @@
       </div>
     </div>
     <script type="text/javascript">
+
     var date = new Date();
     date.setDate(date.getDate());
 
-        $('.date').datepicker({
-            startDate: date,
-            locale: 'de',
-           format: 'dd.mm.yyyy'
-
-         });
-
+    $('.date').datepicker({
+        startDate: date,
+        locale: 'de',
+       format: 'dd.mm.yyyy',
+     });
     </script>
 
+    <script type="text/javascript">
+      $('.datepicker-dropdown').css('right', '700px');
+    </script>
 
   </body>
 
