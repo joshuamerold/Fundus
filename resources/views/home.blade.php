@@ -138,7 +138,7 @@
                 </span>
                 <span>
                   @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                  <div class="col-md-1 dropdown">
+                  <div class="dropdown">
                     <!-- <i class="fa fa-caret-down"></i> -->
                     <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
@@ -245,7 +245,7 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <div class="col-md-1 dropdown">
+                    <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
@@ -352,7 +352,7 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <div class="col-md-1 dropdown">
+                    <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
@@ -457,7 +457,7 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <div class="col-md-1 dropdown">
+                    <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
@@ -562,7 +562,7 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <div class="col-md-1 dropdown">
+                    <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
@@ -667,7 +667,7 @@
                   </span>
                   <span>
                     @if($lesson->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-                    <div class="col-md-1 dropdown">
+                    <div class="dropdown">
                       <!-- <i class="fa fa-caret-down"></i> -->
                       <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 
