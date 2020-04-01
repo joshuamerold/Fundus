@@ -65,14 +65,17 @@
         @if($module->semester === 1)
         <li>
           <div class="row">
-            <div class="col-md-11"><b>{{$module->name}}</b><br>
+            <div class="col-md-10"><b>{{$module->name}}</b><br>
             </div>
             @if($module->creatoruserid == Auth::user()->id || Auth::user()->rights == "admin")
-            <div class="justify-content-end dropdown">
-              <i class="fa fa-caret-down"></i>
-              <div class="dropdown-content">
-                <a href="/edit/module/{{$module->id}}">Modul bearbeiten</a>
-                <form action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/></form>
+            <div class="col-md-1 dropdown">
+              <!-- <i class="fa fa-caret-down"></i> -->
+              <button class="dropdown-toggle dark-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+
+              <div class="dropdown-menu">
+                <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
+
+                <button class="dropdown-item" action="/delete/module/{{$module->id}}" method="post">@csrf<input type="submit" value="Module löschen"/ class="delete-module"></button>
               </div>
             </div>
             @endif
