@@ -21,7 +21,15 @@ class ProfileController extends NavbarController
         $user = User::all()->where('username', $username)->first();
         $course = Course::all()->where('id', $user->courseid)->first();
 
-        return view('profile')->with('currentUser', $currentUser)->with('user', $user)->with('course', $course->name);
+        $countZusammenfassungen = File::all()->where('type', 'zusammenfassung')->where('creatoruserid', $user->id);
+        $countAltklausuren = File::all()->where('type', 'altklausur')->where('creatoruserid', $user->id);
+        $countKarteikarten = File::all()->where('type', 'karteikarte')->where('creatoruserid', $user->id);
+
+        $countZ = count($countZusammenfassungen);
+        $countA = count($countAltklausuren);
+        $countK = count($countKarteikarten);
+
+        return view('profile')->with('currentUser', $currentUser)->with('user', $user)->with('course', $course->name)->with('countZ', $countZ)->with('countA', $countA)->with('countK', $countK);
     }
 
     public function updateProfile(Request $request, $username){

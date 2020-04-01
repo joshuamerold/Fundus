@@ -99,29 +99,22 @@
                 <tr>
                     <td class="long-td">
                         <div>
-                            <p>Upvotes</p>
-                            <p class="counter-count">879</p>
-                        </div>
-                    </td>
-
-                    <td class="long-td">
-                        <div>
                             <p>Zusammenfassungen</p>
-                            <p class="counter-count">360</p>
+                            <p class="counter-count">{{$countZ}}</p>
                         </div>
                     </td>
 
                     <td class="long-td">
                         <div>
                             <p>Altklausuren</p>
-                            <p class="counter-count">125</p>
+                            <p class="counter-count">{{$countA}}</p>
                         </div>
                     </td>
 
                     <td class="long-td">
                         <div>
                             <p>Karteikarten</p>
-                            <p class="counter-count">652</p>
+                            <p class="counter-count">{{$countK}}</p>
                         </div>
                     </td>
                 </tr>

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
           'coursename' => 'ON18'
         ]);
         App\User::create([
-          'username' =>'noadmin',
+          'username' =>'noadmin.noadmin.18',
           'email' => 'noadmin@noadmin.de',
           'password' => Hash::make('noadmin'),
           'courseid' => 1,
