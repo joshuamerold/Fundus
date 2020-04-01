@@ -13,7 +13,7 @@
             <p>
               Um alle Inhalte von Fundus zu nutzen, müssen die Kurssprecher bestimmt werden.<br>
               Bitte wählen Sie die Kurssprecher aus der Benutzerliste unten aus.<br>
-              Sollte sich der Kurssprecher nicht in der Liste befinden, fordern Sie diese bitte auf sich zu registrieren.
+              Sollte sich die Kurssprecher nicht in der Liste befinden, fordern Sie diese bitte auf sich zu registrieren.
             </p>
             <form class="" action="/add/adminuser/{{$user->coursename}}" method="post">
               @csrf
