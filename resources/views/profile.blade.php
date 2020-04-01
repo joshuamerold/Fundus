@@ -23,7 +23,6 @@
                 </label>
             </div>
 
-
             <div class="form-group row justify-content-center">
                 <input disabled class="form-control" type="text" name="username" value="{{$user->username}}"></input>
             </div>
@@ -55,13 +54,13 @@
     @else
         <div class="row justify-content-center mt-4">
             @if(!empty($user->imageURL))
-                <img src="{{$user->imageURL}}" alt="Profilbild"/ class="img-circle profile-img">
+                <img src="{{$user->imageURL}}" alt="Profilbild"/ class="img-circle profile-img"/>
             @else
-                <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" alt="Platzhalter für Profilbild"/ class="img-circle profile-img">
+                <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" alt="Platzhalter für Profilbild"/ class="img-circle profile-img"/>
             @endif
         </div>
 
-        <div class="row justify-content-center mt-4">
+        <div class="row justify-content-center mt-4" style="margin-top: 115px !important;">
             <table>
                 <tr>
                     <td class="long-td text-red">Username</th>
@@ -89,7 +88,7 @@
                 </tr>
                 <tr>
                     <td class="long-td text-red">Jahrgang</th>
-                    <td>{{$course}}</td>
+                    <td>{{$user->coursename}}</td>
                 </tr>
             </table>
         </div>
@@ -97,23 +96,23 @@
         <div class="row justify-content-center">
             <table class="mt-4">
                 <tr>
-                    <td class="long-td">
+                    <td class="long-td centered">
                         <div>
-                            <p>Zusammenfassungen</p>
+                            <p><img src="/assets/Zusammenfassung.svg" alt="gepostete Zusammenfassungen" title="gepostete Zusammenfassungen" class="type-pic"></p>
                             <p class="counter-count">{{$countZ}}</p>
                         </div>
                     </td>
 
-                    <td class="long-td">
+                    <td class="long-td centered">
                         <div>
-                            <p>Altklausuren</p>
+                            <p><img src="/assets/Altklausur.svg" alt="gepostete Altklausuren" title="gepostete Altklausuren" class="type-pic"></p>
                             <p class="counter-count">{{$countA}}</p>
                         </div>
                     </td>
 
-                    <td class="long-td">
+                    <td class="long-td centered">
                         <div>
-                            <p>Karteikarten</p>
+                            <p><img src="/assets/Karteikarten.svg" alt="gepostete Karteikarten" title="gepostete Karteikarten" class="type-pic"></p>
                             <p class="counter-count">{{$countK}}</p>
                         </div>
                     </td>

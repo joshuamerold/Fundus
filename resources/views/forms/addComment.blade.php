@@ -5,46 +5,36 @@
 <body class="addComment-body">
   <div class="row pl-4" >
     <div class="col">
-      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> zurück</a>    
+      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> zurück</a>
     </div>
   </div>
 
   <div class="row pl-4">
-    <div class="col-6">
+    <div class="col-3">
       <h4>Vorschau</h4>
+    </div>
+    <div class="offset-2 col-1">
+      <h4>
+        <a href="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/up" class="fa fa-angle-up custom-link"></a>
+        {{$rating}}
+        <a href="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/down" class="fa fa-angle-down custom-link"></a>
+      </h4>
     </div>
     <div class="col-6 pl-0">
       <h4>Kommentare</h4>
     </div>
   </div>
-  
+
   <div class="row pl-4">
     <div class="col-6">
-      <div class="row">
-        @if($fileToShow->extension != 'pdf' && $fileToShow->extension != 'txt')
-          <div style="height: 500px; width: 500px;">
+      <div class="row pl-3">
+        @if($fileToShow->extension != 'pdf' && $fileToShow->extension != 'txt' && $fileToShow->extension != 'jpg')
+          <div style="height: 545px; width: 600px;">
             <p>keine Vorschau</p>
           </div>
         @else
-          <iframe src="http://fundus.localhost/.{{$fileToShow->path}}" class="custom-frame rounded-sm" height="500px" width="500px"></iframe>
-        @endif 
-      </div>  
-      <div class="row">
-        <div class="col-2">
-          Bewertung
-        </div>
-
-        <div class="col-2">
-          {{$rating}}
-        </div>
-        
-        <div class="col-3">
-          <a href="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/up">hier upvoten</a>
-        </div>
-
-        <div class="col-3">
-          <a href="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/down">hier downvoten</a>
-        </div>
+          <iframe src="http://fundus.localhost/.{{$fileToShow->path}}" class="custom-frame rounded-sm" height="545px" width="600px"></iframe>
+        @endif
       </div>
     </div>
     <div class="col-6">
@@ -60,20 +50,24 @@
                           <tr>
                             <td width="35px">
                               <div class="image">
+                                <a href="/profile/{{$user->username}}">
                                 @if(!empty($user->imageURL))
                                     <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width: 25px; height: 25px;"/>
                                 @else
                                     <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width: 25px; height: 25px;" class="img-circle" alt="Profilbild"/>
                                 @endif
+                                </a>
                               </div>
                             </td>
-                            
+
                             <td class="align-bottom">
                               <div class="">
-                              <small>{{$user->coursename}} | {{$user->username}}</small>
-                              </div> 
+                                <a href="/profile/{{$user->username}}" class="custom-link-red">
+                                  <small>{{$user->coursename}} | {{$user->username}}</small>
+                                </a>
+                              </div>
                             </td>
-                          </tr>  
+                          </tr>
 
                           <tr>
                             <td colspan="2">{{$comment->content}} </td>
@@ -89,11 +83,11 @@
         </ul>
       </div>
         <div class="row">
-        <form class="" action="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/store" method="post">
+        <form action="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/store" method="post">
           <div class="input-group-append">
-            <input class="form-control" type="text" name="content" placeholder="dein Kommentar" style="width: 290px; margin-right: 10px;">
+            <input class="form-control" type="text" name="content" placeholder="dein Kommentar" style="width: 250px; margin-right: 10px;">
             <span class="input-group-btn">
-              <button class="btn btn-red btn-sm-custom" type="submit" name="" value="">abschicken</button>
+              <button class="btn btn-red btn-sm-custom" type="submit" name="" value="">go</button>
             </span>
           </div>
           @csrf
@@ -102,4 +96,3 @@
     </div>
   </div>
 </body>
-

@@ -6,7 +6,7 @@
 div.scrollable { 
     overflow-x: auto;
     height: 500px;
-    width: 400px;
+    width: 300px;
     border: 1px solid rgb(206, 212, 218);
     padding: 10px;
   }
@@ -17,21 +17,28 @@ div.scrollable {
   margin-bottom: 0px;
 }
 
-.btn-sm-custom{
-  width: 100px !important;
+.btn-sm-custom {
+  width: 40px !important;
 }
 
 .hr-custom {
-  width: 360px;
+  width: 260px;
   margin: 2px 0px;
 }
 
 .custom-link {
   color: rgb(134, 134, 134);
+  text-decoration: none !important;
 }
 
-.custom-link:hover {
+.custom-link-red {
   color: rgb(230,51,41);
+  text-decoration: none !important;
+}
+
+.custom-link-red:hover {
+  color: rgb(230,51,41);
+  text-decoration: none !important;
 }
 
 .custom-frame {
