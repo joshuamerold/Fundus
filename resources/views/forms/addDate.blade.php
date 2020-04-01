@@ -4,7 +4,7 @@
 @include('inc/messages')
 <style media="screen">
 .datepicker{
-  left: 265px !important;
+  left: 665px !important;
 }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
@@ -54,9 +54,6 @@ date.setDate(date.getDate());
      });
     </script>
 
-    <script type="text/javascript">
-      $('.datepicker-dropdown').css('right', '700px');
-    </script>
 
   </body>
 
