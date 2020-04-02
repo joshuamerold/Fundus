@@ -11664,7 +11664,7 @@ div.scrollable {
 }
 
 .hr-custom {
-  width: 260px;
+  width: 280px;
   margin: 2px 0px;
 }
 
@@ -11690,6 +11690,16 @@ div.scrollable {
 
 .custom-frame {
   border: 1px solid #ced4da;
+}
+
+.smaller-lighter {
+  font-size: x-small;
+  color: #868686;
+}
+
+.align-right {
+  text-align: right;
+  width: 160px;
 }
 
 .addDate-body {
