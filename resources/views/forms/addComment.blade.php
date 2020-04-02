@@ -63,6 +63,9 @@
                               <div class="">
                                 <a href="/profile/{{$user->username}}" class="custom-link-red">
                                   <small>{{$user->coursename}} | {{$user->username}}</small>
+                                  <p>
+                                  <small>{{ $comment->created_at->format('d.m.Y , H:i') }}</small>
+                                  </p>
                                 </a>
                               </div>
                             </td>
