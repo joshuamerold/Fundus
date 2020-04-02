@@ -75,7 +75,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif
@@ -182,7 +182,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif
@@ -289,7 +289,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif
@@ -394,7 +394,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif
@@ -499,7 +499,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif
@@ -604,7 +604,7 @@
               <div class="dropdown-menu">
                 <a class="no-link" href="/edit/module/{{$module->id}}"><button class="dropdown-item">Modul bearbeiten</button></a>
 
-                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Module löschen"/></form></button>
+                <button class="dropdown-item"><form action="/delete/module/{{$module->id}}" method="post">@csrf<input class="delete-module" type="submit" value="Modul Löschen"/></form></button>
               </div>
             </div>
             @endif

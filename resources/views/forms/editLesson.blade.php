@@ -4,7 +4,7 @@
 @include('inc/messages')
 <body class="editModule-body">
   <div class="editModule-card offset-md-2 col-md-8">
-  <h2 class="mt-3">Lesson {{$currentLesson->name}} bearbeiten</h2>
+  <h2 class="mt-3">Lehrveranstaltung {{$currentLesson->name}} bearbeiten</h2>
     <div class="card-body">
       <form class="" action="/{{$currentLesson->id}}/edit/show/add" method="post">
         @csrf
