@@ -19,6 +19,13 @@ class ModuleController extends NavbarController
     return view('forms.addModule')->with('semester', $semester);
   }
 
+  public function editShow($id){
+    $currentModule = Module::all()->where('id', $id)->first();
+    if(Auth::user()->id == $currentModule->creatoruserid || Auth::user()->rights == "admin"){
+        return view('forms.editModule')->with('currentModule', $currentModule);
+    }
+    return redirect('/home')->with('error', 'Du hast keine Berechtigungen für diese Aktion!');
+  }
 
   public function edit(Request $request, $id){
     if($request->name === "happy easter"){
