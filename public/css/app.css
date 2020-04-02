@@ -11673,6 +11673,11 @@ div.scrollable {
   text-decoration: none !important;
 }
 
+.custom-link:hover {
+  color: #e63329;
+  text-decoration: none !important;
+}
+
 .custom-link-red {
   color: #e63329;
   text-decoration: none !important;

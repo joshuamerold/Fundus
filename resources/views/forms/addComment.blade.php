@@ -4,7 +4,7 @@
 <body class="addComment-body">
   <div class="row pl-4" >
     <div class="col">
-      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> zurück</a>
+      <a href="/{{$lessonId}}/show" name="button" class="custom-link"><span class="fa fa-caret-left"></span> Zurück</a>
     </div>
   </div>
 
@@ -84,9 +84,9 @@
         <div class="row">
         <form action="/{{$lessonId}}/{{$fileToShow->id}}/add/comment/store" method="post">
           <div class="input-group-append">
-            <input class="form-control" type="text" name="content" placeholder="dein Kommentar" style="width: 250px; margin-right: 10px;">
+            <input class="form-control" type="text" name="content" placeholder="Dein Kommentar" style="width: 250px; margin-right: 10px;">
             <span class="input-group-btn">
-              <button class="btn btn-red btn-sm-custom" type="submit" name="" value="">go</button>
+              <button class="btn btn-red btn-sm-custom" type="submit"><span class="fa fa-paper-plane" style="height: 8px;"></span></button>
             </span>
           </div>
           @csrf
