@@ -37,43 +37,46 @@
       </div>
     </div>
     <div class="col-6">
-      <div class="row mb-1 scrollable rounded-sm">
+      <div class="row mb-1 scrollable rounded-sm" style="width: 310px; padding-top:unset;">
         <ul class="noStyle">
           @foreach($comments as $comment)
-            <li class="mb-2">
+            <li class="mb-2" style="margin-top:20px">
               <div class="col-12 mb-2">
                   @foreach($users as $user)
                     @if($comment->userid == $user->id)
                       <div class="row">
-                        <table>
+                        <table style="margin-top:-10px;">
                           <tr>
-                            <td width="35px">
+                            <td width="10px">
                               <div class="image">
                                 <a href="/profile/{{$user->username}}">
                                 @if(!empty($user->imageURL))
-                                    <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width: 25px; height: 25px;"/>
+                                    <img src="{{$user->imageURL}}" alt="Profilbild" class="img-circle" style="width: 35px; height: 35px;"/>
                                 @else
-                                    <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width: 25px; height: 25px;" class="img-circle" alt="Profilbild"/>
+                                    <img src="https://i.pinimg.com/236x/8b/33/47/8b3347691677254b345de63fe82f8ef6--batman.jpg" style="width: 35px; height: 35px;" class="img-circle" alt="Profilbild"/>
                                 @endif
                                 </a>
                               </div>
                             </td>
 
-                            <td class="align-bottom">
-                              <div class="">
+                            <td class="align-top"style="width:100%; margin-top:10px">
+                              <div class="" style="padding-top: 3px; margin-left: 10px; line-height:15px;">
                                 <a href="/profile/{{$user->username}}" class="custom-link-red">
                                   <small>{{$user->coursename}} | {{$user->username}}</small>
-                                </a>
+                                </a> <br>
+                                <small class="smaller-lighter" style="">{{ $comment->created_at->format('d.m.Y , H:i') }}</small>
                               </div>
                             </td>
 
-                            <td  class="align-bottom align-right">
-                              <small class="smaller-lighter">{{ $comment->created_at->format('d.m.Y , H:i') }}</small>
+                            <td  class="align-bottom align-left">
                             </td>
                           </tr>
 
                           <tr>
-                            <td colspan="2">{{$comment->content}} </td>
+                            <td colspan="4" style="word-break: break-word; padding:8px 0px;">
+                            {{$comment->content}}
+                            </td>
+                          </div>
                           </tr>
                         </table>
                       </div>
